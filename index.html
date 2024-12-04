@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/style.css" rel="stylesheet">
+    <title>Dashboard</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container-fluid position-relative bg-white d-flex p-0">
+        <!-- **side bar start** -->
+        <div class="sidebar pe-4 pb-3">
+            <nav class="navbar bg-light navbar-light">
+                <a href="#" class="navbar-brand mx-4 mb-3">
+                    <h3 class="text-primary">
+                        <i class="fa fa-hashtag me-2"></i>
+                        DASHBOARD
+
+
+                    </h3>
+                </a>
+                <div class="d-flex align-items-center ms-4 mb-4">
+                    <div class="position-relative">
+                        <img src="img/user.jpg" class="rounded-circle user-img" alt="">
+                        <div class="bg-success rounded-circle border border-2 border-white position-absolute end-0 bottom-0 p-1"></div>
+                    </div>
+                    <div class="ms-3">
+                        <h6 class="mb-0">Jhon Doe</h6>
+                        <span>Admin</span>
+                    </div>
+                </div>
+                <div class="navbar-nav w-100">
+                    <a href="" class="nav-item nav-link active">
+                        <i class="fa fa-tachometer-alt me-2"></i> Dashboard
+                    </a>
+                    <div class="nav-item dropdown">
+                        <a href="" class="nav-link dropdown-toggle"><i class="fa fa-laptop me-2"> </i>Elements</a>
+                        <div class="dropdown-menu bg-transparent border-0">
+                            <a href="" class="dropdown-item">Buttons</a>
+                            <a href="" class="dropdown-item">Typography</a>
+                            <a href="" class="dropdown-item">Other Elements</a>
+
+                        </div>
+
+                    </div>
+                    <a href="" class="nav-item nav-link"><i class="fa fa-th me-2"></i>Widgets</a>
+                    <a href="" class="nav-item nav-link"><i class="fa fa-keyboard me-2"></i>Forms</a>
+                    <a href="" class="nav-item nav-link"><i class="fa fa-table me-2"></i>Tables</a>
+                    <a href="" class="nav-item nav-link"><i class="fa fa-chart-bar me-2"></i>charts</a>
+                    <div class="nav-item dropdown">
+                        <a href="" class="nav-link dropdown-toggle"><i class="far fa-file-alt me-2"></i>Pages</a>
+                        <div class="dropdown-menu bg-transparent border-0">
+                            <a href="" class="dropdown-item">Sing in</a>
+                        </div>
+                    </div>
+
+                </div>              
+            </nav>
+        </div>
+        <!-- **side bar end** -->
+
+        <!-- **nav bar start** -->
+
+        <div class="content">
+            <nav class="navbar navbar-expand bg-light navbar-light sticky-top px-4 py-0">
+                <a href="index.html" class="navbar-brand d-flex d-lg-none me-4">
+                    <h2 class="text-primary mb-0"><i class="fa fa-hashtag"></i></h2>
+
+                </a>
+                <a href="#" class="sidebar-toggle flex-shrink-0">
+                    <i class="fa fa-bars"></i>
+                </a>
+                <form class="d-none d-md-flex ms-4">
+                    <input type="search" class="form-control border-0" placeholder="Search">
+                </form>
+                <div class="navbar-nav align-items-center ms-auto">
+                    <div class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle">
+                            <i class="fa fa-envelope me-lg-2"></i>
+                            <span class="d-none d-lg-inline-flex">Message</span>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-end bg-light border-0 rounded-bottom m-0">
+                            <a href="#" class="dropdown-item">
+                                <div class="d-flex align-items-center">
+                                    <img class="rounded-circle" src="img/user.jpg" alt="">
+                                    <div class="ms-2">
+                                        <h6>John send you a </h6>
+                                    </div>
+                                </div>
+                            </a>
+                            
+
+                        </div>
+                    </div>
+                    <div class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle">
+                            <i class="fa fa-bell me-lg-2"></i>
+                            <span class="d-none d-lg-inline-flex">Notification</span>
+                        </a>
+                    </div>
+                    <div class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle">
+                            <img class="rounded-circle me-lg-2 user-img" src="img/user.jpg" alt="">
+                            <span class="d-none d-lg-inline-flex">Jhon Doe</span>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-end border-0 rounded-0 rounded-bottom m-0">
+                            <a href="#" class="dropdown-item">My Profile</a>
+                            <a href="#" class="dropdown-item">Settins</a>
+                            <a href="#" class="dropdown-item">Log Out</a>
+                        </div>
+                    </div>
+                </div>
+
+            </nav>
+            <!-- **nav bar end** -->
+
+            <!-- **Sale e renuve start** -->
+            <div class="container-fluid pt-4 px-4">
+                <div class="row g-4">
+                    <div class="col-sm-6 col-xl-3">
+                        <div class="bg-light rounded d-flex align-items-center justify-content-between p-4">
+                            <i class="fa fa-chart-line fa-3x text-primary"></i>
+                            <div class="ms-3">
+                                <p class="mb-2">Today Sale</p>
+                                <h6 class="mb-0">$123456</h6>
+                            </div>
+
+                        </div>
+
+                    </div>
+                    <div class="col-sm-6 col-xl-3">
+                        <div class="bg-light rounded d-flex align-items-center justify-content-between p-4">
+                        <i class="fa fa-chart-bar fa-3x text-primary"></i>
+                        <div class="ms-3">
+                            <p class="mb-2">Today Sale</p>
+                            <h6 class="mb-0">$123456</h6>
+                        </div>
+                        </div>
+
+                    </div>
+                    <div class="col-sm-6 col-xl-3">
+                        <div class="bg-light rounded d-flex align-items-center justify-content-between p-4">
+                        <i class="fa fa-chart-area fa-3x text-primary"></i>
+                        <div class="ms-3">
+                            <p class="mb-2">Today Sale</p>
+                            <h6 class="mb-0">$123456</h6>
+                        </div>
+                        </div>
+                    
+                    </div>
+                    <div class="col-sm-6 col-xl-3">
+                        <div class="bg-light rounded d-flex align-items-center justify-content-between p-4">
+                        <i class="fa fa-chart-pie fa-3x text-primary"></i>
+                        <div class="ms-3">
+                            <p class="mb-2">Today Sale</p>
+                            <h6 class="mb-0">$123456</h6>
+                        </div>
+                        </div>
+            
+                    </div>
+
+                </div>
+            </div>
+            <!-- **Sale e renuve end** -->
+
+
+            <!-- **Sales chart Start** -->
+             <div class="container-fluid pt-4 px-4">
+                <div class="row g-4">
+                    <div class="col-sm-12 col-xl-6">
+                        <div class="bg-light text-center rounded p-4">
+                            <div class="d-flex align-items-center justify-content-between mb-4">
+                                <h6 class="mb-0">Worldwide Sales</h6>
+                                <a href="">Show all</a>
+                            
+                            </div>
+
+                            <canvas id="worldwide-sales"></canvas>
+                            
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-xl-6">
+                        <div class="bg-light text-center rounded p-4">
+                            <div class="d-flex align-items-center justify-content-between mb-4">
+                                <h6 class="mb-0">Salse & Revenue</h6>
+                                <a href="">Show all</a>
+
+                            </div>
+
+                            <canvas id="salse-revenue"></canvas>
+
+                        </div>
+
+                    </div>
+                </div>
+             </div>
+            <!-- **Sales chart end** -->
+
+            <!-- ** Recents Sales start** -->
+            <div class="container-fluid pt-4 px-4">
+                <div class="bg-light text-center rounded pb-4">
+                    <div class="d-flex align-items-center justify-content-between mb-4">
+                        <h6 class="mb-0">
+                            Recent Salse
+                        </h6>
+                        <a href="">Show all</a>
+
+                    </div>
+                    <div class="table-responsive">
+                        <table class="table text-start align-middle table-bordered table-hover mb-0">
+                            <thead>
+                                <tr class="text-dark">
+                                    <th scope="col" ><input type="checkbox"></th>
+                                    <th scope="col" >Date</th>
+                                    <th scope="col" >Invoice</th>
+                                    <th scope="col" >Customer</th>
+                                    <th scope="col" >Amount</th>
+                                    <th scope="col" >Status</th>
+                                    <th scope="col" >Action</th>
+
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><input type="checkbox" class="form-check-input"></td>
+                                    <td>01 Jan 2025</td>
+                                    <td>INV-01582</td>
+                                    <td>Joh Deo</td>
+                                    <td>$4324</td>
+                                    <td>Paid</td>
+                                    <td><a href="" class="btn btn-sm btn-primary">Detail</a></td>
+                                </tr>
+
+                                <tr>
+                                    <td><input type="checkbox" class="form-check-input"></td>
+                                    <td>01 Jan 2025</td>
+                                    <td>INV-01582</td>
+                                    <td>Joh Deo</td>
+                                    <td>$4324</td>
+                                    <td>Paid</td>
+                                    <td><a href="" class="btn btn-sm btn-primary">Detail</a></td>
+                                </tr>
+
+                                <tr>
+                                    <td><input type="checkbox" class="form-check-input"></td>
+                                    <td>01 Jan 2025</td>
+                                    <td>INV-01582</td>
+                                    <td>Joh Deo</td>
+                                    <td>$4324</td>
+                                    <td>Paid</td>
+                                    <td><a href="" class="btn btn-sm btn-primary">Detail</a></td>
+                                </tr>
+
+                                <tr>
+                                    <td><input type="checkbox" class="form-check-input"></td>
+                                    <td>01 Jan 2025</td>
+                                    <td>INV-01582</td>
+                                    <td>Joh Deo</td>
+                                    <td>$4324</td>
+                                    <td>Paid</td>
+                                    <td><a href="" class="btn btn-sm btn-primary">Detail</a></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <!-- **RECENT SALES END**-->
+
+            
+            <!-- **WIDGETS START** -->
+            <div class="container-fluid pt-4 px-4">
+                <div class="row g-4">
+                    <div class="col-sm-12 col-md-6 col-xl-4">
+                        <div class="h-100 bg-light rounded p-4">
+                            <div class="d-flex align-items-center justify-content-between mb-2">
+                                <h6 class="mb-0">Messanger</h6>
+                                <a href="">Show all</a>
+
+                            </div>
+                            <div class="d-flex align-items-center border-bottom py-3">
+                                <img class="rounded-circle flex-shrink-0 user-img" src="img/user.jpg" alt="">
+                                <div class="w-100 ms-3">
+                                    <div class="d-flex w-100 justify-content-between">
+                                        <h6 class="mb-0">John Doe</h6>
+                                        <small>15 minutes ago</small>
+                                    </div>
+                                    <span>Short message goes here</span>
+                                </div>
+
+                            </div>
+                            <div class="d-flex align-items-center border-bottom py-3">
+                                <img class="rounded-circle flex-shrink-0 user-img" src="img/user.jpg" alt="">
+                                <div class="w-100 ms-3">
+                                    <div class="d-flex w-100 justify-content-between">
+                                        <h6 class="mb-0">John Doe</h6>
+                                        <small>15 minutes ago</small>
+                                    </div>
+                                    <span>Short message goes here</span>
+                                </div>
+
+                            </div>
+                            <div class="d-flex align-items-center border-bottom py-3">
+                                <img class="rounded-circle flex-shrink-0 user-img" src="img/user.jpg" alt="">
+                                <div class="w-100 ms-3">
+                                    <div class="d-flex w-100 justify-content-between">
+                                        <h6 class="mb-0">John Doe</h6>
+                                        <small>15 minutes ago</small>
+                                    </div>
+                                    <span>Short message goes here</span>
+                                </div>
+
+                            </div>
+                            <div class="d-flex align-items-center border-bottom py-3">
+                                <img class="rounded-circle flex-shrink-0 user-img" src="img/user.jpg" alt="">
+                                <div class="w-100 ms-3">
+                                    <div class="d-flex w-100 justify-content-between">
+                                        <h6 class="mb-0">John Doe</h6>
+                                        <small>15 minutes ago</small>
+                                    </div>
+                                    <span>Short message goes here</span>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+                    <div class="col-sm-12 col-md-6 col-xl-4">
+                        <div class="h-100 bg-light rounded p-4">
+                            <div class="d-flex align-items-center justify-content-between mb-4">
+                                <h6 class="mb-0">Calender</h6>
+                                <a href="">Show all</a>
+
+                            </div>
+                            <div id="calender">
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-md-6 col-xl-4">
+                        <div class="h-100 bg-light rounded p-4">
+                            <div class="d-flex align-items-center justify-content-between mb-4">
+                                <h6 class="mb-0">To do list</h6>
+                                <a href="">Show all</a>
+                            </div>
+                            <div id="d-flex mb-2">
+                                <input type="text" placeholder="Enter text">
+                                <button type="button" class="btn btn-primary ms-2">Add</button>
+
+                            </div>
+                            <div class="d-flex align-items-center border-bottom py-2">
+                                <input type="checkbox" class="form-check-input m-0">
+                                <div class="w-100 ms-3">
+                                    <div class="d-flex w-100 align-items-center justify-content-between">
+                                        <span>Short task goes here</span>
+                                        <button class="btn btn-sm"><i class="fa fa-times"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="d-flex align-items-center border-bottom py-2">
+                                <input type="checkbox" class="form-check-input m-0">
+                                <div class="w-100 ms-3">
+                                    <div class="d-flex w-100 align-items-center justify-content-between">
+                                        <span>Short task goes here</span>
+                                        <button class="btn btn-sm"><i class="fa fa-times"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="d-flex align-items-center border-bottom py-2">
+                                <input type="checkbox" class="form-check-input m-0">
+                                <div class="w-100 ms-3">
+                                    <div class="d-flex w-100 align-items-center justify-content-between">
+                                        <span>Short task goes here</span>
+                                        <button class="btn btn-sm"><i class="fa fa-times"></i></button>
+                                    </div>
+
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                
+                </div>
+                
+            </div>
+            <!-- **Widgets end** -->
+
+
+            <!-- **Footer start** -->
+             <div class="container-fluid pt-4 px-4">
+                <div class="bg-light">
+                    <div class="row">
+                        <div class="col-12 col-sm-6 text-center text-sm-start">
+                            &copy; <a href="">Your site name</a>, All right Reserved
+                        </div>
+                        <div class="col-12 col-sm-6 text-center text-sm-end">
+                            Designed by <a href="https://www.instagram.com/pontocom.oficial01?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==">Insta PontoCom</a>
+                        
+                        </div>
+                    </div>
+                </div>
+             </div>
+             <!-- **Footer end** -->
+        
+        </div>
+        <!-- **Content end** -->
+        <a href="" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+
+    </div>
+    
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
