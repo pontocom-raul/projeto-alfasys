@@ -240,10 +240,6 @@ body{
     cursor: pointer;
     transition: all .4s ease;
 }
-.sidebar .menu .list.active{
-    background-color: #f2f6f7;
-    color: #007bff;
-}
 .sidebar .menu .list:hover{
     background-color: #f2f6f7;
 }
@@ -262,9 +258,7 @@ body{
 .sidebar .list i{
     font-size: 20px;
 }
-.sidebar .menu .list.active a{
-    color: #007bff;
-}
+
 .bx-chevron-down{
     font-weight: 400 !important;
     font-size: 20px;
