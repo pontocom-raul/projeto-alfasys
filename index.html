@@ -148,7 +148,7 @@
                 <a href="#" class="text-decoration-none sub-menu">
                   <div class="text d-flex">
                     <span>
-                        <i class="fa-solid fa-calendar"></i>
+                        <i class="fa-solid fa-square-arrow-up-right"></i>
                     </span>
                     <div class="ml-4">
                         <span class="">
@@ -162,11 +162,6 @@
             <div class="collapse" id="cadastro">
                 <ul class="unstyled pl-5 ml-4 submenu  nav nav-pills flex-column">
                 <li class="py-2 nav-item">
-                    <a data-toggle="pill"  href="#cadastro-feito"  class="text-decoration-none ">
-                            Todos cadastros
-                        </a>
-                </li>
-                <li class="py-2 nav-item">
                     <a data-toggle="pill" href="#cadastro-fazer"  class="text-decoration-none ">
                             Realizar cadastro
                         </a>
@@ -175,6 +170,11 @@
                     <a data-toggle="pill" href="#cadastro-editar"  class="text-decoration-none ">
                            Editar cadastro
                     </a>
+                </li>
+                <li class="py-2 nav-item">
+                    <a data-toggle="pill"  href="#cadastro-feito"  class="text-decoration-none ">
+                            Todos cadastros
+                        </a>
                 </li>
                 </ul>
              </div>
@@ -214,20 +214,20 @@
             </li>
             <div class="collapse" id="liberação">
                 <ul class="unstyled pl-5 ml-4 submenu  nav nav-pills flex-column">
-                <li class="py-2 nav-item">
-                    <a data-toggle="pill"  href="#todos-agendamentos"  class="text-decoration-none ">
-                            Histórico de agendamentos
-                        </a>
-                </li>
-                <li class="py-2 nav-item">
-                    <a data-toggle="pill" href="#novo-agendamentos"  class="text-decoration-none ">
-                            Realizar agendamento
-                        </a>
-                </li>
+                    <li class="py-2 nav-item">
+                        <a data-toggle="pill" href="#novo-agendamentos"  class="text-decoration-none ">
+                                Realizar agendamento
+                            </a>
+                    </li>
                 <li class="py-2 nav-item">
                     <a data-toggle="pill" href="#editar-agendamento"  class="text-decoration-none ">
                            Editar agendamento
                     </a>
+                </li>
+                <li class="py-2 nav-item">
+                    <a data-toggle="pill"  href="#todos-agendamentos"  class="text-decoration-none ">
+                            Histórico de agendamentos
+                        </a>
                 </li>
                 </ul>
              </div>
@@ -817,105 +817,6 @@
 
          <!-- ============================== PÁGINA DE CADASTRO END ID ============================== -->
 
-            <!--todos cadastros-->
-
-            <div class="tab-pane fade px-4" id="cadastro-feito">
-                <div class="container-fluid">
-                    <div class="row justify-content-between my-4">
-                        <div class="col shadow bg-white p-4 rounded">
-                            <h4 class=" mb-3">Histórico de cadastros:</h4>
-                            <div class="header-result">
-                                <input type="search" class="border-0 bg-light p-2 w-40" placeholder="Pesquisar por Site ID..">
-                                <input type="search" class="border-0 bg-light p-2" placeholder="Pesquisar por End ID..">
-                                <input type="date" class="border-0 bg-light p-2">
-                                <button class="btn btn-warning text-white">Pesquisar</button>
-                            </div>
-                            <div class="table-responsive text-nowrap">
-                                <table class="table my-4 table-hover table-striped w-100">
-                                    <thead>
-                                        <tr>
-                                            <td><input type="checkbox"></td>
-                                            <th>END ID</th>
-                                            <th>Demanda</th>
-                                            <th>Site ID</th>
-                                            <th>Detentora</th>
-                                            <th>ID Detentora</th>
-                                            <th>Operadora Cedente</th>
-                                            <th>ID Operadora</th>
-                                            <th>Logradouro</th>
-                                            <th>Número</th>
-                                            <th>Bairro</th>
-                                            <th>Município</th>
-                                            <th>Estado</th>
-                                            <th>CEP</th>
-                                            <th>Latitude</th>
-                                            <th>Longitude</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td><input type="checkbox"></td>
-                                            <td>SITE001</td>
-                                            <td>Expansão</td>
-                                            <td>END1234</td>
-                                            <td>Empresa A</td>
-                                            <td>DET001</td>
-                                            <td>Operadora X</td>
-                                            <td>OPX001</td>
-                                            <td>Rua das Flores</td>
-                                            <td>123</td>
-                                            <td>Centro</td>
-                                            <td>São Paulo</td>
-                                            <td>SP</td>
-                                            <td>12345-678</td>
-                                            <td>-23.55052</td>
-                                            <td>-46.633308</td>
-                                        </tr>
-                                        <tr>
-                                            <td><input type="checkbox"></td>
-                                            <td>SITE002</td>
-                                            <td>Manutenção</td>
-                                            <td>END5678</td>
-                                            <td>Empresa B</td>
-                                            <td>DET002</td>
-                                            <td>Operadora Y</td>
-                                            <td>OPY002</td>
-                                            <td>Avenida Paulista</td>
-                                            <td>456</td>
-                                            <td>Jardins</td>
-                                            <td>Rio de Janeiro</td>
-                                            <td>RJ</td>
-                                            <td>23456-789</td>
-                                            <td>-22.9068</td>
-                                            <td>-43.1729</td>
-                                        </tr>
-                                        <tr>
-                                            <td><input type="checkbox"></td>
-                                            <td>SITE003</td>
-                                            <td>Instalação</td>
-                                            <td>END9101</td>
-                                            <td>Empresa C</td>
-                                            <td>DET003</td>
-                                            <td>Operadora Z</td>
-                                            <td>OPZ003</td>
-                                            <td>Rua das Acácias</td>
-                                            <td>789</td>
-                                            <td>Santa Cecília</td>
-                                            <td>Curitiba</td>
-                                            <td>PR</td>
-                                            <td>34567-890</td>
-                                            <td>-25.4284</td>
-                                            <td>-49.2733</td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </div>
-                        </div>
-                    </div>
-                </div>    
-             </div>
-           
-            
             <!-- realizar cadastro -->
 
             <div class="tab-pane fade px-4" id="cadastro-fazer">
@@ -1113,8 +1014,105 @@
                     </div>
                 </div>
             </div>
-            
 
+            <!--todos cadastros-->
+
+            <div class="tab-pane fade px-4" id="cadastro-feito">
+                <div class="container-fluid">
+                    <div class="row justify-content-between my-4">
+                        <div class="col shadow bg-white p-4 rounded">
+                            <h4 class=" mb-3">Histórico de cadastros:</h4>
+                            <div class="header-result">
+                                <input type="search" class="border-0 bg-light p-2 w-40" placeholder="Pesquisar por Site ID..">
+                                <input type="search" class="border-0 bg-light p-2" placeholder="Pesquisar por End ID..">
+                                <input type="search" class="border-0 bg-light p-2" placeholder="Pesquisar por Estado..">
+                                <button class="btn btn-warning text-white">Pesquisar</button>
+                            </div>
+                            <div class="table-responsive text-nowrap">
+                                <table class="table my-4 table-hover table-striped w-100">
+                                    <thead>
+                                        <tr>
+                                            <td><input type="checkbox"></td>
+                                            <th>END ID</th>
+                                            <th>Demanda</th>
+                                            <th>Site ID</th>
+                                            <th>Detentora</th>
+                                            <th>ID Detentora</th>
+                                            <th>Operadora Cedente</th>
+                                            <th>ID Operadora</th>
+                                            <th>Logradouro</th>
+                                            <th>Número</th>
+                                            <th>Bairro</th>
+                                            <th>Município</th>
+                                            <th>Estado</th>
+                                            <th>CEP</th>
+                                            <th>Latitude</th>
+                                            <th>Longitude</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td><input type="checkbox"></td>
+                                            <td>SITE001</td>
+                                            <td>Expansão</td>
+                                            <td>END1234</td>
+                                            <td>Empresa A</td>
+                                            <td>DET001</td>
+                                            <td>Operadora X</td>
+                                            <td>OPX001</td>
+                                            <td>Rua das Flores</td>
+                                            <td>123</td>
+                                            <td>Centro</td>
+                                            <td>São Paulo</td>
+                                            <td>SP</td>
+                                            <td>12345-678</td>
+                                            <td>-23.55052</td>
+                                            <td>-46.633308</td>
+                                        </tr>
+                                        <tr>
+                                            <td><input type="checkbox"></td>
+                                            <td>SITE002</td>
+                                            <td>Manutenção</td>
+                                            <td>END5678</td>
+                                            <td>Empresa B</td>
+                                            <td>DET002</td>
+                                            <td>Operadora Y</td>
+                                            <td>OPY002</td>
+                                            <td>Avenida Paulista</td>
+                                            <td>456</td>
+                                            <td>Jardins</td>
+                                            <td>Rio de Janeiro</td>
+                                            <td>RJ</td>
+                                            <td>23456-789</td>
+                                            <td>-22.9068</td>
+                                            <td>-43.1729</td>
+                                        </tr>
+                                        <tr>
+                                            <td><input type="checkbox"></td>
+                                            <td>SITE003</td>
+                                            <td>Instalação</td>
+                                            <td>END9101</td>
+                                            <td>Empresa C</td>
+                                            <td>DET003</td>
+                                            <td>Operadora Z</td>
+                                            <td>OPZ003</td>
+                                            <td>Rua das Acácias</td>
+                                            <td>789</td>
+                                            <td>Santa Cecília</td>
+                                            <td>Curitiba</td>
+                                            <td>PR</td>
+                                            <td>34567-890</td>
+                                            <td>-25.4284</td>
+                                            <td>-49.2733</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>    
+             </div>
+            
 
          <!-- ============================== PÁGINA DE STATUS ============================== -->
 
@@ -1132,139 +1130,7 @@
         
         
          <!-- ============================== PÁGINA DE LIBERAÇÃO DE ACESSO ============================== -->
-
-            <!-- todos agendamentos -->
-
-            <div class="tab-pane fade px-4" id="todos-agendamentos">
-            <div class="container-fluid">
-                <div class="row justify-content-between my-4">
-                    <div class="col shadow bg-white p-4 rounded">
-                        <h4 class=" mb-3">Histórico de Agendamentos:</h4>
-                        <div class="header-result mb-3">
-                            <input type="search" class="border-0 bg-light p-2 w-40" placeholder="Pesquisar por Status..">
-                            <input type="date" class="border-0 bg-light p-2" placeholder="Data Inicial">
-                            <input type="date" class="border-0 bg-light p-2" placeholder="Data Final">
-                            <button class="btn btn-warning text-white">BUSCAR</button>
-                        </div>
-                        <div class="table-responsive text-nowrap">
-                            <table class="table table-hover table-striped w-100">
-                                <thead class="bg-light">
-                                    <tr>
-                                        <th>End ID</th>
-                                        <th>Data Solicitação</th>
-                                        <th>Data Previsão</th>
-                                        <th>Data de Agendamento</th>
-                                        <th>Site ID</th>
-                                        <th>Demanda</th>
-                                        <th>Detentora</th>
-                                        <th>ID Detentora</th>
-                                        <th>Operadora Cedente</th>
-                                        <th>ID Operadora</th>
-                                        <th>Logradouro</th>
-                                        <th>Número</th>
-                                        <th>Bairro</th>
-                                        <th>Município</th>
-                                        <th>Estado</th>
-                                        <th>CEP</th>
-                                        <th>Latitude</th>
-                                        <th>Longitude</th>
-                                        <th>Status Agendamento</th>
-                                        <th>Observações</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td>98765</td>
-                                        <td>2024-12-01</td>
-                                        <td>2024-12-05</td>
-                                        <td>2024-12-04</td>
-                                        <td>12345</td>
-                                        <td>Instalação</td>
-                                        <td>Empresa A</td>
-                                        <td>00123</td>
-                                        <td>Operadora B</td>
-                                        <td>00234</td>
-                                        <td>Rua Exemplo</td>
-                                        <td>123</td>
-                                        <td>Centro</td>
-                                        <td>São Paulo</td>
-                                        <td>SP</td>
-                                        <td>01000-000</td>
-                                        <td>-23.55052</td>
-                                        <td>-46.6333</td>
-                                        <td>
-                                            <select class="form-select border-0 bg-light p-2">
-                                                <option value="concluido">Concluído</option>
-                                                <option value="pendente" selected>Pendente</option>
-                                                <option value="cancelado">Cancelado</option>
-                                            </select>
-                                        </td>
-                                        <td>Verificar documentação</td>
-                                    </tr>
-                                    <tr>
-                                        <td>98765</td>
-                                        <td>2024-12-02</td>
-                                        <td>2024-12-06</td>
-                                        <td>2024-12-05</td>
-                                        <td>54321</td>
-                                        <td>Manutenção</td>
-                                        <td>Empresa B</td>
-                                        <td>00456</td>
-                                        <td>Operadora A</td>
-                                        <td>00789</td>
-                                        <td>Rua Outro Exemplo</td>
-                                        <td>456</td>
-                                        <td>Jardim</td>
-                                        <td>Rio de Janeiro</td>
-                                        <td>RJ</td>
-                                        <td>20000-000</td>
-                                        <td>-22.9068</td>
-                                        <td>-43.1729</td>
-                                        <td>
-                                            <select class="form-select border-0 bg-light p-2">
-                                                <option value="concluido" selected>Concluído</option>
-                                                <option value="pendente">Pendente</option>
-                                                <option value="cancelado">Cancelado</option>
-                                            </select>
-                                        </td>
-                                        <td>Serviço concluído com sucesso</td>
-                                    </tr>
-                                    <tr>
-                                        <td>2024-12-03</td>
-                                        <td>2024-12-07</td>
-                                        <td>2024-12-10</td>
-                                        <td>67890</td>
-                                        <td>Reparo</td>
-                                        <td>54321</td>
-                                        <td>Empresa C</td>
-                                        <td>00987</td>
-                                        <td>Operadora C</td>
-                                        <td>00654</td>
-                                        <td>Rua Último Exemplo</td>
-                                        <td>789</td>
-                                        <td>Vila Nova</td>
-                                        <td>Curitiba</td>
-                                        <td>PR</td>
-                                        <td>80000-000</td>
-                                        <td>-25.4296</td>
-                                        <td>-49.2713</td>
-                                        <td>
-                                            <select class="form-select border-0 bg-light p-2">
-                                                <option value="concluido">Concluído</option>
-                                                <option value="pendente">Pendente</option>
-                                                <option value="cancelado" selected>Cancelado</option>
-                                            </select>
-                                        </td>
-                                        <td>Aguardando reagendamento</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-            
+           
             <!-- cadastrar novo agendamento -->
 
             <div class="tab-pane fade px-4" id="novo-agendamentos">
@@ -1519,7 +1385,137 @@
             </div>
         </div>
     
+            <!-- todos agendamentos -->
 
+            <div class="tab-pane fade px-4" id="todos-agendamentos">
+                <div class="container-fluid">
+                    <div class="row justify-content-between my-4">
+                        <div class="col shadow bg-white p-4 rounded">
+                            <h4 class=" mb-3">Histórico de Agendamentos:</h4>
+                            <div class="header-result mb-3">
+                                <input type="search" class="border-0 bg-light p-2 w-40" placeholder="Pesquisar por END ID...">
+                                <input type="search" class="border-0 bg-light p-2" placeholder="Pesquisar por Status...">
+                                <input type="search" class="border-0 bg-light p-2" placeholder="Pesquisar por Site ID ">
+                                <button class="btn btn-warning text-white">BUSCAR</button>
+                            </div>
+                            <div class="table-responsive text-nowrap">
+                                <table class="table table-hover table-striped w-100">
+                                    <thead class="bg-light">
+                                        <tr>
+                                            <th>End ID</th>
+                                            <th>Data Solicitação</th>
+                                            <th>Data Previsão</th>
+                                            <th>Data de Agendamento</th>
+                                            <th>Site ID</th>
+                                            <th>Demanda</th>
+                                            <th>Detentora</th>
+                                            <th>ID Detentora</th>
+                                            <th>Operadora Cedente</th>
+                                            <th>ID Operadora</th>
+                                            <th>Logradouro</th>
+                                            <th>Número</th>
+                                            <th>Bairro</th>
+                                            <th>Município</th>
+                                            <th>Estado</th>
+                                            <th>CEP</th>
+                                            <th>Latitude</th>
+                                            <th>Longitude</th>
+                                            <th>Status Agendamento</th>
+                                            <th>Observações</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>98765</td>
+                                            <td>2024-12-01</td>
+                                            <td>2024-12-05</td>
+                                            <td>2024-12-04</td>
+                                            <td>12345</td>
+                                            <td>Instalação</td>
+                                            <td>Empresa A</td>
+                                            <td>00123</td>
+                                            <td>Operadora B</td>
+                                            <td>00234</td>
+                                            <td>Rua Exemplo</td>
+                                            <td>123</td>
+                                            <td>Centro</td>
+                                            <td>São Paulo</td>
+                                            <td>SP</td>
+                                            <td>01000-000</td>
+                                            <td>-23.55052</td>
+                                            <td>-46.6333</td>
+                                            <td>
+                                                <select class="form-select border-0 bg-light p-2">
+                                                    <option value="concluido">Concluído</option>
+                                                    <option value="pendente" selected>Pendente</option>
+                                                    <option value="cancelado">Cancelado</option>
+                                                </select>
+                                            </td>
+                                            <td>Verificar documentação</td>
+                                        </tr>
+                                        <tr>
+                                            <td>98765</td>
+                                            <td>2024-12-02</td>
+                                            <td>2024-12-06</td>
+                                            <td>2024-12-05</td>
+                                            <td>54321</td>
+                                            <td>Manutenção</td>
+                                            <td>Empresa B</td>
+                                            <td>00456</td>
+                                            <td>Operadora A</td>
+                                            <td>00789</td>
+                                            <td>Rua Outro Exemplo</td>
+                                            <td>456</td>
+                                            <td>Jardim</td>
+                                            <td>Rio de Janeiro</td>
+                                            <td>RJ</td>
+                                            <td>20000-000</td>
+                                            <td>-22.9068</td>
+                                            <td>-43.1729</td>
+                                            <td>
+                                                <select class="form-select border-0 bg-light p-2">
+                                                    <option value="concluido" selected>Concluído</option>
+                                                    <option value="pendente">Pendente</option>
+                                                    <option value="cancelado">Cancelado</option>
+                                                </select>
+                                            </td>
+                                            <td>Serviço concluído com sucesso</td>
+                                        </tr>
+                                        <tr>
+                                            <td>2024-12-03</td>
+                                            <td>2024-12-07</td>
+                                            <td>2024-12-10</td>
+                                            <td>67890</td>
+                                            <td>Reparo</td>
+                                            <td>54321</td>
+                                            <td>Empresa C</td>
+                                            <td>00987</td>
+                                            <td>Operadora C</td>
+                                            <td>00654</td>
+                                            <td>Rua Último Exemplo</td>
+                                            <td>789</td>
+                                            <td>Vila Nova</td>
+                                            <td>Curitiba</td>
+                                            <td>PR</td>
+                                            <td>80000-000</td>
+                                            <td>-25.4296</td>
+                                            <td>-49.2713</td>
+                                            <td>
+                                                <select class="form-select border-0 bg-light p-2">
+                                                    <option value="concluido">Concluído</option>
+                                                    <option value="pendente">Pendente</option>
+                                                    <option value="cancelado" selected>Cancelado</option>
+                                                </select>
+                                            </td>
+                                            <td>Aguardando reagendamento</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
          
          
          <!-- ============================== PÁGINA DE VISTORIA ============================== -->
@@ -1612,9 +1608,9 @@
                     <div class="col-12 shadow bg-white p-4 rounded">
                         <h4 class=" mb-3">KITS-TSSR</h4>
                         <div class="header-result d-flex justify-content-start gap-3 mb-3">
-                            <input type="search" class="border-0 bg-light p-2 w-15" placeholder="Procurar por TSSR-KIT..">
+                            <input type="search" class="border-0 bg-light p-2 w-15" placeholder="Procurar por END ID..">
                             <input type="search" class="border-0 bg-light p-2 w-15" placeholder="Procurar por Status..">
-                            <input type="date" class="border-0 bg-light p-2 w-15" placeholder="Procurar por parecer..">
+                            <input type="search" class="border-0 bg-light p-2 w-15" placeholder="Procurar por Parecer..">
                             <button class="btn btn-warning text-white">Pesquisar</button>
                         </div>
                         <div class="table-responsive text-nowrap">
@@ -1690,14 +1686,6 @@
           <!-- ============================== página de SCI INCLUSÃO ============================== -->
 
         <div class="tab-pane fade px-4" id="all-classes-page">
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="info-pages mb-3">
-                        <h3 class="">SCI de Inclusão</h3>
-                        <p class=" h6">Home /<span> SCI de Inclusão</span></p>
-                    </div>
-                </div>
-            </div>
             <div class="container-fluid">
                 <div class="row justify-content-between my-4">
                     <div class="col-12 shadow bg-white p-4 rounded">
