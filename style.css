@@ -270,7 +270,7 @@ body{
     color: #007bff;
 }
 .collapse ul li{
-    list-style:disc;
+    list-style:circle;
     cursor: pointer;
 }
 .submenu li:hover a{
