@@ -182,7 +182,7 @@
             <!------------------------------------------- STATUS ------------------------------------------------>
 
             <li class="rounded mt-1 list nav-item">
-                <a href="#all-teachers-page" class="text-decoration-none d-flex" data-toggle="pill">
+                <a href="#status" class="text-decoration-none d-flex" data-toggle="pill">
                       <span>
                         <i class="fa-solid fa-chart-simple"></i>
                       </span>
@@ -236,7 +236,7 @@
             <!-------------------------------------------  VISTORIA ------------------------------------------------>
             
             <li class="rounded mt-1 list nav-item">
-                <a href="#all-parents-page" class="text-decoration-none d-flex" data-toggle="pill">
+                <a href="#vistoria" class="text-decoration-none d-flex" data-toggle="pill">
                       <span>
                         <i class="fa-solid fa-screwdriver-wrench"></i>
                       </span>
@@ -252,7 +252,7 @@
             <!------------------------------------------- KIT-TSSR ------------------------------------------------>
 
             <li class="rounded mt-1 list nav-item">
-                <a href="#add-book-page" class="text-decoration-none d-flex" data-toggle="pill">
+                <a href="#kit-tssr" class="text-decoration-none d-flex" data-toggle="pill">
                       <span>
                         <i class="fa-brands fa-uikit mr-1"></i>
                       </span>
@@ -268,13 +268,13 @@
             <!------------------------------------------- SCI INCLUSAO ------------------------------------------------>
             
             <li class="rounded mt-1 list nav-item">
-                <a href="#all-classes-page" class="text-decoration-none d-flex" data-toggle="pill">
+                <a href="#sci-inclusao" class="text-decoration-none d-flex" data-toggle="pill">
                       <span>
                         <i class="fa-solid fa-plus mr-1"></i>
                       </span>
                       <div class="ml-4">
                         <span class="">
-                            SCI DE INCLUSAO
+                            SCI DE INCLUSÃO
                         </span>
                       </div>
                   </a>
@@ -283,7 +283,7 @@
             <!------------------------------------------- OBRA ------------------------------------------------>
             
             <li class="rounded mt-1 list nav-item">
-                <a href="#obra-page" class="text-decoration-none d-flex" data-toggle="pill">
+                <a href="#obra" class="text-decoration-none d-flex" data-toggle="pill">
                       <span>
                         <i class="fa-solid fa-helmet-safety"></i>
                       </span>
@@ -298,7 +298,7 @@
             <!------------------------------------------- PROJETOS ------------------------------------------------>
 
             <li class="rounded mt-1 list nav-item">
-                <a href="#exam-schedule-page" class="text-decoration-none d-flex" data-toggle="pill">
+                <a href="#projeto" class="text-decoration-none d-flex" data-toggle="pill">
                       <span>
                         <i class="fa-solid fa-clipboard mr-2"></i>
                       </span>
@@ -313,7 +313,7 @@
             <!------------------------------------------- SCI DE EXCLUSÃO ------------------------------------------------>
             
             <li class="rounded mt-1 list nav-item">
-                <a href="#add-users-page" class="text-decoration-none d-flex" data-toggle="pill">
+                <a href="#sci-exclusão" class="text-decoration-none d-flex" data-toggle="pill">
                       <span>
                         <i class="fa-solid fa-minus mr-1"></i>
                       </span>
@@ -802,8 +802,9 @@
                 </div>
             </div>
            </div>
-        </div>
+        </div>  
 
+        
          <!-- ============================== PÁGINA DE CADASTRO END ID ============================== -->
 
             <!-- realizar cadastro -->
@@ -1010,7 +1011,7 @@
                 <div class="container-fluid">
                     <div class="row justify-content-between my-4">
                         <div class="col shadow bg-white p-4 rounded">
-                            <h4 class=" mb-3">Histórico de cadastros:</h4>
+                            <h4 class="mb-3">Histórico de cadastros:</h4>
                             <div class="header-result">
                                 <input type="search" class="border-0 bg-light p-2 w-40" placeholder="Pesquisar por Site ID..">
                                 <input type="search" class="border-0 bg-light p-2" placeholder="Pesquisar por End ID..">
@@ -1036,6 +1037,7 @@
                                             <th>CEP</th>
                                             <th>Latitude</th>
                                             <th>Longitude</th>
+                                            <th>Ação</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -1055,6 +1057,9 @@
                                             <td>12345-678</td>
                                             <td>-23.55052</td>
                                             <td>-46.633308</td>
+                                            <td>
+                                                <button class="btn btn-primary">Enviar</button>
+                                            </td>
                                         </tr>
                                         <tr>
                                             <td>SITE002</td>
@@ -1072,6 +1077,9 @@
                                             <td>23456-789</td>
                                             <td>-22.9068</td>
                                             <td>-43.1729</td>
+                                            <td>
+                                                <button class="btn btn-primary">Enviar</button>
+                                            </td>
                                         </tr>
                                         <tr>
                                             <td>SITE003</td>
@@ -1089,6 +1097,9 @@
                                             <td>34567-890</td>
                                             <td>-25.4284</td>
                                             <td>-49.2733</td>
+                                            <td>
+                                                <button class="btn btn-primary">Enviar</button>
+                                            </td>
                                         </tr>
                                     </tbody>
                                 </table>
@@ -1096,21 +1107,56 @@
                         </div>
                     </div>
                 </div>    
-             </div>
+            </div>
             
+
 
          <!-- ============================== PÁGINA DE STATUS ============================== -->
 
-         <div class="tab-pane fade px-4" id="all-teachers-page">
+         <div class="tab-pane fade px-4" id="status">
             <div class="container-fluid">
-             <div class="row">
-                 <div class="info-pages mb-3">
-                     <h3 class="">Status</h3>
-                     <p class=" h6">Status<span> </span></p>
-                 </div>
-             </div>
-            </div>
-         </div>
+                <div class="row justify-content-between my-4">
+                    <div class="col shadow bg-white p-4 rounded">
+                        <h4 class=" mb-3">Status dos cadastros:</h4>
+                        <div class="header-result">
+                            <input type="search" class="border-0 bg-light p-2 w-40" placeholder="Pesquisar por END ID..">
+                            <input type="search" class="border-0 bg-light p-2" placeholder="Pesquisar por Data de Cadastro..">
+                            <input type="search" class="border-0 bg-light p-2" placeholder="Pesquisar por Situação..">
+                            <button class="btn btn-warning text-white">Pesquisar</button>
+                        </div>
+                        <div class="table-responsive text-nowrap">
+                            <table class="table my-4 table-hover table-striped w-100">
+                                <thead>
+                                    <tr>
+                                        <th>END ID</th>
+                                        <th>Data de Cadastro</th>
+                                        <th>Situação</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>END001</td>
+                                        <td>01/12/2024</td>
+                                        <td>Agendamento</td>
+                                    </tr>
+                                    <tr>
+                                        <td>END002</td>
+                                        <td>05/12/2024</td>
+                                        <td>Vistoria</td>
+                                    </tr>
+                                    <tr>
+                                        <td>END003</td>
+                                        <td>07/12/2024</td>
+                                        <td>Obra</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>    
+        </div>
+        
 
 
          <!-- ============================== PÁGINA DE LIBERAÇÃO DE ACESSO ============================== -->
@@ -1375,7 +1421,7 @@
                 <div class="container-fluid">
                     <div class="row justify-content-between my-4">
                         <div class="col shadow bg-white p-4 rounded">
-                            <h4 class=" mb-3">Histórico de Agendamentos:</h4>
+                            <h4 class="mb-3">Histórico de Agendamentos:</h4>
                             <div class="header-result mb-3">
                                 <input type="search" class="border-0 bg-light p-2 w-40" placeholder="Pesquisar por END ID...">
                                 <input type="search" class="border-0 bg-light p-2" placeholder="Pesquisar por Status...">
@@ -1406,14 +1452,15 @@
                                             <th>Longitude</th>
                                             <th>Status Agendamento</th>
                                             <th>Observações</th>
+                                            <th>Ação</th>
                                         </tr>
                                     </thead>
                                     <tbody>
                                         <tr>
                                             <td>98765</td>
-                                            <td>2024-12-01</td>
-                                            <td>2024-12-05</td>
-                                            <td>2024-12-04</td>
+                                            <td>01/12/2024</td>
+                                            <td>05/12/2024</td>
+                                            <td>04/12/2024</td>
                                             <td>12345</td>
                                             <td>Instalação</td>
                                             <td>Empresa A</td>
@@ -1436,12 +1483,13 @@
                                                 </select>
                                             </td>
                                             <td>Verificar documentação</td>
+                                            <td><button class="btn btn-primary">Enviar</button></td>
                                         </tr>
                                         <tr>
                                             <td>98765</td>
-                                            <td>2024-12-02</td>
-                                            <td>2024-12-06</td>
-                                            <td>2024-12-05</td>
+                                            <td>02/12/2024</td>
+                                            <td>06/12/2024</td>
+                                            <td>05/12/2024</td>
                                             <td>54321</td>
                                             <td>Manutenção</td>
                                             <td>Empresa B</td>
@@ -1464,14 +1512,15 @@
                                                 </select>
                                             </td>
                                             <td>Serviço concluído com sucesso</td>
+                                            <td><button class="btn btn-primary">Enviar</button></td>
                                         </tr>
                                         <tr>
-                                            <td>2024-12-03</td>
-                                            <td>2024-12-07</td>
-                                            <td>2024-12-10</td>
                                             <td>67890</td>
-                                            <td>Reparo</td>
+                                            <td>03/12/2024</td>
+                                            <td>07/12/2024</td>
+                                            <td>10/12/2024</td>
                                             <td>54321</td>
+                                            <td>Reparo</td>
                                             <td>Empresa C</td>
                                             <td>00987</td>
                                             <td>Operadora C</td>
@@ -1492,6 +1541,7 @@
                                                 </select>
                                             </td>
                                             <td>Aguardando reagendamento</td>
+                                            <td><button class="btn btn-primary">Enviar</button></td>
                                         </tr>
                                     </tbody>
                                 </table>
@@ -1500,11 +1550,12 @@
                     </div>
                 </div>
             </div>
+            
          
          
          <!-- ============================== PÁGINA DE VISTORIA ============================== -->
 
-         <div class="tab-pane fade px-4" id="all-parents-page">
+         <div class="tab-pane fade px-4" id="vistoria">
             <div class="container-fluid">
                 <div class="row">
                 </div>
@@ -1579,9 +1630,11 @@
             </div>                                          
         </div>
         
+
+
            <!-- ============================== PÁGINA DE KIT TSSR ============================== -->
 
-        <div class="tab-pane fade px-4" id="add-book-page">
+        <div class="tab-pane fade px-4" id="kit-tssr">
             <div class="container-fluid">
             </div>
             <div class="container-fluid">
@@ -1661,9 +1714,11 @@
             </div>            
          </div>
 
+
+
           <!-- ============================== PÁGINA DE SCI INCLUSÃO ============================== -->
 
-        <div class="tab-pane fade px-4" id="all-classes-page">
+        <div class="tab-pane fade px-4" id="sci-inclusao">
             <div class="container-fluid">
                 <div class="row justify-content-between my-4">
                     <div class="col-12 shadow bg-white p-4 rounded">
@@ -1678,7 +1733,7 @@
                             <table class="table my-4 table-hover table-striped w-100">
                                 <thead>
                                     <tr>
-                                        <th>ID</th>
+                                        <th>END ID</th>
                                         <th>Status SCI-Inclusão</th>
                                         <th>Código SCI</th>
                                         <th>Data Envio</th>
@@ -1735,686 +1790,190 @@
             </div>            
          </div>
 
+
+
           <!-- ============================== página de obra ============================== -->
 
-        <div class="tab-pane fade px-4" id="obra-page">
+          <div class="tab-pane fade px-4" id="obra"> 
             <div class="container-fluid">
-             <div class="row">
-                 <div class="info-pages mb-3">
-                     <h3 class="">Obra</h3>
-                     <p class=" h6">Home /<span> Obra</span></p>
-                 </div>
-             </div>
-             <div class="row justify-content-between my-4">
-                <div class="col shadow bg-white p-4 rounded">
-                   <h4 class=" mb-3">add new subject</h4>
-                   <div class="row form-desing my-4">
-                      <div class="col-md-6 mt-2 mt-md-0">
-                          <label class="">subject name *</label><br>
-                          <input type="text">
-                      </div>
-                      <div class="col-md-6 mt-3 mt-md-0">
-                          <label class="">subject type *</label><br>
-                          <select >
-                            <option selected>Please Select *</option>
-                            <option>Bangla</option>
-                            <option>English</option>
-                            <option>Mathematics</option>
-                            <option>Economics</option>
-                        </select>
-                      </div>
-                   </div>
-                   <div class="row form-desing my-4">
-                      <div class="col-md-6 mt-2 mt-md-0">
-                          <label class="">select class *</label><br>
-                          <select >
-                              <option selected>Please Select *</option>
-                              <option>One</option>
-                              <option>Three</option>
-                              <option>Four</option>
-                              <option>Six</option>
-                              <option>Two</option>
-                          </select>
-                      </div>
-                      <div class="col-md-6 mt-3 mt-md-0">
-                          <label class="">select code *</label><br>
-                          <select >
-                              <option selected>Please Select *</option>
-                              <option>00524</option>
-                              <option>00525</option>
-                              <option>00526</option>
-                              <option>00527</option>
-                              <option>00528</option>
-                          </select>
-                      </div>
-                   </div>
-                   <div class="row form-desing my-4">
-                     <div class="col">
-                      <button class="btn save text-white py-2 px-5" type="button">Save</button>
-                      <button class="btn reset text-white py-2 px-5" type="reset">Reset</button>
-                     </div>
-                   </div>
-                  
+                <div class="row justify-content-between my-4">
+                    <div class="col-12 shadow bg-white p-4 rounded">
+                        <h4 class=" mb-3">Todas obras</h4>
+                        <div class="header-result d-flex justify-content-start gap-3 mb-3">
+                            <input type="search" class="border-0 bg-light p-2 w-15" placeholder="Procurar por Status...">
+                            <input type="search" class="border-0 bg-light p-2 w-15" placeholder="Procurar por Início Previsto...">
+                            <input type="search" class="border-0 bg-light p-2 w-15" placeholder="Procurar por Data Final...">
+                            <button class="btn btn-warning text-white">Pesquisar</button>
+                        </div>
+                        <div class="table-responsive text-nowrap">
+                            <table class="table my-4 table-hover table-striped w-100">
+                                <thead>
+                                    <tr>
+                                        <th>END ID</th>
+                                        <th>Status Obra</th>
+                                        <th>Início Previsto</th>
+                                        <th>Data Final</th>
+                                        <th>Ação</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>#001</td>
+                                        <td>
+                                            <select class="form-select">
+                                                <option value="obra-concluida">Concluído</option>
+                                                <option value="obra-andamento">Em Andamento</option>
+                                                <option value="obra-naoiniciada">Não Iniciado</option>
+                                                <option value="obra-cancelada">Aprovado</option>
+                                                <option value="obra-cancelada">Inviável</option>
+                                            </select>
+                                        </td>
+                                        <td>
+                                            <input type="date" class="form-control">
+                                        </td>
+                                        <td>
+                                            <input type="date" class="form-control">
+                                        </td>
+                                        <td>
+                                            <button class="btn btn-primary">Enviar</button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>#002</td>
+                                        <td>
+                                            <select class="form-select">
+                                                <option value="obra-concluida">Concluída</option>
+                                                <option value="obra-andamento">Em Andamento</option>
+                                                <option value="obra-naoiniciada">Não Iniciada</option>
+                                                <option value="obra-cancelada">Cancelada</option>
+                                            </select>
+                                        </td>
+                                        <td>
+                                            <input type="date" class="form-control">
+                                        </td>
+                                        <td>
+                                            <input type="date" class="form-control">
+                                        </td>
+                                        <td>
+                                            <button class="btn btn-primary">Enviar</button>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
                 </div>
-               </div>
-            </div>
-            <div class="container-fluid">
-             <div class="row justify-content-between my-4">
-              <div class="col shadow bg-white p-4 rounded">
-                 <h4 class=" mb-3">all subjects</h4>
-                 <div class="header-result">
-                     <input type="search" class="border-0 bg-light p-2 w-40" placeholder="Search by ID..">
-                     <input type="search" class="border-0 bg-light p-2" placeholder="Search by subject..">
-                     <input type="date" class="border-0 bg-light p-2" placeholder="">
-                     <button class="btn btn-warning text-white">SEARCH</button>
-                 </div>
-                <div class="table-responsive text-nowrap">
-                 <table class="table my-4 table-hover table-striped table-hover w-100">
-                     <tr>
-                         <th>ID</th>
-                         <th>Subject Name</th>
-                         <th>Subject Type</th>
-                         <th>Class</th>
-                         <th>Date</th>
-                     </tr>
-                     <tr>
-                         <td>#0021</td>
-                         <td>Accounting</td>
-                         <td>Mathematics</td>
-                         <td>2</td>
-                         <td>02/05/2002</td>
-                     </tr>
-                     <tr>
-                         <td>#0023</td>
-                         <td>Bangla</td>
-                         <td>Theory</td>
-                         <td>4</td>
-                         <td>07/09/2004</td>
-                     </tr>
-                     <tr>
-                         <td>#0025</td>
-                         <td>English</td>
-                         <td>Theory</td>
-                         <td>5</td>
-                         <td>25/10/2001</td>
-                     </tr>
-                     <tr>
-                         <td>#0021</td>
-                         <td>Accounting</td>
-                         <td>Mathematics</td>
-                         <td>2</td>
-                         <td>02/05/2002</td>
-                     </tr>
-                     <tr>
-                         <td>#0023</td>
-                         <td>Bangla</td>
-                         <td>Theory</td>
-                         <td>4</td>
-                         <td>07/09/2004</td>
-                     </tr>
-                     <tr>
-                         <td>#0025</td>
-                         <td>English</td>
-                         <td>Theory</td>
-                         <td>5</td>
-                         <td>25/10/2001</td>
-                     </tr>
-                     <tr>
-                         <td>#0021</td>
-                         <td>Accounting</td>
-                         <td>Mathematics</td>
-                         <td>2</td>
-                         <td>02/05/2002</td>
-                     </tr>
-                     <tr>
-                         <td>#0023</td>
-                         <td>Bangla</td>
-                         <td>Theory</td>
-                         <td>4</td>
-                         <td>07/09/2004</td>
-                     </tr>
-                     <tr>
-                         <td>#0025</td>
-                         <td>English</td>
-                         <td>Theory</td>
-                         <td>5</td>
-                         <td>25/10/2001</td>
-                     </tr>
-                     <tr>
-                         <td>#0021</td>
-                         <td>Accounting</td>
-                         <td>Mathematics</td>
-                         <td>2</td>
-                         <td>02/05/2002</td>
-                     </tr>
-                     <tr>
-                         <td>#0023</td>
-                         <td>Bangla</td>
-                         <td>Theory</td>
-                         <td>4</td>
-                         <td>07/09/2004</td>
-                     </tr>
-                     <tr>
-                         <td>#0025</td>
-                         <td>English</td>
-                         <td>Theory</td>
-                         <td>5</td>
-                         <td>25/10/2001</td>
-                     </tr>
-                     <tr>
-                         <td>#0021</td>
-                         <td>Accounting</td>
-                         <td>Mathematics</td>
-                         <td>2</td>
-                         <td>02/05/2002</td>
-                     </tr>
-                     <tr>
-                         <td>#0023</td>
-                         <td>Bangla</td>
-                         <td>Theory</td>
-                         <td>4</td>
-                         <td>07/09/2004</td>
-                     </tr>
-                     <tr>
-                         <td>#0025</td>
-                         <td>English</td>
-                         <td>Theory</td>
-                         <td>5</td>
-                         <td>25/10/2001</td>
-                     </tr>
-                     <tr>
-                         <td>#0021</td>
-                         <td>Accounting</td>
-                         <td>Mathematics</td>
-                         <td>2</td>
-                         <td>02/05/2002</td>
-                     </tr>
-                     <tr>
-                         <td>#0023</td>
-                         <td>Bangla</td>
-                         <td>Theory</td>
-                         <td>4</td>
-                         <td>07/09/2004</td>
-                     </tr>
-                     <tr>
-                         <td>#0025</td>
-                         <td>English</td>
-                         <td>Theory</td>
-                         <td>5</td>
-                         <td>25/10/2001</td>
-                     </tr>
-                     <tr>
-                         <td>#0021</td>
-                         <td>Accounting</td>
-                         <td>Mathematics</td>
-                         <td>2</td>
-                         <td>02/05/2002</td>
-                     </tr>
-                     <tr>
-                         <td>#0023</td>
-                         <td>Bangla</td>
-                         <td>Theory</td>
-                         <td>4</td>
-                         <td>07/09/2004</td>
-                     </tr>
-                     <tr>
-                         <td>#0025</td>
-                         <td>English</td>
-                         <td>Theory</td>
-                         <td>5</td>
-                         <td>25/10/2001</td>
-                     </tr>
-                     
-                 </table>
-                </div>
-              </div>
-             </div>
-            </div>
+            </div>            
          </div>
+
+
+
 
           <!-- ============================== página de projeto ============================== -->
 
-          <div class="tab-pane fade px-4" id="exam-schedule-page">
+          <div class="tab-pane fade px-4" id="projeto">
             <div class="container-fluid">
              <div class="row">
                  <div class="info-pages mb-3">
                      <h3 class="">Projeto</h3>
-                     <p class=" h6">home /<span> exam schedule</span></p>
+                     <p class=" h6">Home /<span> Projeto</span></p>
                  </div>
-             </div>
-             <div class="row justify-content-between my-4">
-                <div class="col shadow bg-white p-4 rounded">
-                   <h4 class=" mb-3">add new exam</h4>
-                   <div class="row form-desing my-4">
-                      <div class="col-md-6 mt-2 mt-md-0">
-                          <label class="">exam name *</label><br>
-                          <input type="text">
-                      </div>
-                      <div class="col-md-6 mt-3 mt-md-0">
-                          <label class="">exam type *</label><br>
-                          <select >
-                            <option selected>Please Select *</option>
-                            <option>Bangla</option>
-                            <option>English</option>
-                            <option>Mathematics</option>
-                            <option>Economics</option>
-                        </select>
-                      </div>
-                   </div>
-                   <div class="row form-desing my-4">
-                      <div class="col-md-6 mt-2 mt-md-0">
-                          <label class="">select class *</label><br>
-                          <select >
-                              <option selected>Please Select *</option>
-                              <option>One</option>
-                              <option>Three</option>
-                              <option>Four</option>
-                              <option>Six</option>
-                              <option>Two</option>
-                          </select>
-                      </div>
-                      <div class="col-md-6 mt-3 mt-md-0">
-                          <label class="">select section *</label><br>
-                          <select >
-                              <option selected>Please Select *</option>
-                              <option>A</option>
-                              <option>B</option>
-                              <option>D</option>
-                              <option>C</option>
-                              <option>E</option>
-                          </select>
-                      </div>
-                   </div>
-                   <div class="row form-desing my-4">
-                      <div class="col-md-6 mt-2 mt-md-0">
-                          <label class="">select time *</label><br>
-                          <input type="text">
-                      </div>
-                      <div class="col-md-6 mt-3 mt-md-0">
-                          <label class="">select date *</label><br>
-                          <input type="date">
-                      </div>
-                   </div>
-                   <div class="row form-desing my-4">
-                     <div class="col">
-                      <button class="btn save text-white py-2 px-5" type="button">Save</button>
-                      <button class="btn reset text-white py-2 px-5" type="reset">Reset</button>
-                     </div>
-                   </div>
-                  
-                </div>
-               </div>
-            </div>
-            <div class="container-fluid">
-             <div class="row justify-content-between my-4">
-              <div class="col shadow bg-white p-4 rounded">
-                 <h4 class=" mb-3">all exam schedule</h4>
-                 <div class="header-result">
-                     <input type="search" class="border-0 bg-light p-2 w-40" placeholder="Search by Exam..">
-                     <input type="search" class="border-0 bg-light p-2" placeholder="Search by subject..">
-                     <input type="search" class="border-0 bg-light p-2" placeholder="Search by Date..">
-                     <button class="btn btn-warning text-white">SEARCH</button>
-                 </div>
-                <div class="table-responsive text-nowrap">
-                 <table class="table my-4 table-hover table-striped table-hover w-100">
-                     <tr>
-                         <th>Exam Name</th>
-                         <th>Subject</th>
-                         <th>Class</th>
-                         <th>Section</th>
-                         <th>Time</th>
-                         <th>Date</th>
-                     </tr>
-                     <tr>
-                         <td>Class Test</td>
-                         <td>Mathematics</td>
-                         <td>4</td>
-                         <td>A</td>
-                         <td>10:30 am - 12:00 am</td>
-                         <td>02/05/2020</td>
-                     </tr>
-                     <tr>
-                         <td>Mid Term</td>
-                         <td>English</td>
-                         <td>5</td>
-                         <td>C</td>
-                         <td>8:00 am - 10:00 am</td>
-                         <td>07/09/2020</td>
-                     </tr>
-                     <tr>
-                         <td>Class Test</td>
-                         <td>Mathematics</td>
-                         <td>4</td>
-                         <td>A</td>
-                         <td>10:30 am - 12:00 am</td>
-                         <td>02/05/2020</td>
-                     </tr>
-                     <tr>
-                         <td>Mid Term</td>
-                         <td>English</td>
-                         <td>5</td>
-                         <td>C</td>
-                         <td>8:00 am - 10:00 am</td>
-                         <td>07/09/2020</td>
-                     </tr>
-                     <tr>
-                         <td>Class Test</td>
-                         <td>Mathematics</td>
-                         <td>4</td>
-                         <td>A</td>
-                         <td>10:30 am - 12:00 am</td>
-                         <td>02/05/2020</td>
-                     </tr>
-                     <tr>
-                         <td>Mid Term</td>
-                         <td>English</td>
-                         <td>5</td>
-                         <td>C</td>
-                         <td>8:00 am - 10:00 am</td>
-                         <td>07/09/2020</td>
-                     </tr>
-                     <tr>
-                         <td>Class Test</td>
-                         <td>Mathematics</td>
-                         <td>4</td>
-                         <td>A</td>
-                         <td>10:30 am - 12:00 am</td>
-                         <td>02/05/2020</td>
-                     </tr>
-                     <tr>
-                         <td>Mid Term</td>
-                         <td>English</td>
-                         <td>5</td>
-                         <td>C</td>
-                         <td>8:00 am - 10:00 am</td>
-                         <td>07/09/2020</td>
-                     </tr>
-                     <tr>
-                         <td>Class Test</td>
-                         <td>Mathematics</td>
-                         <td>4</td>
-                         <td>A</td>
-                         <td>10:30 am - 12:00 am</td>
-                         <td>02/05/2020</td>
-                     </tr>
-                     <tr>
-                         <td>Mid Term</td>
-                         <td>English</td>
-                         <td>5</td>
-                         <td>C</td>
-                         <td>8:00 am - 10:00 am</td>
-                         <td>07/09/2020</td>
-                     </tr>
-                     <tr>
-                         <td>Class Test</td>
-                         <td>Mathematics</td>
-                         <td>4</td>
-                         <td>A</td>
-                         <td>10:30 am - 12:00 am</td>
-                         <td>02/05/2020</td>
-                     </tr>
-                     <tr>
-                         <td>Mid Term</td>
-                         <td>English</td>
-                         <td>5</td>
-                         <td>C</td>
-                         <td>8:00 am - 10:00 am</td>
-                         <td>07/09/2020</td>
-                     </tr>
-                     
-                 </table>
-                </div>
-              </div>
              </div>
             </div>
          </div>
+
+
 
          <!-- ============================== página de SCI exclusão ============================== -->
 
-        <div class="tab-pane fade px-4" id="add-users-page">
+         <div class="tab-pane fade px-4" id="sci-exclusão"> 
             <div class="container-fluid">
-             <div class="row">
-                 <div class="info-pages mb-3">
-                     <h3 class="">SCI exclusão</h3>
-                     <p class=" h6">home /<span> setting</span></p>
-                 </div>
-             </div>
-            </div>
-            <div class="container-fluid">
-             <div class="row justify-content-between my-4">
-              <div class="col shadow bg-white p-4 rounded">
-                 <h4 class=" mb-3">add new user</h4>
-                 <div class="row form-desing my-4">
-                    <div class="col-md-3 mt-2 mt-md-0">
-                        <label class="">first name *</label><br>
-                        <input type="text">
-                    </div>
-                    <div class="col-md-3 mt-3 mt-md-0">
-                        <label class="">last name *</label><br>
-                        <input type="text">
-                    </div>
-                    <div class="col-md-3 mt-3 mt-md-0">
-                        <label class="">user type *</label><br>
-                        <select >
-                            <option selected>Please Select *</option>
-                            <option>Suber Admin</option>
-                            <option>Admin</option>
-                            <option>User</option>
-                        </select>
-                    </div>
-                    <div class="col-md-3 mt-3 mt-md-0">
-                        <label class="">Gender *</label><br>
-                        <select >
-                            <option selected>Please Select Gender</option>
-                            <option>Male</option>
-                            <option>Female</option>
-                        </select>
-                    </div>
-                 </div>
-                 <div class="row form-desing my-4">
-                    <div class="col-md-3 mt-2 mt-md-0">
-                        <label class="">father's name *</label><br>
-                        <input type="text">
-                    </div>
-                    <div class="col-md-3 mt-3 mt-md-0">
-                        <label class="">mother's name *</label><br>
-                       <input type="text">
-                    </div>
-                    <div class="col-md-3 mt-3 mt-md-0">
-                        <label class="">religion *</label><br>
-                        <select >
-                            <option selected>Please Select religion</option>
-                            <option>Islam</option>
-                            <option>Christan</option>
-                            <option>Hindu</option>
-                            <option>Others</option>
-                        </select>
-                    </div>
-                    <div class="col-md-3 mt-3 mt-md-0">
-                        <label class="">date of birth *</label><br>
-                        <input type="date">
-                    </div>
-                 </div>
-                 <div class="row form-desing my-3">
-                    <div class="col-md-3 mt-2 mt-md-0">
-                        <label class="">joining date *</label><br>
-                        <input type="date">
-                    </div>
-                    <div class="col-md-3 mt-3 mt-md-0">
-                        <label class="">Section *</label><br>
-                        <select >
-                            <option selected>Please Select Section *</option>
-                            <option>Pink</option>
-                            <option>Red</option>
-                            <option>Blue</option>
-                            <option>Rose</option>
-                            <option>Bird</option>
-                        </select>
-                    </div>
-                    <div class="col-md-3 mt-3 mt-md-0">
-                        <label class="">address *</label><br>
-                        <input type="text">
-                    </div>
-                    <div class="col-md-3 mt-3 mt-md-0">
-                        <label class="">phone *</label><br>
-                        <input type="text">
-                    </div>
-                 </div>
-                 <div class="row form-desing my-4">
-                    <div class="col-md-3 mt-2 mt-md-0">
-                        <label>class *</label><br>
-                        <select >
-                            <option selected>Please Select Class *</option>
-                            <option>One</option>
-                            <option>Two</option>
-                            <option>Three</option>
-                            <option>Four</option>
-                            <option>Five</option>
-                        </select>
-                    </div>
-                    <div class="col-md-3 mt-3 mt-md-0">
-                        <label>ID no *</label><br>
-                        <input type="input">
-                    </div>
-                 </div>
-                 <div class="row form-desing my-4">
-                   <div class="col">
-                    <button class="btn save text-white py-2 px-5" type="button">Save</button>
-                    <button class="btn reset text-white py-2 px-5" type="reset">Reset</button>
-                   </div>
-                 </div>
-              </div>
-             </div>
-             <div class="row my-4">
-                <div class="expenses shadow bg-white rounded p-4">
-                 <h4 class=" mb-3">all users</h4>
-                 <ul class="list-group">
-                    <li class="list-group-item active d-flex align-items-center my-2">
-                        <div class="mr-3"><span><i class="bx bxs-user-circle display-4"></i></span></div>
-                        <div>
-                            <h4 class="text-white">Daadir Ali</h4>
-                            <p>Super Admin</p>
+                <div class="row justify-content-between my-4">
+                    <div class="col-12 shadow bg-white p-4 rounded">
+                        <h4 class=" mb-3">SCI de Exclusão</h4>
+                        <div class="header-result d-flex justify-content-start gap-3 mb-3">
+                            <input type="search" class="border-0 bg-light p-2 w-15" placeholder="Procurar por Status...">
+                            <input type="search" class="border-0 bg-light p-2 w-15" placeholder="Procurar por Código SCI...">
+                            <input type="search" class="border-0 bg-light p-2 w-15" placeholder="Procurar por Cadastro Workflow...">
+                            <button class="btn btn-warning text-white">Pesquisar</button>
                         </div>
-                    </li>
-                    <li class="list-group-item d-flex align-items-center my-2">
-                        <div class="mr-3"><span><i class="bx bxs-user-circle text-warning display-4"></i></span></div>
-                        <div>
-                            <h4 class=" text-dark">aweys nuux</h4>
-                            <p>Admin</p>
+                        <div class="table-responsive text-nowrap">
+                            <table class="table my-4 table-hover table-striped w-100">
+                                <thead>
+                                    <tr>
+                                        <th>END ID</th>
+                                        <th>Status SCI de Exclusão</th>
+                                        <th>Código SCI</th>
+                                        <th>Data Envio</th>
+                                        <th>Data Aprovação</th>
+                                        <th>Última Cobrança</th>
+                                        <th>Cadastro Workflow</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <th>#001</th>
+                                        <td>
+                                            <select class="form-select">
+                                                <option value="sci-exclusao">Concluído</option>
+                                                <option value="sci-exclusao">Aprovado</option>
+                                                <option value="sci-analise">Não Iniciado</option>
+                                                <option value="sci-inviavel">Inviável</option>
+                                            </select>
+                                        </td>
+                                        <td>
+                                            <input type="text" class="form-control" placeholder="Código SCI">
+                                        </td>
+                                        <td>
+                                            <input type="date" class="form-control">
+                                        </td>
+                                        <td>
+                                            <input type="date" class="form-control">
+                                        </td>
+                                        <td>
+                                            <input type="date" class="form-control">
+                                        </td>
+                                        <td>
+                                            <input type="text" class="form-control" placeholder="Cadastro Workflow">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>#002</th>
+                                        <td>
+                                            <select class="form-select">
+                                                <option value="sci-exclusao">Concluído</option>
+                                                <option value="sci-exclusao">Aprovado</option>
+                                                <option value="sci-analise">Não Iniciado</option>
+                                                <option value="sci-inviavel">Inviável</option>
+                                            </select>
+                                        </td>
+                                        <td>
+                                            <input type="text" class="form-control" placeholder="Código SCI">
+                                        </td>
+                                        <td>
+                                            <input type="date" class="form-control">
+                                        </td>
+                                        <td>
+                                            <input type="date" class="form-control">
+                                        </td>
+                                        <td>
+                                            <input type="date" class="form-control">
+                                        </td>
+                                        <td>
+                                            <input type="text" class="form-control" placeholder="Cadastro Workflow">
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
                         </div>
-                    </li>
-                    <li class="list-group-item d-flex align-items-center my-2">
-                        <div class="mr-3"><span><i class="bx bxs-user-circle text-primary display-4"></i></span></div>
-                        <div>
-                            <h4 class="text-dark ">xaliimo dahir</h4>
-                            <p>User</p>
-                        </div>
-                    </li>
-                    <li class="list-group-item d-flex align-items-center my-2">
-                        <div class="mr-3"><span><i class="bx bxs-user-circle text-warning display-4"></i></span></div>
-                        <div>
-                            <h4 class=" text-dark">yasiin farxaan</h4>
-                            <p>User</p>
-                        </div>
-                    </li>
-                    <li class="list-group-item d-flex align-items-center my-2">
-                        <div class="mr-3"><span><i class="bx bxs-user-circle text-primary display-4"></i></span></div>
-                        <div>
-                            <h4 class="text-dark ">fadumo cali</h4>
-                            <p>Super Admin</p>
-                        </div>
-                    </li>
-                    <li class="list-group-item d-flex align-items-center my-2">
-                        <div class="mr-3"><span><i class="bx bxs-user-circle text-dark display-4"></i></span></div>
-                        <div>
-                            <h4 class=" text-dark">cali fanax</h4>
-                            <p>User</p>
-                        </div>
-                    </li>
-                    <li class="list-group-item d-flex align-items-center my-2">
-                        <div class="mr-3"><span><i class="bx bxs-user-circle text-primary display-4"></i></span></div>
-                        <div>
-                            <h4 class="text-dark ">yoonis cali</h4>
-                            <p>Super Admin</p>
-                        </div>
-                    </li>
-                 </ul>
-                </div>
-                <div class="earnings shadow bg-white rounded p-4">
-                 <h4 class=" mb-3">user details</h4>
-                 <div class="d-flex align-items-center">
-                    <div class="mr-3">
-                        <span><i class='bx bxs-user-circle text-primary display-1'></i></span>
                     </div>
                 </div>
-                <table class="table table-borderless">
-                    <tr>
-                        <td class="text-muted ">name:</td>
-                        <td class="">dadir ali</td>
-                    </tr>
-                    <tr>
-                        <td class="text-muted ">Gender:</td>
-                        <td class="">male</td>
-                    </tr>
-                    <tr>
-                        <td class="text-muted ">user type:</td>
-                        <td class="">super admin</td>
-                    </tr>
-                    <tr>
-                        <td class="text-muted ">father name:</td>
-                        <td class="">ali xaashi</td>
-                    </tr>
-                    <tr>
-                        <td class="text-muted ">mother name:</td>
-                        <td class="">xaawo farax</td>
-                    </tr>
-                    <tr>
-                        <td class="text-muted ">date of birth:</td>
-                        <td class="">07.08.1990</td>
-                    </tr>
-                    <tr>
-                        <td class="text-muted ">religion:</td>
-                        <td class="">islam</td>
-                    </tr>
-                    <tr>
-                        <td class="text-muted ">joining date:</td>
-                        <td class="">07.08.2016</td>
-                    </tr>
-                    <tr>
-                        <td class="text-muted ">email:</td>
-                        <td class="">dada52@gmail.com</td>
-                    </tr>
-                    <tr>
-                        <td class="text-muted ">subject:</td>
-                        <td class="">English</td>
-                    </tr>
-                    <tr>
-                        <td class="text-muted ">Class:</td>
-                        <td class="">2</td>
-                    </tr>
-                    <tr>
-                        <td class="text-muted ">Section:</td>
-                        <td class="">pink</td>
-                    </tr>
-                    <tr>
-                        <td class="text-muted ">ID:</td>
-                        <td class="">10005</td>
-                    </tr>
-                    <tr>
-                        <td class="text-muted ">Adress:</td>
-                        <td class="">House #10, Road #6, kaaraan</td>
-                    </tr>
-                    <tr>
-                        <td class="text-muted ">phone:</td>
-                        <td class="">+252 61 7 726267</td>
-                    </tr>
-                </table>
-                </div>
-             </div>
-
-            </div>
+            </div>            
          </div>
-       </div>
+       
+       
+       
+        </div>
          
 </div>
 </div>
