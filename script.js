@@ -56,3 +56,10 @@ menu.addEventListener("click",()=>{
     sidebar.classList.toggle("active");
     main.classList.toggle("active");
 })
+
+let navbarBrand = document.querySelector(".navbar-brand");
+
+navbarBrand.addEventListener("click", (e) => {
+    e.preventDefault(); 
+    location.reload(); 
+});
