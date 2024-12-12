@@ -94,7 +94,6 @@ body{
 .notice{
     width: 350px;
     background-color: #fff;
-    padding-top: 20px;
     position: absolute;
     top: 64px;
     right: 215px;
@@ -180,7 +179,7 @@ body{
 }
 .sidebar{
     width: 20%;
-    padding: 100px 0px;
+    padding: 85px 0px;
     background-color: #fff;
     height: 100vh;
     overflow-x: hidden;
@@ -294,7 +293,7 @@ h4{
     border-radius: 6px;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-around;
     background-color: #fff;
     box-shadow: 0px 15px 15px rgba(0,0,0,0.1);
 }
