@@ -7,8 +7,6 @@ let sidebar = document.querySelector(".sidebar");
 let searchIcon = document.querySelector(".search-icon");
 let input = document.querySelector(".input");
 let noticeIcon = document.querySelector(".notice-icon");
-let messageIcon = document.querySelector(".message-icon");
-let messages = document.querySelector(".messages");
 let notice = document.querySelector(".notice");
 
 
@@ -43,14 +41,6 @@ noticeIcon.addEventListener("click",()=>{
     })
 })
 
-messageIcon.addEventListener("click",()=>{
-    messages.classList.add("show")
-    document.addEventListener("click",(e)=>{
-        if(e.target.tagName != "I" && e.target != !messageIcon){
-            messages.classList.remove("show")
-        }
-    })
-})
 
 menu.addEventListener("click",()=>{
     sidebar.classList.toggle("active");
@@ -60,6 +50,6 @@ menu.addEventListener("click",()=>{
 let navbarBrand = document.querySelector(".navbar-brand");
 
 navbarBrand.addEventListener("click", (e) => {
-    e.preventDefault(); 
-    location.reload(); 
+    e.preventDefault(); // Previne o comportamento padrão do link
+    location.reload(); // Recarrega a página
 });
