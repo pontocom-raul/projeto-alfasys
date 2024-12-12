@@ -60,6 +60,7 @@ body{
     width: 40px;
     cursor: pointer;
     height: 40px;
+    object-fit: cover;
 }
 .user span{
     position: relative;
@@ -83,39 +84,6 @@ body{
 .user h6{
     color: var(--color);
     cursor: pointer;
-}
-.messages{
-    width: 400px;
-    background-color: #fff;
-    padding-top: 20px;
-    position: absolute;
-    top: 64px;
-    right: 170px;
-    box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
-    transition: all .4s ease;
-    display: none;
-}
-.messages::before{
-    position: absolute;
-    content: '';
-    top: -20px;
-    z-index: 9;
-    right: 25px;
-    border-bottom: 50px solid #fff;
-    border-left: 20px solid transparent;
-    border-right: 20px solid transparent;
-}
-.messages ul li{
-    transition: all .4s ease;
-}
-.notice ul li{
-    transition: all .4s ease;
-}
-.messages ul li:hover{
-    background-color: #f2f6f7;
-}
-.messages ul li:first-child:hover{
-    background-color: transparent;
 }
 .notice ul li:first-child:hover{
     background-color: transparent;
