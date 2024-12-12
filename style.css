@@ -313,21 +313,37 @@ h4{
 .cards h5{
     color: var(--color);
 }
-.cards .stud{
-    color: #3cb878;
-    background-color: #d1f3e0;
+.cards .cadastro1{
+    color: red;
+    background-color: #ffffff;
 }
-.cards .teach{
-    color: #3f7afc;
-    background-color: #e1f1ff;
+.cards .agendamento1{
+    color: blue;
+    background-color: #ffffff;
 }
-.cards .earn{
-    color: #ff0000;
-    background-color: #ffeaea;
+.cards .vistoria1{
+    color: black;
+    background-color: #ffffff;
 }
-.cards .pare{
-    color: #ffa001;
-    background-color: #fff2d8;
+.cards .kit1{
+    color: pink;
+    background-color: #ffffff;
+}
+.cards .inclusão1{
+    color: greenyellow;
+    background-color: #ffffff;
+}
+.cards .obra1{
+    color: brown;
+    background-color: #ffffff;
+}
+.cards .projeto1{
+    color: aquamarine;
+    background-color: #ffffff;
+}
+.cards .exclusão1{
+    color:rebeccapurple ;
+    background-color: #ffffff;
 }
 .earnings{
     flex-basis: 60%;
