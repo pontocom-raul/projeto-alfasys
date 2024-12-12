@@ -65,7 +65,7 @@ document.querySelectorAll(".end-id").forEach(button => {
         alertDiv.style.top = "50%";
         alertDiv.style.left = "50%";
         alertDiv.style.transform = "translate(-50%, -50%)";
-        alertDiv.style.width = "90%";
+        alertDiv.style.width = "86%"; /* 7% em cada lado */
         alertDiv.style.maxWidth = "900px";
         alertDiv.style.padding = "30px";
         alertDiv.style.backgroundColor = "#012970";
@@ -74,51 +74,31 @@ document.querySelectorAll(".end-id").forEach(button => {
         alertDiv.style.borderRadius = "15px";
         alertDiv.style.boxShadow = "0 4px 20px rgba(0, 0, 0, 0.15)";
         alertDiv.style.zIndex = "1000";
-        alertDiv.style.overflow = "hidden"; 
-        alertDiv.style.overflowX = "auto"; 
+        alertDiv.style.overflow = "hidden";
 
         alertDiv.innerHTML = `
             <strong style="display: block; text-align: center; margin-bottom: 20px; font-size: 1.5em;">Dados do END ID: ${endId}</strong>
-            <table style="margin-top: 10px; width: 100%; background-color: #01447e; color: #ffffff; border-collapse: collapse; text-align: left; font-size: 1em;">
-                <thead>
-                    <tr style="background-color: #012970; color: #ffffff;">
-                        <th style="padding: 10px; border: 1px solid #ffffff;">Site ID</th>
-                        <th style="padding: 10px; border: 1px solid #ffffff;">Demanda</th>
-                        <th style="padding: 10px; border: 1px solid #ffffff;">Detentora</th>
-                        <th style="padding: 10px; border: 1px solid #ffffff;">ID Detentora</th>
-                        <th style="padding: 10px; border: 1px solid #ffffff;">Operadora Cedente</th>
-                        <th style="padding: 10px; border: 1px solid #ffffff;">ID Operadora</th>
-                        <th style="padding: 10px; border: 1px solid #ffffff;">Logradouro</th>
-                        <th style="padding: 10px; border: 1px solid #ffffff;">Número</th>
-                        <th style="padding: 10px; border: 1px solid #ffffff;">Bairro</th>
-                        <th style="padding: 10px; border: 1px solid #ffffff;">Município</th>
-                        <th style="padding: 10px; border: 1px solid #ffffff;">Estado</th>
-                        <th style="padding: 10px; border: 1px solid #ffffff;">CEP</th>
-                        <th style="padding: 10px; border: 1px solid #ffffff;">Latitude</th>
-                        <th style="padding: 10px; border: 1px solid #ffffff;">Longitude</th>
-                        <th style="padding: 10px; border: 1px solid #ffffff;">Observações</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr style="color: #ffffff;">
-                        <td style="padding: 10px; border: 1px solid #ffffff; color: #ffffff !important;">SITE01</td>
-                        <td style="padding: 10px; border: 1px solid #ffffff; color: #ffffff !important;">Expansão</td>
-                        <td style="padding: 10px; border: 1px solid #ffffff; color: #ffffff !important;">Empresa B</td>
-                        <td style="padding: 10px; border: 1px solid #ffffff; color: #ffffff !important;">001</td>
-                        <td style="padding: 10px; border: 1px solid #ffffff; color: #ffffff !important;">Vivo</td>
-                        <td style="padding: 10px; border: 1px solid #ffffff; color: #ffffff !important;">001</td>
-                        <td style="padding: 10px; border: 1px solid #ffffff; color: #ffffff !important;">Rua Vinte</td>
-                        <td style="padding: 10px; border: 1px solid #ffffff; color: #ffffff !important;">20</td>
-                        <td style="padding: 10px; border: 1px solid #ffffff; color: #ffffff !important;">Bairro Vinte</td>
-                        <td style="padding: 10px; border: 1px solid #ffffff; color: #ffffff !important;">Vinte</td>
-                        <td style="padding: 10px; border: 1px solid #ffffff; color: #ffffff !important;">SP</td>
-                        <td style="padding: 10px; border: 1px solid #ffffff; color: #ffffff !important;">0800081</td>
-                        <td style="padding: 10px; border: 1px solid #ffffff; color: #ffffff !important;">-1240</td>
-                        <td style="padding: 10px; border: 1px solid #ffffff; color: #ffffff !important;">8158</td>
-                        <td style="padding: 10px; border: 1px solid #ffffff; color: #ffffff !important;">sem observações</td>
-                    </tr>
-                </tbody>
-            </table>
+            <div style="display: flex; flex-wrap: wrap; gap: 10px;">
+                <ul style="flex: 1; padding-left: 20px; font-size: 1em; list-style: none;">
+                    <li><strong>Site ID:</strong> SITE01</li>
+                    <li><strong>Demanda:</strong> Expansão</li>
+                    <li><strong>Detentora:</strong> Empresa B</li>
+                    <li><strong>ID Detentora:</strong> 001</li>
+                    <li><strong>Operadora Cedente:</strong> Vivo</li>
+                    <li><strong>ID Operadora:</strong> 001</li>
+                    <li><strong>Logradouro:</strong> Rua Vinte</li>
+                    <li><strong>Número:</strong> 20</li>
+                </ul>
+                <ul style="flex: 1; padding-right: 20px; font-size: 1em; list-style: none;">
+                    <li><strong>Bairro:</strong> Bairro Vinte</li>
+                    <li><strong>Município:</strong> Vinte</li>
+                    <li><strong>Estado:</strong> SP</li>
+                    <li><strong>CEP:</strong> 0800081</li>
+                    <li><strong>Latitude:</strong> -1240</li>
+                    <li><strong>Longitude:</strong> 8158</li>
+                    <li><strong>Observações:</strong> sem observações</li>
+                </ul>
+            </div>
         `;
 
         const closeButton = document.createElement("button");
@@ -148,3 +128,6 @@ document.querySelectorAll(".end-id").forEach(button => {
         window.scrollTo(0, alertDiv.getBoundingClientRect().top + window.scrollY - 100);
     });
 });
+
+
+
