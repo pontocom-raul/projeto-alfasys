@@ -214,11 +214,6 @@
             </li>
             <div class="collapse" id="liberação">
                 <ul class="unstyled pl-5 ml-4 submenu  nav nav-pills flex-column">
-                    <li class="py-2 nav-item">
-                        <a data-toggle="pill" href="#novo-agendamentos"  class="text-decoration-none ">
-                                Realizar agendamento
-                            </a>
-                    </li>
                 <li class="py-2 nav-item">
                     <a data-toggle="pill" href="#editar-agendamento"  class="text-decoration-none ">
                            Editar agendamento
@@ -896,8 +891,8 @@
                             </div>
                             <div class="row form-desing my-4">
                                 <div class="col">
-                                    <button class="btn save text-white py-2 px-5" type="button">Save</button>
-                                    <button class="btn reset text-white py-2 px-5" type="reset">Reset</button>
+                                    <button class="btn save text-white py-2 px-5" type="button">Salvar</button>
+                                    <button class="btn reset text-white py-2 px-5" type="reset">Resetar</button>
                                 </div>
                             </div>
                         </div>
@@ -1161,130 +1156,6 @@
 
          <!-- ============================== PÁGINA DE LIBERAÇÃO DE ACESSO ============================== -->
            
-            <!-- cadastrar novo agendamento -->
-
-            <div class="tab-pane fade px-4" id="novo-agendamentos">
-            <div class="container-fluid">
-                <div class="row justify-content-between my-4">
-                    <div class="col shadow bg-white p-4 rounded">
-                        <h4 class=" mb-3">Realizar agendamento:</h4>
-                        <form>
-                            <div class="row form-desing my-4">
-                                <div class="col-md-6 mt-2 mt-md-0">
-                                    <label class="">Data Solicitação *</label>
-                                    <input type="date" class="form-control">
-                                </div>
-                                <div class="col-md-6 mt-2 mt-md-0">
-                                    <label class="">Data Previsão *</label>
-                                    <input type="date" class="form-control">
-                                </div>
-                            </div>
-                            <div class="row form-desing my-4">
-                                <div class="col-md-6 mt-2 mt-md-0">
-                                    <label class="">Data de Agendamento *</label>
-                                    <input type="date" class="form-control">
-                                </div>
-                                <div class="col-md-6 mt-2 mt-md-0">
-                                    <label class="">Site ID *</label>
-                                    <input type="text" class="form-control">
-                                </div>
-                            </div>
-                            <div class="row form-desing my-4">
-                                <div class="col-md-6 mt-2 mt-md-0">
-                                    <label class="">Demanda *</label>
-                                    <input type="text" class="form-control">
-                                </div>
-                                <div class="col-md-6 mt-2 mt-md-0">
-                                    <label class="">End ID *</label>
-                                    <input type="text" class="form-control">
-                                </div>
-                            </div>
-                            <div class="row form-desing my-4">
-                                <div class="col-md-6 mt-2 mt-md-0">
-                                    <label class="">Detentora *</label>
-                                    <input type="text" class="form-control">
-                                </div>
-                                <div class="col-md-6 mt-2 mt-md-0">
-                                    <label class="">ID Detentora *</label>
-                                    <input type="text" class="form-control">
-                                </div>
-                            </div>
-                            <div class="row form-desing my-4">
-                                <div class="col-md-6 mt-2 mt-md-0">
-                                    <label class="">Operadora Cedente *</label>
-                                    <input type="text" class="form-control">
-                                </div>
-                                <div class="col-md-6 mt-2 mt-md-0">
-                                    <label class="">ID Operadora *</label>
-                                    <input type="text" class="form-control">
-                                </div>
-                            </div>
-                            <div class="row form-desing my-4">
-                                <div class="col-md-6 mt-2 mt-md-0">
-                                    <label class="">Logradouro *</label>
-                                    <input type="text" class="form-control">
-                                </div>
-                                <div class="col-md-6 mt-2 mt-md-0">
-                                    <label class="">Número *</label>
-                                    <input type="text" class="form-control">
-                                </div>
-                            </div>
-                            <div class="row form-desing my-4">
-                                <div class="col-md-6 mt-2 mt-md-0">
-                                    <label class="">Bairro *</label>
-                                    <input type="text" class="form-control">
-                                </div>
-                                <div class="col-md-6 mt-2 mt-md-0">
-                                    <label class="">Município *</label>
-                                    <input type="text" class="form-control">
-                                </div>
-                            </div>
-                            <div class="row form-desing my-4">
-                                <div class="col-md-6 mt-2 mt-md-0">
-                                    <label class="">Estado *</label>
-                                    <input type="text" class="form-control">
-                                </div>
-                                <div class="col-md-6 mt-2 mt-md-0">
-                                    <label class="">CEP *</label>
-                                    <input type="text" class="form-control">
-                                </div>
-                            </div>
-                            <div class="row form-desing my-4">
-                                <div class="col-md-6 mt-2 mt-md-0">
-                                    <label class="">Latitude *</label>
-                                    <input type="text" class="form-control">
-                                </div>
-                                <div class="col-md-6 mt-2 mt-md-0">
-                                    <label class="">Longitude *</label>
-                                    <input type="text" class="form-control">
-                                </div>
-                            </div>
-                            <div class="row form-desing my-4">
-                                <div class="col-md-6 mt-2 mt-md-0">
-                                    <label class="">Status Agendamento *</label>
-                                    <select class="form-select form-control">
-                                        <option value="pendente">Pendente</option>
-                                        <option value="concluido">Concluído</option>
-                                        <option value="cancelado">Cancelado</option>
-                                    </select>
-                                </div>
-                                <div class="col-md-6 mt-2 mt-md-0">
-                                    <label class="">Observações</label>
-                                    <textarea class="form-control" rows="3"></textarea>
-                                </div>
-                            </div>
-                            <div class="row form-desing my-4">
-                                <div class="col">
-                                    <button class="btn btn-success text-white py-2 px-5" type="button">Salvar</button>
-                                    <button class="btn btn-secondary text-white py-2 px-5" type="reset">Resetar</button>
-                                </div>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
-
             <!-- editar end id -->
 
             <div class="tab-pane fade px-4" id="editar-agendamento">
@@ -1457,10 +1328,10 @@
                                     </thead>
                                     <tbody>
                                         <tr>
-                                            <td>98765</td>
-                                            <td>01/12/2024</td>
-                                            <td>05/12/2024</td>
-                                            <td>04/12/2024</td>
+                                            <td>#98765</td>
+                                            <td><input type="date" class="form-control"></td>
+                                            <td><input type="date" class="form-control"></td>
+                                            <td><input type="date" class="form-control"></td>
                                             <td>12345</td>
                                             <td>Instalação</td>
                                             <td>Empresa A</td>
@@ -1486,10 +1357,10 @@
                                             <td><button class="btn btn-primary">Enviar</button></td>
                                         </tr>
                                         <tr>
-                                            <td>98765</td>
-                                            <td>02/12/2024</td>
-                                            <td>06/12/2024</td>
-                                            <td>05/12/2024</td>
+                                            <td>#98765</td>
+                                            <td><input type="date" class="form-control"></td>
+                                            <td><input type="date" class="form-control"></td>
+                                            <td><input type="date" class="form-control"></td>
                                             <td>54321</td>
                                             <td>Manutenção</td>
                                             <td>Empresa B</td>
@@ -1515,10 +1386,10 @@
                                             <td><button class="btn btn-primary">Enviar</button></td>
                                         </tr>
                                         <tr>
-                                            <td>67890</td>
-                                            <td>03/12/2024</td>
-                                            <td>07/12/2024</td>
-                                            <td>10/12/2024</td>
+                                            <td>#67890</td>
+                                            <td><input type="date" class="form-control"></td>
+                                            <td><input type="date" class="form-control"></td>
+                                            <td><input type="date" class="form-control"></td>
                                             <td>54321</td>
                                             <td>Reparo</td>
                                             <td>Empresa C</td>
