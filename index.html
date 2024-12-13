@@ -703,21 +703,9 @@
                 <div class="col shadow bg-white p-4 rounded">
                   <h4 class="mb-3">Histórico de cadastros:</h4>
                   <div class="header-result">
-                    <input
-                      type="search"
-                      class="border-0 bg-light p-2 w-40"
-                      placeholder="Pesquisar por Site ID.."
-                    />
-                    <input
-                      type="search"
-                      class="border-0 bg-light p-2"
-                      placeholder="Pesquisar por End ID.."
-                    />
-                    <input
-                      type="search"
-                      class="border-0 bg-light p-2"
-                      placeholder="Pesquisar por Estado.."
-                    />
+                    <input type="search" class="border-0 bg-light p-2 w-40" placeholder="Pesquisar por Site ID.."/>
+                    <input type="search" class="border-0 bg-light p-2" placeholder="Pesquisar por End ID.."/>
+                    <input type="search" class="border-0 bg-light p-2" placeholder="Pesquisar por Estado.."/>
                     <button class="btn btn-warning text-white">
                       Pesquisar
                     </button>
@@ -762,7 +750,7 @@
                           <td>-23.55052</td>
                           <td>-46.633308</td>
                           <td>
-                            <button class="btn btn-primary">Finalizar</button>
+                            <button class="btn btn-primary finalizar-btn" data-id="#001">Finalizar</button>
                           </td>
                         </tr>
                         <tr>
@@ -782,7 +770,7 @@
                           <td>-22.9068</td>
                           <td>-43.1729</td>
                           <td>
-                            <button class="btn btn-primary">Finalizar</button>
+                            <button class="btn btn-primary finalizar-btn" data-id="#002">Finalizar</button>
                           </td>
                         </tr>
                         <tr>
@@ -802,7 +790,7 @@
                           <td>-25.4284</td>
                           <td>-49.2733</td>
                           <td>
-                            <button class="btn btn-primary">Finalizar</button>
+                            <button class="btn btn-primary finalizar-btn" data-id="#003">Finalizar</button>
                           </td>
                         </tr>
                       </tbody>
@@ -1065,7 +1053,7 @@
                           </td>
                           <td>Verificar documentação</td>
                           <td>
-                            <button class="btn btn-primary">Finalizar</button>
+                            <button class="btn btn-primary finalizar-btn" data-id="#001">Finalizar</button>
                           </td>
                         </tr>
                         <tr>
@@ -1096,7 +1084,7 @@
                           </td>
                           <td>Serviço concluído com sucesso</td>
                           <td>
-                            <button class="btn btn-primary">Finalizar</button>
+                            <button class="btn btn-primary finalizar-btn" data-id="#002">Finalizar</button>
                           </td>
                         </tr>
                         <tr>
@@ -1127,7 +1115,7 @@
                           </td>
                           <td>Aguardando reagendamento</td>
                           <td>
-                            <button class="btn btn-primary">Finalizar</button>
+                            <button class="btn btn-primary finalizar-btn" data-id="#003">Finalizar</button>
                           </td>
                         </tr>
                       </tbody>
@@ -1190,7 +1178,7 @@
                             </select>
                           </td>
                           <td>
-                            <button class="btn btn-primary">Finalizar</button>
+                            <button class="btn btn-primary finalizar-btn" data-id="#001">Finalizar</button>
                           </td>
                         </tr>
                         <tr>
@@ -1220,7 +1208,7 @@
                             </select>
                           </td>
                           <td>
-                            <button class="btn btn-primary">Finalizar</button>
+                            <button class="btn btn-primary finalizar-btn" data-id="#002">Finalizar</button>
                           </td>
                         </tr>
                       </tbody>
@@ -1286,7 +1274,7 @@
                             </select>
                           </td>
                           <td>
-                            <button class="btn btn-primary">Finalizar</button>
+                            <button class="btn btn-primary finalizar-btn" data-id="#001">Finalizar</button>
                           </td>
                         </tr>
                         <tr>
@@ -1317,7 +1305,7 @@
                             </select>
                           </td>
                           <td>
-                            <button class="btn btn-primary">Finalizar</button>
+                            <button class="btn btn-primary finalizar-btn" data-id="#002">Finalizar</button>
                           </td>
                         </tr>
                       </tbody>
@@ -1375,7 +1363,7 @@
                           <td><input type="date" class="form-control" /></td>
                           <td><input type="date" class="form-control" /></td>
                           <td>
-                            <button class="btn btn-primary">Finalizar</button>
+                            <button class="btn btn-primary finalizar-btn" data-id="#001">Finalizar</button>
                           </td>
                         </tr>
                         <tr>
@@ -1399,7 +1387,7 @@
                           <td><input type="date" class="form-control" /></td>
                           <td><input type="date" class="form-control" /></td>
                           <td>
-                            <button class="btn btn-primary">Finalizar</button>
+                            <button class="btn btn-primary finalizar-btn" data-id="#002">Finalizar</button>
                           </td>
                         </tr>
                       </tbody>
@@ -1452,7 +1440,7 @@
                           </td>
                           <td><input type="date" class="form-control" /></td>
                           <td><input type="date" class="form-control" /></td>
-                          <td><button class="btn btn-primary">Finalizar</button></td>
+                          <td><button class="btn btn-primary finalizar-btn" data-id="#001">Finalizar</button></td>
                         </tr>
                         <tr>
                           <td>
@@ -1471,7 +1459,7 @@
                           </td>
                           <td><input type="date" class="form-control" /></td>
                           <td><input type="date" class="form-control" /></td>
-                          <td><button class="btn btn-primary">Finalizar</button></td>
+                          <td><button class="btn btn-primary finalizar-btn" data-id="#002">Finalizar</button></td>
                         </tr>
                       </tbody>
                     </table>
@@ -1602,7 +1590,9 @@
                                         <td><input type="date" class="form-control" /></td>
                                         <td><input type="date" class="form-control" /></td>
                                         <td><input type="date" class="form-control" /></td>
-                                        <td><button class="btn btn-primary">Finalizar</button></td>
+                                        <td>
+                                            <button class="btn btn-primary finalizar-btn" data-id="#001">Finalizar</button>
+                                        </td>
                                     </tr>
                                     <tr>
                                         <td>
@@ -1626,7 +1616,9 @@
                                         <td><input type="date" class="form-control" /></td>
                                         <td><input type="date" class="form-control" /></td>
                                         <td><input type="date" class="form-control" /></td>
-                                        <td><button class="btn btn-primary">Finalizar</button></td>
+                                        <td>
+                                            <button class="btn btn-primary finalizar-btn" data-id="#002">Finalizar</button>
+                                        </td>
                                     </tr>
                                     <tr>
                                         <td>
@@ -1648,7 +1640,9 @@
                                         <td><input type="date" class="form-control" /></td>
                                         <td><input type="date" class="form-control" /></td>
                                         <td><input type="date" class="form-control" /></td>
-                                        <td><button class="btn btn-primary">Finalizar</button></td>
+                                        <td>
+                                            <button class="btn btn-primary finalizar-btn" data-id="#002">Finalizar</button>
+                                        </td>
                                     </tr>
                                 </tbody>
                             </table>
