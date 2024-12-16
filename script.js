@@ -255,5 +255,44 @@ document.querySelectorAll(".finalizar-btn").forEach(button => {
 });
 
 
+document.querySelectorAll(".iniciar-btn").forEach(button => {
+    button.addEventListener("click", (event) => {
+      const endId = event.target.getAttribute("data-id");
+      
+      const alertDiv = document.createElement("div");
+      alertDiv.className = "custom-alert";
 
+      alertDiv.style.position = "fixed";
+      alertDiv.style.top = "50%";
+      alertDiv.style.left = "50%";
+      alertDiv.style.transform = "translate(-50%, -50%)";
+      alertDiv.style.width = "300px";
+      alertDiv.style.padding = "15px";
+      alertDiv.style.backgroundColor = "rgba(1, 41, 112, 0.9)";
+      alertDiv.style.color = "#ffffff";
+      alertDiv.style.borderRadius = "5px";
+      alertDiv.style.boxShadow = "0 4px 20px rgba(0, 0, 0, 0.15)";
+      alertDiv.style.zIndex = "1000";
+      alertDiv.style.textAlign = "center";
+      alertDiv.innerHTML = `
+        <strong>Tem certeza que deseja iniciar essa etapa?</strong><br>
+        <button class="btn btn-light mt-2" onclick="dismissAlert()">Não</button>
+        <button class="btn btn-warning text-white mt-2" onclick="confirmAlert('${endId}')">Iniciar</button>
+      `;
+
+      document.body.appendChild(alertDiv);
+    });
+  });
+
+  function dismissAlert() {
+    const alertDiv = document.querySelector(".custom-alert");
+    if (alertDiv) {
+      alertDiv.remove();
+    }
+  }
+
+  function confirmAlert(endId) {
+    alert(`Etapa iniciada com sucesso.`);
+    dismissAlert();
+  }
 
