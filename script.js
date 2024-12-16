@@ -248,6 +248,12 @@ document.querySelectorAll(".finalizar-btn").forEach(button => {
     dismissAlert();
   }
 
+
+
   document.getElementById('logout').addEventListener('click', function() {
     window.location.href = 'login.html';
 });
+
+
+
+
