@@ -247,3 +247,7 @@ document.querySelectorAll(".finalizar-btn").forEach(button => {
     alert(`END ID ${endId} enviado com sucesso.`);
     dismissAlert();
   }
+
+  document.getElementById('logout').addEventListener('click', function() {
+    window.location.href = 'login.html';
+});
