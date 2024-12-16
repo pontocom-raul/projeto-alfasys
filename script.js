@@ -80,19 +80,26 @@ document.querySelectorAll(".end-id").forEach(button => {
             <strong style="display: block; text-align: center; margin-bottom: 20px; font-size: 1.5em;">Detalhes do Projeto: ${endId}</strong>
             <div style="display: flex; flex-wrap: wrap; gap: 10px;">
                 <ul style="flex: 1; padding-left: 20px; font-size: 1em; list-style: none;">
-                    <li><strong>Nome do Projeto:</strong> Projeto Exemplo</li>
-                    <li><strong>Cliente:</strong> Empresa A</li>
-                    <li><strong>Data Início:</strong> 01/01/2024</li>
-                    <li><strong>Data Fim:</strong> 31/12/2024</li>
-                    <li><strong>Status:</strong> Em Andamento</li>
-                    <li><strong>Descrição:</strong> Este é um projeto de exemplo para fins demonstrativos.</li>
+                    <li><strong>Site ID:</strong> Projeto Exemplo</li>
+                    <li><strong>Demanda:</strong> Empresa A</li>
+                    <li><strong>Detentora:</strong> 01/01/2024</li>
+                    <li><strong>ID Detentora:</strong> 31/12/2024</li>
+                    <li><strong>Operadora cedente:</strong> Em Andamento</li>
+                    <li><strong>ID Operadora:</strong> Este é um projeto de exemplo para fins demonstrativos.</li>
+                    <li><strong>Logradouro:</strong> Rua Vinte</li>
+                    <li><strong>Número:</strong> 20</li>
                 </ul>
                 <ul style="flex: 1; padding-right: 20px; font-size: 1em; list-style: none;">
-                    <li><strong>Endereço:</strong> Rua Vinte, 20, Bairro Vinte, Vinte - SP, CEP: 0800081</li>
+                    <li><strong>Bairro:</strong> Bairro Vinte</li>
+                    <li><strong>Município:</strong> Vinte</li>
+                    <li><strong>Estado:</strong> SP</li>
+                    <li><strong>CEP:</strong> 0800081</li>
                     <li><strong>Latitude:</strong> -1240</li>
                     <li><strong>Longitude:</strong> 8158</li>
                     <li><strong>Observações:</strong> sem observações adicionais</li>
+                    <li><strong>Status do agendamento:</strong> Em Andamento</li>
                 </ul>
+
             </div>
         `;
 
@@ -145,23 +152,32 @@ document.querySelectorAll(".btn-outline-primary").forEach(button => {
         alertDiv.innerHTML = `
             <strong style="display: block; text-align: center; margin-bottom: 20px; font-size: 1.5em;">Informações de ligação do projeto: ${endId}</strong>
             <div style="display: flex; flex-wrap: wrap; gap: 10px;">
-                <ul style="flex: 1; padding-left: 20px; font-size: 1em; list-style: none;">
-                    <li><strong>Status Ligação:</strong> qualquer resposta</li>
-                    <li><strong>Concessionária:</strong> qualquer resposta</li>
-                    <li><strong>Previsão de Ligação:</strong> qualquer resposta</li>
-                    <li><strong>Número Medidor:</strong> qualquer resposta</li>
-                    <li><strong>Número Instalação:</strong> qualquer resposta</li>
-                    <li><strong>Número de Fases:</strong> qualquer resposta</li>
-                </ul>
-                <ul style="flex: 1; padding-right: 20px; font-size: 1em; list-style: none;">
-                    <li><strong>Leitura Inicial:</strong> qualquer resposta</li>
-                    <li><strong>Data Ligação:</strong> qualquer resposta</li>
-                    <li><strong>Endereço:</strong> Rua Vinte, 20, Bairro Vinte, Vinte - SP</li>
-                    <li><strong>Latitude:</strong> -1240</li>
-                    <li><strong>Longitude:</strong> 8158</li>
-                    <li><strong>Observações:</strong> sem observações adicionais</li>
-                </ul>
-            </div>
+            <ul style="flex: 1; padding-left: 20px; font-size: 1em; list-style: none;">
+                <li><strong>ENDEREÇO ID:</strong> </li>
+                <li><strong>SITE ID:</strong> </li>
+                <li><strong>Leitura Inicial:</strong> </li>
+                <li><strong>Concessionária:</strong> </li>
+                <li><strong>Regional:</strong> </li>
+                <li><strong>CEP:</strong> </li>
+                <li><strong>UF:</strong> </li>
+                <li><strong>Cidade:</strong> </li>
+                <li><strong>Endereço:</strong> </li>
+                <li><strong>Número:</strong> </li>
+                <li><strong>Bairro:</strong> </li>
+                <li><strong>Complemento:</strong> </li>
+            </ul>
+            <ul style="flex: 1; padding-right: 20px; font-size: 1em; list-style: none;">
+                <li><strong>CNPJ:</strong></li>
+                <li><strong>CMPJ DA UC SOLICITADA:</strong> </li> 
+                <li><strong>Previsão de Ligação:</strong> </li>
+                <li><strong>Número Medidor:</strong> </li>
+                <li><strong>Tipo de Tensão:</strong> </li>
+                <li><strong>Unidade:</strong> </li>
+                <li><strong>Número de Instalação:</strong> </li>
+                <li><strong>Número de Fases:</strong> </li>
+            </li>
+        </ul>
+    </div>
         `;
 
         const closeButton = document.createElement("button");
