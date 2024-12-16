@@ -17,36 +17,36 @@
 <body>
     <div class="container" id="container">
         <div class="form-container sign-up">
-            <form>
+            <form id="signup-form">
                 <h1>Criar Conta</h1>
                 <span>Registrar com E-mail</span>
                 <div class="input-container">
                     <i class="fa-solid fa-user"></i>
-                    <input type="text" placeholder="Nome completo">
+                    <input type="text" placeholder="Nome completo" id="fullname">
                 </div>
                 <div class="input-container">
                     <i class="fa-solid fa-envelope"></i>
-                    <input type="email" placeholder="Seu melhor E-mail">
+                    <input type="email" placeholder="Seu melhor E-mail" id="email">
                 </div>
-                <button>Cadastrar</button>
+                <button type="submit">Cadastrar</button>
             </form>
         </div>
     
 
         <div class="form-container sign-in">
-            <form>
+            <form id="signin-form">
                 <h1>Login</h1>
                 <span>Login com E-mail e Senha</span>
                 <div class="input-container">
                     <i class="fa-solid fa-envelope"></i>
-                    <input type="email" placeholder="Seu E-mail">
+                    <input type="email" placeholder="Seu E-mail" id="login-email">
                 </div>
                 <div class="input-container">
                     <i class="fa-solid fa-lock"></i>
-                    <input type="password" placeholder="Sua senha">
+                    <input type="password" placeholder="Sua senha" id="login-password">
                 </div>
                 <a href="#">Esqueceu a senha?</a>
-                <button>Entrar</button>
+                <button type="submit">Entrar</button>
             </form>
         </div>
 
