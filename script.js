@@ -1,5 +1,8 @@
-let userImg = document.querySelector(".user-img")
-let userName = document.querySelector("#userName")
+let userImg = document.querySelector(".user-img");
+let userName = document.querySelector("#nomeUserHeader");
+let nomeUserInfo = document.querySelector("#nomeUserInfo");
+let cargoInfo = document.querySelector("#cargoInfo");
+let cargoHeader = document.querySelector("#cargoHeader");
 let profile = document.querySelector(".profile");
 let menu = document.querySelector("#menu");
 let main = document.querySelector(".main");
@@ -9,74 +12,92 @@ let input = document.querySelector(".input");
 let noticeIcon = document.querySelector(".notice-icon");
 let notice = document.querySelector(".notice");
 
+// Dados do user
+const decodedToken = jwt_decode(token);
+console.log(decodedToken);
 
-searchIcon.addEventListener("click",()=>{
-    input.classList.toggle("active");
-})
+userName.innerHTML = `${decodedToken.nome
+  .split(" ")
+  .slice(0, 2)
+  .join(" ")} <i class="bx bxs-down-arrow"></i>`;
+nomeUserInfo.innerHTML = decodedToken.nome;
+cargoInfo.innerHTML = decodedToken.cargo;
+cargoHeader.innerHTML = decodedToken.cargo;
 
-userImg.addEventListener("click",()=>{
-    profile.classList.add("show")
+searchIcon.addEventListener("click", () => {
+  input.classList.toggle("active");
+});
 
-    document.addEventListener("click",(e)=>{
-        if(e.target.tagName != "IMG" && e.target != !userImg && e.target.tagName != "H6"){
-            profile.classList.remove("show")
-        }
-    })
-})
-userName.addEventListener("click",()=>{
-    profile.classList.add("show")
-    document.addEventListener("click",(e)=>{
-        if(e.target.tagName != "H6" && e.target != !userName && e.target.tagName != "IMG"){
-            profile.classList.remove("show")
-        }
-    })
-})
+userImg.addEventListener("click", () => {
+  profile.classList.add("show");
 
-noticeIcon.addEventListener("click",()=>{
-    notice.classList.add("show")
-    document.addEventListener("click",(e)=>{
-        if(e.target.tagName != "I" && e.target != !noticeIcon){
-            notice.classList.remove("show")
-        }
-    })
-})
+  document.addEventListener("click", (e) => {
+    if (
+      e.target.tagName != "IMG" &&
+      e.target != !userImg &&
+      e.target.tagName != "H6"
+    ) {
+      profile.classList.remove("show");
+    }
+  });
+});
+userName.addEventListener("click", () => {
+  profile.classList.add("show");
+  document.addEventListener("click", (e) => {
+    if (
+      e.target.tagName != "H6" &&
+      e.target != !userName &&
+      e.target.tagName != "IMG"
+    ) {
+      profile.classList.remove("show");
+    }
+  });
+});
 
+noticeIcon.addEventListener("click", () => {
+  notice.classList.add("show");
+  document.addEventListener("click", (e) => {
+    if (e.target.tagName != "I" && e.target != !noticeIcon) {
+      notice.classList.remove("show");
+    }
+  });
+});
 
-menu.addEventListener("click",()=>{
-    sidebar.classList.toggle("active");
-    main.classList.toggle("active");
-})
+menu.addEventListener("click", () => {
+  sidebar.classList.toggle("active");
+  main.classList.toggle("active");
+});
 
 let navbarBrand = document.querySelector(".navbar-brand");
 
 navbarBrand.addEventListener("click", (e) => {
-    e.preventDefault(); 
-    location.reload(); 
+  e.preventDefault();
+  location.reload();
 });
 
-document.querySelectorAll(".end-id").forEach(button => {
-    button.addEventListener("click", (event) => {
-        const endId = event.target.getAttribute("data-id");
-        
-        const alertDiv = document.createElement("div");
-        alertDiv.className = "alert-container";
-        
-        alertDiv.style.position = "fixed";
-        alertDiv.style.top = "50%";
-        alertDiv.style.left = "50%";
-        alertDiv.style.transform = "translate(-50%, -50%)";
-        alertDiv.style.width = "86%"; /* 7% em cada lado */
-        alertDiv.style.maxWidth = "900px";
-        alertDiv.style.padding = "30px";
-        alertDiv.style.backgroundColor = "#012970";
-        alertDiv.style.color = "#ffffff";
-        alertDiv.style.border = "2px solid #012970";
-        alertDiv.style.borderRadius = "15px";
-        alertDiv.style.boxShadow = "0 4px 20px rgba(0, 0, 0, 0.15)";
-        alertDiv.style.zIndex = "1000";
-        alertDiv.style.overflow = "hidden";
+document.querySelectorAll(".end-id").forEach((button) => {
+  button.addEventListener("click", (event) => {
+    const endId = event.target.getAttribute("data-id");
 
-        alertDiv.innerHTML = `
+    const alertDiv = document.createElement("div");
+    alertDiv.className = "alert-container";
+
+    alertDiv.style.position = "fixed";
+    alertDiv.style.top = "50%";
+    alertDiv.style.left = "50%";
+    alertDiv.style.transform = "translate(-50%, -50%)";
+    alertDiv.style.width = "86%"; /* 7% em cada lado */
+    alertDiv.style.maxWidth = "900px";
+    alertDiv.style.padding = "30px";
+    alertDiv.style.backgroundColor = "#012970";
+    alertDiv.style.color = "#ffffff";
+    alertDiv.style.border = "2px solid #012970";
+    alertDiv.style.borderRadius = "15px";
+    alertDiv.style.boxShadow = "0 4px 20px rgba(0, 0, 0, 0.15)";
+    alertDiv.style.zIndex = "1000";
+    alertDiv.style.overflow = "hidden";
+
+    alertDiv.innerHTML = `
             <strong style="display: block; text-align: center; margin-bottom: 20px; font-size: 1.5em;">Detalhes do Projeto: ${endId}</strong>
             <div style="display: flex; flex-wrap: wrap; gap: 10px;">
                 <ul style="flex: 1; padding-left: 20px; font-size: 1em; list-style: none;">
@@ -103,53 +124,59 @@ document.querySelectorAll(".end-id").forEach(button => {
             </div>
         `;
 
-        const closeButton = document.createElement("button");
-        closeButton.innerText = "Fechar";
-        closeButton.style.marginTop = "20px";
-        closeButton.style.padding = "12px 20px";
-        closeButton.style.backgroundColor = "#ffffff";
-        closeButton.style.border = "2px solid #ffffff";
-        closeButton.style.color = "#012970";
-        closeButton.style.cursor = "pointer";
-        closeButton.style.borderRadius = "10px";
-        closeButton.style.display = "block";
-        closeButton.style.marginLeft = "auto";
-        closeButton.style.marginRight = "auto";
+    const closeButton = document.createElement("button");
+    closeButton.innerText = "Fechar";
+    closeButton.style.marginTop = "20px";
+    closeButton.style.padding = "12px 20px";
+    closeButton.style.backgroundColor = "#ffffff";
+    closeButton.style.border = "2px solid #ffffff";
+    closeButton.style.color = "#012970";
+    closeButton.style.cursor = "pointer";
+    closeButton.style.borderRadius = "10px";
+    closeButton.style.display = "block";
+    closeButton.style.marginLeft = "auto";
+    closeButton.style.marginRight = "auto";
 
-        closeButton.addEventListener("click", () => {
-            alertDiv.remove();
-        });
-
-        alertDiv.appendChild(closeButton);
-        document.body.appendChild(alertDiv);
-
-        window.scrollTo(0, alertDiv.getBoundingClientRect().top + window.scrollY - 100);
+    closeButton.addEventListener("click", () => {
+      alertDiv.remove();
     });
+
+    alertDiv.appendChild(closeButton);
+    document.body.appendChild(alertDiv);
+
+    window.scrollTo(
+      0,
+      alertDiv.getBoundingClientRect().top + window.scrollY - 100
+    );
+  });
 });
 
-document.querySelectorAll(".btn-outline-primary").forEach(button => {
-    button.addEventListener("click", (event) => {
-        const endId = event.target.closest("tr").querySelector(".end-id").getAttribute("data-id");
-        
-        const alertDiv = document.createElement("div");
-        alertDiv.className = "alert-container";
-        
-        alertDiv.style.position = "fixed";
-        alertDiv.style.top = "50%";
-        alertDiv.style.left = "50%";
-        alertDiv.style.transform = "translate(-50%, -50%)";
-        alertDiv.style.width = "86%"; /* 7% em cada lado */
-        alertDiv.style.maxWidth = "900px";
-        alertDiv.style.padding = "30px";
-        alertDiv.style.backgroundColor = "#012970";
-        alertDiv.style.color = "#ffffff";
-        alertDiv.style.border = "2px solid #012970";
-        alertDiv.style.borderRadius = "15px";
-        alertDiv.style.boxShadow = "0 4px 20px rgba(0, 0, 0, 0.15)";
-        alertDiv.style.zIndex = "1000";
-        alertDiv.style.overflow = "hidden";
+document.querySelectorAll(".btn-outline-primary").forEach((button) => {
+  button.addEventListener("click", (event) => {
+    const endId = event.target
+      .closest("tr")
+      .querySelector(".end-id")
+      .getAttribute("data-id");
 
-        alertDiv.innerHTML = `
+    const alertDiv = document.createElement("div");
+    alertDiv.className = "alert-container";
+
+    alertDiv.style.position = "fixed";
+    alertDiv.style.top = "50%";
+    alertDiv.style.left = "50%";
+    alertDiv.style.transform = "translate(-50%, -50%)";
+    alertDiv.style.width = "86%"; /* 7% em cada lado */
+    alertDiv.style.maxWidth = "900px";
+    alertDiv.style.padding = "30px";
+    alertDiv.style.backgroundColor = "#012970";
+    alertDiv.style.color = "#ffffff";
+    alertDiv.style.border = "2px solid #012970";
+    alertDiv.style.borderRadius = "15px";
+    alertDiv.style.boxShadow = "0 4px 20px rgba(0, 0, 0, 0.15)";
+    alertDiv.style.zIndex = "1000";
+    alertDiv.style.overflow = "hidden";
+
+    alertDiv.innerHTML = `
             <strong style="display: block; text-align: center; margin-bottom: 20px; font-size: 1.5em;">Informações de ligação do projeto: ${endId}</strong>
             <div style="display: flex; flex-wrap: wrap; gap: 10px;">
             <ul style="flex: 1; padding-left: 20px; font-size: 1em; list-style: none;">
@@ -180,119 +207,117 @@ document.querySelectorAll(".btn-outline-primary").forEach(button => {
     </div>
         `;
 
-        const closeButton = document.createElement("button");
-        closeButton.innerText = "Fechar";
-        closeButton.style.marginTop = "20px";
-        closeButton.style.padding = "12px 20px";
-        closeButton.style.backgroundColor = "#ffffff";
-        closeButton.style.border = "2px solid #ffffff";
-        closeButton.style.color = "#012970";
-        closeButton.style.cursor = "pointer";
-        closeButton.style.borderRadius = "10px";
-        closeButton.style.display = "block";
-        closeButton.style.marginLeft = "auto";
-        closeButton.style.marginRight = "auto";
+    const closeButton = document.createElement("button");
+    closeButton.innerText = "Fechar";
+    closeButton.style.marginTop = "20px";
+    closeButton.style.padding = "12px 20px";
+    closeButton.style.backgroundColor = "#ffffff";
+    closeButton.style.border = "2px solid #ffffff";
+    closeButton.style.color = "#012970";
+    closeButton.style.cursor = "pointer";
+    closeButton.style.borderRadius = "10px";
+    closeButton.style.display = "block";
+    closeButton.style.marginLeft = "auto";
+    closeButton.style.marginRight = "auto";
 
-        closeButton.addEventListener("click", () => {
-            alertDiv.remove();
-        });
-
-        alertDiv.appendChild(closeButton);
-        document.body.appendChild(alertDiv);
-
-        window.scrollTo(0, alertDiv.getBoundingClientRect().top + window.scrollY - 100);
+    closeButton.addEventListener("click", () => {
+      alertDiv.remove();
     });
+
+    alertDiv.appendChild(closeButton);
+    document.body.appendChild(alertDiv);
+
+    window.scrollTo(
+      0,
+      alertDiv.getBoundingClientRect().top + window.scrollY - 100
+    );
+  });
 });
 
+document.querySelectorAll(".finalizar-btn").forEach((button) => {
+  button.addEventListener("click", (event) => {
+    const endId = event.target.getAttribute("data-id");
 
+    const alertDiv = document.createElement("div");
+    alertDiv.className = "custom-alert";
 
-
-document.querySelectorAll(".finalizar-btn").forEach(button => {
-    button.addEventListener("click", (event) => {
-      const endId = event.target.getAttribute("data-id");
-      
-      const alertDiv = document.createElement("div");
-      alertDiv.className = "custom-alert";
-
-      alertDiv.style.position = "fixed";
-      alertDiv.style.top = "50%";
-      alertDiv.style.left = "50%";
-      alertDiv.style.transform = "translate(-50%, -50%)";
-      alertDiv.style.width = "300px";
-      alertDiv.style.padding = "15px";
-      alertDiv.style.backgroundColor = "rgba(1, 41, 112, 0.9)";
-      alertDiv.style.color = "#ffffff";
-      alertDiv.style.borderRadius = "5px";
-      alertDiv.style.boxShadow = "0 4px 20px rgba(0, 0, 0, 0.15)";
-      alertDiv.style.zIndex = "1000";
-      alertDiv.style.textAlign = "center";
-      alertDiv.innerHTML = `
+    alertDiv.style.position = "fixed";
+    alertDiv.style.top = "50%";
+    alertDiv.style.left = "50%";
+    alertDiv.style.transform = "translate(-50%, -50%)";
+    alertDiv.style.width = "300px";
+    alertDiv.style.padding = "15px";
+    alertDiv.style.backgroundColor = "rgba(1, 41, 112, 0.9)";
+    alertDiv.style.color = "#ffffff";
+    alertDiv.style.borderRadius = "5px";
+    alertDiv.style.boxShadow = "0 4px 20px rgba(0, 0, 0, 0.15)";
+    alertDiv.style.zIndex = "1000";
+    alertDiv.style.textAlign = "center";
+    alertDiv.innerHTML = `
         <strong>Tem certeza que deseja enviar o END ID ${endId}?</strong><br>
         <button class="btn btn-light mt-2" onclick="dismissAlert()">Cancelar</button>
         <button class="btn btn-warning text-white mt-2" onclick="confirmAlert('${endId}')">Enviar</button>
       `;
 
-      document.body.appendChild(alertDiv);
-    });
+    document.body.appendChild(alertDiv);
   });
-
-  function dismissAlert() {
-    const alertDiv = document.querySelector(".custom-alert");
-    if (alertDiv) {
-      alertDiv.remove();
-    }
-  }
-
-  function confirmAlert(endId) {
-    alert(`END ID ${endId} enviado com sucesso.`);
-    dismissAlert();
-  }
-
-
-
-  document.getElementById('logout').addEventListener('click', function() {
-    window.location.href = 'login.html';
 });
 
+function dismissAlert() {
+  const alertDiv = document.querySelector(".custom-alert");
+  if (alertDiv) {
+    alertDiv.remove();
+  }
+}
 
-document.querySelectorAll(".iniciar-btn").forEach(button => {
-    button.addEventListener("click", (event) => {
-      const endId = event.target.getAttribute("data-id");
-      
-      const alertDiv = document.createElement("div");
-      alertDiv.className = "custom-alert";
+function confirmAlert(endId) {
+  alert(`END ID ${endId} enviado com sucesso.`);
+  dismissAlert();
+}
 
-      alertDiv.style.position = "fixed";
-      alertDiv.style.top = "50%";
-      alertDiv.style.left = "50%";
-      alertDiv.style.transform = "translate(-50%, -50%)";
-      alertDiv.style.width = "300px";
-      alertDiv.style.padding = "15px";
-      alertDiv.style.backgroundColor = "rgba(1, 41, 112, 0.9)";
-      alertDiv.style.color = "#ffffff";
-      alertDiv.style.borderRadius = "5px";
-      alertDiv.style.boxShadow = "0 4px 20px rgba(0, 0, 0, 0.15)";
-      alertDiv.style.zIndex = "1000";
-      alertDiv.style.textAlign = "center";
-      alertDiv.innerHTML = `
+document.getElementById("logout").addEventListener("click", function () {
+  localStorage.removeItem("token");
+
+  window.location.href = "login.html";
+});
+
+document.querySelectorAll(".iniciar-btn").forEach((button) => {
+  button.addEventListener("click", (event) => {
+    const endId = event.target.getAttribute("data-id");
+
+    const alertDiv = document.createElement("div");
+    alertDiv.className = "custom-alert";
+
+    alertDiv.style.position = "fixed";
+    alertDiv.style.top = "50%";
+    alertDiv.style.left = "50%";
+    alertDiv.style.transform = "translate(-50%, -50%)";
+    alertDiv.style.width = "300px";
+    alertDiv.style.padding = "15px";
+    alertDiv.style.backgroundColor = "rgba(1, 41, 112, 0.9)";
+    alertDiv.style.color = "#ffffff";
+    alertDiv.style.borderRadius = "5px";
+    alertDiv.style.boxShadow = "0 4px 20px rgba(0, 0, 0, 0.15)";
+    alertDiv.style.zIndex = "1000";
+    alertDiv.style.textAlign = "center";
+    alertDiv.innerHTML = `
         <strong>Tem certeza que deseja iniciar essa etapa?</strong><br>
         <button class="btn btn-light mt-2" onclick="dismissAlert()">Não</button>
         <button class="btn btn-warning text-white mt-2" onclick="confirmAlert('${endId}')">Iniciar</button>
       `;
 
-      document.body.appendChild(alertDiv);
-    });
+    document.body.appendChild(alertDiv);
   });
+});
 
-  function dismissAlert() {
-    const alertDiv = document.querySelector(".custom-alert");
-    if (alertDiv) {
-      alertDiv.remove();
-    }
+function dismissAlert() {
+  const alertDiv = document.querySelector(".custom-alert");
+  if (alertDiv) {
+    alertDiv.remove();
   }
+}
 
-  function confirmAlert(endId) {
-    alert(`Etapa iniciada com sucesso.`);
-    dismissAlert();
-  }
-
+function confirmAlert(endId) {
+  alert(`Etapa iniciada com sucesso.`);
+  dismissAlert();
+}

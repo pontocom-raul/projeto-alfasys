@@ -67,9 +67,6 @@ function login(event) {
 
         console.log("Token armazenado no localStorage:", token);
 
-        // Exibe uma mensagem de sucesso no login
-        alert("Login realizado com sucesso!");
-
         window.location.href = "/index.html";
       } else {
         // Exibe uma mensagem de erro se não houver token
