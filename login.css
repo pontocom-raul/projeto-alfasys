@@ -222,16 +222,18 @@ body {
 input[type="email"], input[type="password"] {
     padding-left: 30px;
 }
+
 .input-container {
     position: relative;
+    width: 80%;
 }
 
 .input-container i {
     position: absolute;
-    left: 10px;
     top: 50%;
     transform: translateY(-50%);
     color: #aaa;
+    pointer-events: none;
 }
 
 input[type="text"],
@@ -341,4 +343,36 @@ input.error::placeholder {
       transform: rotate(360deg);
     }
   }
+  
+  .input-password {
+    position: relative;
+    width: 80%;
+}
+
+.input-password i {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #aaa;
+    pointer-events: none;
+}
+ 
+  .input-password .fa-lock {
+    left: 10px; /* Ícone do cadeado à esquerda */
+  }
+  
+  .input-password .toggle-password {
+    right: 10px; /* Ícone do olho à direita */
+    pointer-events: all; /* Permite clicar no ícone */
+    cursor: pointer;
+  }
+  
+  .input-password input {
+    padding-left: 35px; /* Espaço para o cadeado */
+    padding-right: 35px; /* Espaço para o olho */
+  }
+
+
+  
+  
   
