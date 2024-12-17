@@ -15,7 +15,7 @@
       rel="stylesheet"
     />
 
-    <!-- favicon link  -->
+    <!-- favicon link -->
     <link rel="icon" type="image/x-icon" href="img/logo_alfa-1.png" />
 
     <title>Grupo Alfa - Arujá</title>
@@ -53,33 +53,29 @@
               id="login-email"
               required
             />
-           <small class="error-message" id="email-error"></small>
+            <small class="error-message" id="email-error"></small>
           </div>
-          <div class="input-wrapper">
-            <div class="input-container">
-              <i class="fa-solid fa-lock"></i>
-              <input
-                type="password"
-                placeholder="Sua senha"
-                id="login-password"
-                autocomplete="off"
-                required
-              />
-            </div>
-            <div class="icon-container">
-              <i
-                class="fa-solid fa-eye toggle-password"
-                id="toggle-password"
-                onclick="togglePasswordVisibility()"
-              ></i>
-            </div>
+          <div class="input-password">
+            <i class="fa-solid fa-lock"></i>
+            <input
+              type="password"
+              placeholder="Sua senha"
+              id="login-password"
+              autocomplete="off"
+              required
+            />
+            <i
+              class="fa-solid fa-eye toggle-password"
+              id="toggle-password"
+              onclick="togglePasswordVisibility()"
+            ></i>
           </div>
           <small class="error-message" id="password-error"></small>
           <a href="#">Esqueceu a senha?</a>
           <button type="submit">Entrar</button>
         </form>
-      </div>        
-             
+      </div>
+
       <div class="alert-error"></div>
 
       <!-- Toggle entre Login e Registro -->
@@ -100,5 +96,6 @@
     </div>
 
     <script src="login.js"></script>
+
   </body>
 </html>
