@@ -5,6 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Grupo Alfa Arujá</title>
+
+    <!-- favicon link  -->
+    <link rel="icon" type="image/x-icon" href="img/logo_alfa-1.png" />
+
     <!-- Boxicons CSS -->
     <link
       href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
@@ -47,7 +51,7 @@
         </div>
 
         <div class="user">
-          <span class="mr-3"
+          <span class="mr-3 d-flex"
             ><i class="bx bx-bell notice-icon">
               <div class="badge-icon bg-primary">1</div>
             </i></span
@@ -60,10 +64,8 @@
               alt=""
           /></span>
           <div class="user-descr">
-            <h6 class="ml-3 mb-0" id="userName">
-              Raul Guilherme<i class="bx bxs-down-arrow"></i>
-            </h6>
-            <small class="text-muted h6 ml-3">Boss</small>
+            <h6 class="ml-3 mb-0" id="nomeUserHeader"></h6>
+            <small class="text-muted h6 ml-3" id="cargoHeader"></small>
           </div>
 
           <!-- monitoramento -->
@@ -96,38 +98,37 @@
           <!-- perfil -->
           <div class="profile rounded">
             <div class="user-info">
-                <span>
-                    <img
-                        src="img/1077114.png"
-                        class="mr-2 rounded-circle img-fluid"
-                        alt=""
-                    />
-                </span>
-                <div class="user-name">
-                    <h5 class="mb-0">Raul Guilherme</h5>
-                    <small class="text-muted h6 ml-1">Boss</small>
-                </div>
+              <span>
+                <img
+                  src="img/1077114.png"
+                  class="mr-2 rounded-circle img-fluid"
+                  alt=""
+                />
+              </span>
+              <div class="user-name">
+                <h5 class="mb-0" id="nomeUserInfo">Raul Guilherme</h5>
+                <small class="text-muted h6 ml-1" id="cargoInfo">Boss</small>
+              </div>
             </div>
             <ul class="list-group">
-                <li class="list-group-item border-top text-muted">
-                    <span class="mr-3"><i class="bx bx-user"></i></span>
-                    <span>Meu perfil</span>
-                </li>
-                <li class="list-group-item border-top text-muted">
-                    <span class="mr-3"><i class="bx bx-cog"></i></span>
-                    <span>Configurações</span>
-                </li>
-                <li class="list-group-item border-top text-muted">
-                    <span class="mr-3"><i class="bx bx-help-circle"></i></span>
-                    <span>Suporte</span>
-                </li>
-                <li class="list-group-item border-top text-muted" id="logout">
-                    <span class="mr-3"><i class="bx bx-log-in"></i></span>
-                    <span>Sair</span>
-                </li>
+              <li class="list-group-item border-top text-muted">
+                <span class="mr-3"><i class="bx bx-user"></i></span>
+                <span>Meu perfil</span>
+              </li>
+              <li class="list-group-item border-top text-muted">
+                <span class="mr-3"><i class="bx bx-cog"></i></span>
+                <span>Configurações</span>
+              </li>
+              <li class="list-group-item border-top text-muted">
+                <span class="mr-3"><i class="bx bx-help-circle"></i></span>
+                <span>Suporte</span>
+              </li>
+              <li class="list-group-item border-top text-muted" id="logout">
+                <span class="mr-3"><i class="bx bx-log-in"></i></span>
+                <span>Sair</span>
+              </li>
             </ul>
-        </div>
-        
+          </div>
         </div>
       </div>
       <!-- ============================== sidebar ============================== -->
@@ -136,7 +137,11 @@
           <!------------------------------------------- RAUL CENTRAL - INICIO CENTRAL  ------------------------------------------------>
 
           <li class="rounded mt-1 list nav-item">
-            <a href="#inicio" class="text-decoration-none d-flex" data-toggle="pill">
+            <a
+              href="#inicio"
+              class="text-decoration-none d-flex"
+              data-toggle="pill"
+            >
               <span>
                 <i class="fa-solid fa-house"></i>
               </span>
@@ -148,44 +153,63 @@
 
           <!------------------------------------------- CADASTRO END ID ------------------------------------------------>
 
-          <li class="rounded active mb-1 list nav-item" data-toggle="collapse" data-target="#cadastro">
-  <a href="#" class="text-decoration-none sub-menu">
-    <div class="text d-flex">
-      <span>
-        <i class="fa-solid fa-id-card-clip"></i>
-      </span>
-      <div class="ml-4">
-        <span class=""> CADASTRO END ID </span>
-      </div>
-    </div>
-    <span><i class="bx bx-chevron-down"></i></span>
-  </a>
-</li>
-<div class="collapse" id="cadastro">
-  <ul class="unstyled pl-5 ml-4 submenu nav nav-pills flex-column">
-    <li class="py-2 nav-item">
-      <a data-toggle="pill" href="#cadastro-fazer" class="text-decoration-none titulo-item">
-        Realizar cadastro
-      </a>
-    </li>
-    <li class="py-2 nav-item">
-      <a data-toggle="pill" href="#cadastro-editar" class="text-decoration-none titulo-item">
-        Editar cadastro
-      </a>
-    </li>
-    <li class="py-2 nav-item">
-      <a data-toggle="pill" href="#cadastro-feito" class="text-decoration-none titulo-item">
-        Histórico de cadastros
-      </a>
-    </li>
-  </ul>
-</div>
-
+          <li
+            class="rounded active mb-1 list nav-item"
+            data-toggle="collapse"
+            data-target="#cadastro"
+          >
+            <a href="#" class="text-decoration-none sub-menu">
+              <div class="text d-flex">
+                <span>
+                  <i class="fa-solid fa-id-card-clip"></i>
+                </span>
+                <div class="ml-4">
+                  <span class=""> CADASTRO END ID </span>
+                </div>
+              </div>
+              <span><i class="bx bx-chevron-down"></i></span>
+            </a>
+          </li>
+          <div class="collapse" id="cadastro">
+            <ul class="unstyled pl-5 ml-4 submenu nav nav-pills flex-column">
+              <li class="py-2 nav-item">
+                <a
+                  data-toggle="pill"
+                  href="#cadastro-fazer"
+                  class="text-decoration-none titulo-item"
+                >
+                  Realizar cadastro
+                </a>
+              </li>
+              <li class="py-2 nav-item">
+                <a
+                  data-toggle="pill"
+                  href="#cadastro-editar"
+                  class="text-decoration-none titulo-item"
+                >
+                  Editar cadastro
+                </a>
+              </li>
+              <li class="py-2 nav-item">
+                <a
+                  data-toggle="pill"
+                  href="#cadastro-feito"
+                  class="text-decoration-none titulo-item"
+                >
+                  Histórico de cadastros
+                </a>
+              </li>
+            </ul>
+          </div>
 
           <!------------------------------------------- STATUS ------------------------------------------------>
 
           <li class="rounded mt-1 list nav-item">
-            <a href="#status" class="text-decoration-none d-flex" data-toggle="pill">
+            <a
+              href="#status"
+              class="text-decoration-none d-flex"
+              data-toggle="pill"
+            >
               <span>
                 <i class="fa-solid fa-chart-simple"></i>
               </span>
@@ -197,7 +221,11 @@
 
           <!------------------------------------------- LIBERAÇÃO DE ACESSO------------------------------------------------>
 
-          <li class="rounded active mb-1 list nav-item" data-toggle="collapse" data-target="#liberação">
+          <li
+            class="rounded active mb-1 list nav-item"
+            data-toggle="collapse"
+            data-target="#liberação"
+          >
             <a href="#" class="text-decoration-none sub-menu">
               <div class="text d-flex">
                 <span>
@@ -213,12 +241,20 @@
           <div class="collapse" id="liberação">
             <ul class="unstyled pl-5 ml-4 submenu nav nav-pills flex-column">
               <li class="py-2 nav-item">
-                <a data-toggle="pill" href="#editar-agendamento" class="text-decoration-none">
+                <a
+                  data-toggle="pill"
+                  href="#editar-agendamento"
+                  class="text-decoration-none"
+                >
                   Editar agendamento
                 </a>
               </li>
               <li class="py-2 nav-item">
-                <a data-toggle="pill" href="#todos-agendamentos"class="text-decoration-none">
+                <a
+                  data-toggle="pill"
+                  href="#todos-agendamentos"
+                  class="text-decoration-none"
+                >
                   Histórico de agendamentos
                 </a>
               </li>
@@ -228,7 +264,11 @@
           <!-------------------------------------------  VISTORIA ------------------------------------------------>
 
           <li class="rounded mt-1 list nav-item">
-            <a href="#vistoria" class="text-decoration-none d-flex" data-toggle="pill">
+            <a
+              href="#vistoria"
+              class="text-decoration-none d-flex"
+              data-toggle="pill"
+            >
               <span>
                 <i class="fa-solid fa-screwdriver-wrench"></i>
               </span>
@@ -241,7 +281,11 @@
           <!------------------------------------------- KIT-TSSR ------------------------------------------------>
 
           <li class="rounded mt-1 list nav-item">
-            <a href="#kit-tssr" class="text-decoration-none d-flex" data-toggle="pill">
+            <a
+              href="#kit-tssr"
+              class="text-decoration-none d-flex"
+              data-toggle="pill"
+            >
               <span>
                 <i class="fa-brands fa-uikit mr-1"></i>
               </span>
@@ -254,7 +298,11 @@
           <!------------------------------------------- SCI INCLUSAO ------------------------------------------------>
 
           <li class="rounded mt-1 list nav-item">
-            <a href="#sci-inclusao" class="text-decoration-none d-flex" data-toggle="pill">
+            <a
+              href="#sci-inclusao"
+              class="text-decoration-none d-flex"
+              data-toggle="pill"
+            >
               <span>
                 <i class="fa-solid fa-plus mr-1"></i>
               </span>
@@ -267,7 +315,11 @@
           <!------------------------------------------- OBRA ------------------------------------------------>
 
           <li class="rounded mt-1 list nav-item">
-            <a href="#obra" class="text-decoration-none d-flex" data-toggle="pill">
+            <a
+              href="#obra"
+              class="text-decoration-none d-flex"
+              data-toggle="pill"
+            >
               <span>
                 <i class="fa-solid fa-helmet-safety"></i>
               </span>
@@ -279,11 +331,15 @@
 
           <!------------------------------------------- PROJETOS ------------------------------------------------>
 
-          <li class="rounded active mb-1 list nav-item" data-toggle="collapse" data-target="#projeto">
+          <li
+            class="rounded active mb-1 list nav-item"
+            data-toggle="collapse"
+            data-target="#projeto"
+          >
             <a href="#" class="text-decoration-none sub-menu">
               <div class="text d-flex">
                 <span>
-                    <i class="fa-solid fa-clipboard ml-1"></i>
+                  <i class="fa-solid fa-clipboard ml-1"></i>
                 </span>
                 <div class="ml-4">
                   <span class=""> PROJETOS </span>
@@ -295,12 +351,20 @@
           <div class="collapse" id="projeto">
             <ul class="unstyled pl-5 ml-4 submenu nav nav-pills flex-column">
               <li class="py-2 nav-item">
-                <a href="#editar-projeto" class="text-decoration-none" data-toggle="pill">
-                    Informações de ligação
+                <a
+                  href="#editar-projeto"
+                  class="text-decoration-none"
+                  data-toggle="pill"
+                >
+                  Informações de ligação
                 </a>
               </li>
               <li class="py-2 nav-item">
-                <a data-toggle="pill" href="#todos-projetos" class="text-decoration-none">
+                <a
+                  data-toggle="pill"
+                  href="#todos-projetos"
+                  class="text-decoration-none"
+                >
                   Todos projetos
                 </a>
               </li>
@@ -310,7 +374,11 @@
           <!------------------------------------------- SCI DE EXCLUSÃO ------------------------------------------------>
 
           <li class="rounded mt-1 list nav-item">
-            <a href="#sci-exclusão" class="text-decoration-none d-flex" data-toggle="pill">
+            <a
+              href="#sci-exclusão"
+              class="text-decoration-none d-flex"
+              data-toggle="pill"
+            >
               <span><i class="fa-solid fa-minus ml-1"></i></span>
               <div class="ml-4">
                 <span class=""> SCI DE EXCLUSÃO </span>
@@ -335,7 +403,9 @@
                 </div>
               </div>
               <div class="row my-3">
-                <div class="box d-flex align-items-center justify-content-between my-2 w-100">
+                <div
+                  class="box d-flex align-items-center justify-content-between my-2 w-100"
+                >
                   <div class="cards">
                     <div class="icon cadastro1">
                       <i class="fa-solid fa-id-card-clip"></i>
@@ -424,89 +494,114 @@
                   <h4 class="mb-3">Realizar cadastro:</h4>
                   <div class="row form-desing my-4">
                     <div class="col-md-6 mt-2 mt-md-0">
-                      <label class="">Site ID *</label><br />
-                      <input type="text" class="form-control" />
+                      <label>Site ID *</label><br />
+                      <input type="text" class="form-control" id="siteId" />
                     </div>
                     <div class="col-md-6 mt-2 mt-md-0">
-                      <label class="">End ID *</label><br />
-                      <input type="text" class="form-control" />
+                      <label>End ID *</label><br />
+                      <input type="text" class="form-control" id="endId" />
                     </div>
                   </div>
+
                   <div class="row form-desing my-4">
                     <div class="col-md-6 mt-2 mt-md-0">
-                      <label class="">Demanda *</label><br />
-                      <input type="text" class="form-control" />
+                      <label>Demanda *</label><br />
+                      <input type="text" class="form-control" id="demanda" />
                     </div>
                     <div class="col-md-6 mt-2 mt-md-0">
-                      <label class="">ID Detentora *</label><br />
-                      <input type="text" class="form-control" />
+                      <label>ID Detentora *</label><br />
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="idDetentora"
+                      />
                     </div>
                   </div>
+
                   <div class="row form-desing my-4">
                     <div class="col-md-6 mt-2 mt-md-0">
-                      <label class="">Detentora *</label><br />
-                      <input type="text" class="form-control" />
+                      <label>Detentora *</label><br />
+                      <input type="text" class="form-control" id="detentora" />
                     </div>
                     <div class="col-md-6 mt-2 mt-md-0">
-                      <label class="">ID Operadora *</label><br />
-                      <input type="text" class="form-control" />
+                      <label>ID Operadora *</label><br />
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="idOperadora"
+                      />
                     </div>
                   </div>
+
                   <div class="row form-desing my-4">
                     <div class="col-md-6 mt-2 mt-md-0">
-                      <label class="">Operadora cedente *</label><br />
-                      <input type="text" class="form-control" />
+                      <label>Operadora cedente *</label><br />
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="operadoraCedente"
+                      />
                     </div>
                     <div class="col-md-6 mt-2 mt-md-0">
-                      <label class="">Logradouro *</label><br />
-                      <input type="text" class="form-control" />
+                      <label>Logradouro *</label><br />
+                      <input type="text" class="form-control" id="logradouro" />
                     </div>
                   </div>
+
                   <div class="row form-desing my-4">
                     <div class="col-md-6 mt-2 mt-md-0">
-                      <label class="">Número *</label><br />
-                      <input type="text" class="form-control" />
+                      <label>Número *</label><br />
+                      <input type="text" class="form-control" id="numero" />
                     </div>
                     <div class="col-md-6 mt-2 mt-md-0">
-                      <label class="">Município *</label><br />
-                      <input type="text" class="form-control" />
+                      <label>Município *</label><br />
+                      <input type="text" class="form-control" id="municipio" />
                     </div>
                   </div>
+
                   <div class="row form-desing my-4">
                     <div class="col-md-6 mt-2 mt-md-0">
-                      <label class="">Estado*</label><br />
-                      <input type="text" class="form-control" />
+                      <label>Estado *</label><br />
+                      <input type="text" class="form-control" id="estado" />
                     </div>
                     <div class="col-md-6 mt-2 mt-md-0">
-                      <label class="">Bairro *</label><br />
-                      <input type="text" class="form-control" />
+                      <label>Bairro *</label><br />
+                      <input type="text" class="form-control" id="bairro" />
                     </div>
                   </div>
+
                   <div class="row form-desing my-4">
                     <div class="col-md-6 mt-2 mt-md-0">
-                      <label class="">CEP *</label><br />
-                      <input type="text" class="form-control" />
+                      <label>CEP *</label><br />
+                      <input type="text" class="form-control" id="cep" />
                     </div>
                     <div class="col-md-6 mt-2 mt-md-0">
-                      <label class="">Longitude *</label><br />
-                      <input type="text" class="form-control" />
+                      <label>Longitude *</label><br />
+                      <input type="text" class="form-control" id="longitude" />
                     </div>
                   </div>
+
                   <div class="row form-desing my-4">
                     <div class="col-md-6 mt-2 mt-md-0">
-                      <label class="">Latitude *</label><br />
-                      <input type="text" class="form-control" />
+                      <label>Latitude *</label><br />
+                      <input type="text" class="form-control" id="latitude" />
                     </div>
                     <div class="col-md-6 mt-2 mt-md-0">
-                      <label class="">Observações</label><br />
-                      <input type="text" class="form-control" />
+                      <label>Observações</label><br />
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="observacoes"
+                      />
                     </div>
                   </div>
+
                   <div class="row form-desing my-4">
                     <div class="col">
                       <button
                         class="btn save text-white py-2 px-5"
                         type="button"
+                        onclick="realizarCadastro()"
                       >
                         Salvar
                       </button>
@@ -523,6 +618,100 @@
             </div>
           </div>
 
+          <script>
+            // Função para coletar os dados e fazer a requisição
+            function realizarCadastro() {
+              // Coleta os valores dos campos
+              const endId = document.getElementById("endId").value;
+              const siteId = document.getElementById("siteId").value;
+              const demanda = document.getElementById("demanda").value;
+              const observacoes = document.getElementById("observacoes").value;
+
+              const idDetentora = document.getElementById("idDetentora").value;
+              const detentora = document.getElementById("detentora").value;
+
+              const idOperadora = document.getElementById("idOperadora").value;
+              const operadora =
+                document.getElementById("operadoraCedente").value;
+
+              const logradouro = document.getElementById("logradouro").value;
+              const numero = document.getElementById("numero").value;
+              const bairro = document.getElementById("bairro").value;
+              const municipio = document.getElementById("municipio").value;
+              const estado = document.getElementById("estado").value;
+              const cep = document.getElementById("cep").value;
+
+              const latitude = document.getElementById("latitude").value;
+              const longitude = document.getElementById("longitude").value;
+
+              // Validação dos campos obrigatórios (exceto observações)
+              if (
+                !endId ||
+                !siteId ||
+                !demanda ||
+                !idDetentora ||
+                !detentora ||
+                !idOperadora ||
+                !operadora ||
+                !logradouro ||
+                !numero ||
+                !bairro ||
+                !municipio ||
+                !estado ||
+                !cep ||
+                !latitude ||
+                !longitude
+              ) {
+                alert("Por favor, preencha todos os campos obrigatórios.");
+                return; // Interrompe a execução da função se algum campo obrigatório não foi preenchido
+              }
+
+              // Estrutura do payload
+              const payload = {
+                endId: endId,
+                siteId: siteId,
+                demanda: demanda,
+                observacoes: observacoes || null,
+                detentora: {
+                  idDetentora: idDetentora,
+                  detentora: detentora,
+                },
+                cedente: {
+                  idOperadora: idOperadora,
+                  operadora: operadora,
+                },
+                endereco: {
+                  logradouro: logradouro,
+                  numero: numero,
+                  bairro: bairro,
+                  municipio: municipio,
+                  estado: estado,
+                  cep: cep,
+                  latitude: parseFloat(latitude),
+                  longitude: parseFloat(longitude),
+                },
+              };
+
+              // Envia a requisição para o servidor
+              fetch(`${host}/cadastroEndIds`, {
+                method: "POST",
+                headers: {
+                  "Content-Type": "application/json",
+                },
+                body: JSON.stringify(payload), // Envia o payload estruturado
+              })
+                .then((response) => response.json())
+                .then((data) => {
+                  console.log("Cadastro realizado com sucesso:", data);
+                  alert("Cadastro realizado com sucesso!");
+                })
+                .catch((error) => {
+                  console.error("Erro ao realizar cadastro:", error);
+                  alert("Erro ao realizar cadastro, tente novamente.");
+                });
+            }
+          </script>
+
           <!--editar cadastro-->
 
           <div class="tab-pane fade px-4" id="cadastro-editar">
@@ -534,98 +723,168 @@
                     <div class="row form-desing my-4">
                       <div class="col-md-6 mt-2 mt-md-0">
                         <label>END ID *</label>
-                        <input type="text" class="form-control" placeholder="Informe o END ID" />
+                        <input
+                          type="text"
+                          class="form-control"
+                          placeholder="Informe o END ID"
+                        />
                       </div>
                       <div class="col-md-0 mt-0 mt-md-0 d-flex align-items-end">
                         <button class="btn btn-primary w-100">
-                          <i class="fa-solid fa-magnifying-glass"></i> 
+                          <i class="fa-solid fa-magnifying-glass"></i>
                         </button>
                       </div>
                     </div>
-          
+
                     <div class="row form-desing my-4">
                       <div class="col-md-6 mt-2 mt-md-0">
                         <label>Site ID *</label>
-                        <input type="text" class="form-control" placeholder="Informe o Site ID" />
+                        <input
+                          type="text"
+                          class="form-control"
+                          placeholder="Informe o Site ID"
+                        />
                       </div>
                       <div class="col-md-6 mt-2 mt-md-0">
                         <label>Demanda *</label>
-                        <input type="text" class="form-control" placeholder="Informe a Demanda" />
+                        <input
+                          type="text"
+                          class="form-control"
+                          placeholder="Informe a Demanda"
+                        />
                       </div>
                     </div>
                     <div class="row form-desing my-4">
                       <div class="col-md-6 mt-2 mt-md-0">
                         <label>Detentora *</label>
-                        <input type="text" class="form-control" placeholder="Informe a Detentora" />
+                        <input
+                          type="text"
+                          class="form-control"
+                          placeholder="Informe a Detentora"
+                        />
                       </div>
                       <div class="col-md-6 mt-2 mt-md-0">
                         <label>ID Detentora *</label>
-                        <input type="text" class="form-control" placeholder="Informe o ID da Detentora" />
+                        <input
+                          type="text"
+                          class="form-control"
+                          placeholder="Informe o ID da Detentora"
+                        />
                       </div>
                     </div>
                     <div class="row form-desing my-4">
                       <div class="col-md-6 mt-2 mt-md-0">
                         <label>Operadora Cedente *</label>
-                        <input type="text" class="form-control" placeholder="Informe a Operadora Cedente" />
+                        <input
+                          type="text"
+                          class="form-control"
+                          placeholder="Informe a Operadora Cedente"
+                        />
                       </div>
                       <div class="col-md-6 mt-2 mt-md-0">
                         <label>ID Operadora *</label>
-                        <input type="text" class="form-control" placeholder="Informe o ID da Operadora" />
+                        <input
+                          type="text"
+                          class="form-control"
+                          placeholder="Informe o ID da Operadora"
+                        />
                       </div>
                     </div>
                     <div class="row form-desing my-4">
                       <div class="col-md-6 mt-2 mt-md-0">
                         <label>Logradouro *</label>
-                        <input type="text" class="form-control" placeholder="Informe o Logradouro" />
+                        <input
+                          type="text"
+                          class="form-control"
+                          placeholder="Informe o Logradouro"
+                        />
                       </div>
                       <div class="col-md-6 mt-2 mt-md-0">
                         <label>Número *</label>
-                        <input type="text" class="form-control" placeholder="Informe o Número" />
+                        <input
+                          type="text"
+                          class="form-control"
+                          placeholder="Informe o Número"
+                        />
                       </div>
                     </div>
                     <div class="row form-desing my-4">
                       <div class="col-md-6 mt-2 mt-md-0">
                         <label>Bairro *</label>
-                        <input type="text" class="form-control" placeholder="Informe o Bairro" />
+                        <input
+                          type="text"
+                          class="form-control"
+                          placeholder="Informe o Bairro"
+                        />
                       </div>
                       <div class="col-md-6 mt-2 mt-md-0">
                         <label>Município *</label>
-                        <input type="text" class="form-control" placeholder="Informe o Município" />
+                        <input
+                          type="text"
+                          class="form-control"
+                          placeholder="Informe o Município"
+                        />
                       </div>
                     </div>
                     <div class="row form-desing my-4">
                       <div class="col-md-6 mt-2 mt-md-0">
                         <label>Estado *</label>
-                        <input type="text" class="form-control" placeholder="Informe o Estado" />
+                        <input
+                          type="text"
+                          class="form-control"
+                          placeholder="Informe o Estado"
+                        />
                       </div>
                       <div class="col-md-6 mt-2 mt-md-0">
                         <label>CEP *</label>
-                        <input type="text" class="form-control" placeholder="Informe o CEP" />
+                        <input
+                          type="text"
+                          class="form-control"
+                          placeholder="Informe o CEP"
+                        />
                       </div>
                     </div>
                     <div class="row form-desing my-4">
                       <div class="col-md-6 mt-2 mt-md-0">
                         <label>Latitude *</label>
-                        <input type="text" class="form-control" placeholder="Informe a Latitude" />
+                        <input
+                          type="text"
+                          class="form-control"
+                          placeholder="Informe a Latitude"
+                        />
                       </div>
                       <div class="col-md-6 mt-2 mt-md-0">
                         <label>Longitude *</label>
-                        <input type="text" class="form-control" placeholder="Informe a Longitude" />
+                        <input
+                          type="text"
+                          class="form-control"
+                          placeholder="Informe a Longitude"
+                        />
                       </div>
                     </div>
                     <div class="row form-desing my-4">
                       <div class="col-md-6 mt-2 mt-md-0">
                         <label>Observações </label>
-                        <input type="text" class="form-control" placeholder="Deixe uma observação caso precise" />
+                        <input
+                          type="text"
+                          class="form-control"
+                          placeholder="Deixe uma observação caso precise"
+                        />
                       </div>
                     </div>
-          
+
                     <div class="row form-desing my-4">
                       <div class="col">
-                        <button class="btn btn-primary text-white py-2 px-5" type="button">
+                        <button
+                          class="btn btn-primary text-white py-2 px-5"
+                          type="button"
+                        >
                           Atualizar
                         </button>
-                        <button class="btn btn-secondary text-white py-2 px-5" type="reset">
+                        <button
+                          class="btn btn-secondary text-white py-2 px-5"
+                          type="reset"
+                        >
                           Resetar
                         </button>
                       </div>
@@ -635,7 +894,7 @@
               </div>
             </div>
           </div>
-          
+
           <!--todos cadastros-->
 
           <div class="tab-pane fade px-4" id="cadastro-feito">
@@ -644,9 +903,21 @@
                 <div class="col shadow bg-white p-4 rounded">
                   <h4 class="mb-3">Histórico de cadastros:</h4>
                   <div class="header-result">
-                    <input type="search" class="border-0 bg-light p-2 w-40" placeholder="Pesquisar por Site ID.."/>
-                    <input type="search" class="border-0 bg-light p-2" placeholder="Pesquisar por End ID.."/>
-                    <input type="search" class="border-0 bg-light p-2" placeholder="Pesquisar por Estado.."/>
+                    <input
+                      type="search"
+                      class="border-0 bg-light p-2 w-40"
+                      placeholder="Pesquisar por Site ID.."
+                    />
+                    <input
+                      type="search"
+                      class="border-0 bg-light p-2"
+                      placeholder="Pesquisar por End ID.."
+                    />
+                    <input
+                      type="search"
+                      class="border-0 bg-light p-2"
+                      placeholder="Pesquisar por Estado.."
+                    />
                     <button class="btn btn-warning text-white">
                       Pesquisar
                     </button>
@@ -693,7 +964,12 @@
                           <td>-46.633308</td>
                           <td>Nenhuma</td>
                           <td>
-                            <button class="btn btn-primary finalizar-btn" data-id="#001">Finalizar</button>
+                            <button
+                              class="btn btn-primary finalizar-btn"
+                              data-id="#001"
+                            >
+                              Finalizar
+                            </button>
                           </td>
                         </tr>
                         <tr>
@@ -714,7 +990,12 @@
                           <td>-43.1729</td>
                           <td>Nenhuma</td>
                           <td>
-                            <button class="btn btn-primary finalizar-btn" data-id="#002">Finalizar</button>
+                            <button
+                              class="btn btn-primary finalizar-btn"
+                              data-id="#002"
+                            >
+                              Finalizar
+                            </button>
                           </td>
                         </tr>
                         <tr>
@@ -735,7 +1016,12 @@
                           <td>-49.2733</td>
                           <td>Nenhuma</td>
                           <td>
-                            <button class="btn btn-primary finalizar-btn" data-id="#003">Finalizar</button>
+                            <button
+                              class="btn btn-primary finalizar-btn"
+                              data-id="#003"
+                            >
+                              Finalizar
+                            </button>
                           </td>
                         </tr>
                       </tbody>
@@ -754,10 +1040,24 @@
                 <div class="col shadow bg-white p-4 rounded">
                   <h4 class="mb-3">Status dos cadastros:</h4>
                   <div class="header-result">
-                    <input type="search" class="border-0 bg-light p-2 w-40" placeholder="Pesquisar por END ID.." />
-                    <input type="search" class="border-0 bg-light p-2" placeholder="Pesquisar por Data de Cadastro.." />
-                    <input type="search" class="border-0 bg-light p-2" placeholder="Pesquisar por Situação.." />
-                    <button class="btn btn-warning text-white">Pesquisar</button>
+                    <input
+                      type="search"
+                      class="border-0 bg-light p-2 w-40"
+                      placeholder="Pesquisar por END ID.."
+                    />
+                    <input
+                      type="search"
+                      class="border-0 bg-light p-2"
+                      placeholder="Pesquisar por Data de Cadastro.."
+                    />
+                    <input
+                      type="search"
+                      class="border-0 bg-light p-2"
+                      placeholder="Pesquisar por Situação.."
+                    />
+                    <button class="btn btn-warning text-white">
+                      Pesquisar
+                    </button>
                   </div>
                   <div class="table-responsive text-nowrap">
                     <table class="table my-4 table-hover table-striped w-100">
@@ -795,7 +1095,7 @@
               </div>
             </div>
           </div>
-          
+
           <!-- ============================== PÁGINA DE LIBERAÇÃO DE ACESSO ============================== -->
 
           <!-- editar end id -->
@@ -809,11 +1109,15 @@
                     <div class="row form-desing my-4">
                       <div class="col-md-6 mt-2 mt-md-0">
                         <label>END ID *</label>
-                        <input type="text" class="form-control" placeholder="Informe o END ID"/>
+                        <input
+                          type="text"
+                          class="form-control"
+                          placeholder="Informe o END ID"
+                        />
                       </div>
                       <div class="col-md-0 mt-0 mt-md-0 d-flex align-items-end">
                         <button class="btn btn-primary w-100">
-                          <i class="fa-solid fa-magnifying-glass"></i> 
+                          <i class="fa-solid fa-magnifying-glass"></i>
                         </button>
                       </div>
                     </div>
@@ -923,8 +1227,18 @@
                     </div>
                     <div class="row form-desing my-4">
                       <div class="col">
-                        <button class="btn btn-primary text-white py-2 px-5" type="button">Atualizar</button>
-                        <button class="btn btn-secondary text-white py-2 px-5" type="reset">Resetar</button>
+                        <button
+                          class="btn btn-primary text-white py-2 px-5"
+                          type="button"
+                        >
+                          Atualizar
+                        </button>
+                        <button
+                          class="btn btn-secondary text-white py-2 px-5"
+                          type="reset"
+                        >
+                          Resetar
+                        </button>
                       </div>
                     </div>
                   </form>
@@ -932,7 +1246,6 @@
               </div>
             </div>
           </div>
-          
 
           <!-- todos agendamentos -->
 
@@ -942,9 +1255,21 @@
                 <div class="col shadow bg-white p-4 rounded">
                   <h4 class="mb-3">Histórico de Agendamentos:</h4>
                   <div class="header-result mb-3">
-                    <input type="search" class="border-0 bg-light p-2 w-40" placeholder="Pesquisar por END ID..."/>
-                    <input type="search" class="border-0 bg-light p-2" placeholder="Pesquisar por Status..."/>
-                    <input type="search" class="border-0 bg-light p-2" placeholder="Pesquisar por Site ID "/>
+                    <input
+                      type="search"
+                      class="border-0 bg-light p-2 w-40"
+                      placeholder="Pesquisar por END ID..."
+                    />
+                    <input
+                      type="search"
+                      class="border-0 bg-light p-2"
+                      placeholder="Pesquisar por Status..."
+                    />
+                    <input
+                      type="search"
+                      class="border-0 bg-light p-2"
+                      placeholder="Pesquisar por Site ID "
+                    />
                     <button class="btn btn-warning text-white">BUSCAR</button>
                   </div>
                   <div class="table-responsive text-nowrap">
@@ -995,15 +1320,23 @@
                           <td>-23.55052</td>
                           <td>-46.6333</td>
                           <td>
-                            <select disabled class="form-select border-0 bg-light p-2">
+                            <select
+                              disabled
+                              class="form-select border-0 bg-light p-2"
+                            >
                               <option value="nao-iniciado">Não Iniciado</option>
                               <option value="em-andamento">Em Andamento</option>
                               <option value="concluido">Concluído</option>
-                          </select>
+                            </select>
                           </td>
                           <td>Verificar documentação</td>
                           <td>
-                            <button class="btn btn-primary finalizar-btn" data-id="#001">Finalizar</button>
+                            <button
+                              class="btn btn-primary finalizar-btn"
+                              data-id="#001"
+                            >
+                              Finalizar
+                            </button>
                           </td>
                         </tr>
                         <tr>
@@ -1026,15 +1359,23 @@
                           <td>-22.9068</td>
                           <td>-43.1729</td>
                           <td>
-                            <select disabled class="form-select border-0 bg-light p-2">
+                            <select
+                              disabled
+                              class="form-select border-0 bg-light p-2"
+                            >
                               <option value="nao-iniciado">Não Iniciado</option>
                               <option value="em-andamento">Em Andamento</option>
                               <option value="concluido">Concluído</option>
-                          </select>
+                            </select>
                           </td>
                           <td>Serviço concluído com sucesso</td>
                           <td>
-                            <button class="btn btn-primary finalizar-btn" data-id="#002">Finalizar</button>
+                            <button
+                              class="btn btn-primary finalizar-btn"
+                              data-id="#002"
+                            >
+                              Finalizar
+                            </button>
                           </td>
                         </tr>
                         <tr>
@@ -1057,15 +1398,23 @@
                           <td>-25.4296</td>
                           <td>-49.2713</td>
                           <td>
-                            <select disabled class="form-select border-0 bg-light p-2">
+                            <select
+                              disabled
+                              class="form-select border-0 bg-light p-2"
+                            >
                               <option value="nao-iniciado">Não Iniciado</option>
                               <option value="em-andamento">Em Andamento</option>
                               <option value="concluido">Concluído</option>
-                          </select>
+                            </select>
                           </td>
                           <td>Aguardando reagendamento</td>
                           <td>
-                            <button class="btn btn-primary finalizar-btn" data-id="#003">Finalizar</button>
+                            <button
+                              class="btn btn-primary finalizar-btn"
+                              data-id="#003"
+                            >
+                              Finalizar
+                            </button>
                           </td>
                         </tr>
                       </tbody>
@@ -1086,11 +1435,27 @@
               <div class="row justify-content-between my-4">
                 <div class="col-12 shadow bg-white p-4 rounded">
                   <h4 class="mb-3">Vistorias</h4>
-                  <div class="header-result d-flex justify-content-start gap-3 mb-3">
-                    <input type="search" class="border-0 bg-light p-2 w-15" placeholder="Procurar por END ID.."/>
-                    <input type="search" class="border-0 bg-light p-2 w-15" placeholder="Procurar por Status.."/>
-                    <input type="search" class="border-0 bg-light p-2 w-15" placeholder="Procurar por Parecer.."/>
-                    <button class="btn btn-warning text-white">Pesquisar</button>
+                  <div
+                    class="header-result d-flex justify-content-start gap-3 mb-3"
+                  >
+                    <input
+                      type="search"
+                      class="border-0 bg-light p-2 w-15"
+                      placeholder="Procurar por END ID.."
+                    />
+                    <input
+                      type="search"
+                      class="border-0 bg-light p-2 w-15"
+                      placeholder="Procurar por Status.."
+                    />
+                    <input
+                      type="search"
+                      class="border-0 bg-light p-2 w-15"
+                      placeholder="Procurar por Parecer.."
+                    />
+                    <button class="btn btn-warning text-white">
+                      Pesquisar
+                    </button>
                   </div>
                   <div class="table-responsive text-nowrap">
                     <table class="table my-4 table-hover table-striped w-100">
@@ -1106,15 +1471,27 @@
                       <tbody>
                         <tr>
                           <td>
-                            <button class="btn btn-link p-0 text-decoration-none end-id"data-id="#001">#001</button>
+                            <button
+                              class="btn btn-link p-0 text-decoration-none end-id"
+                              data-id="#001"
+                            >
+                              #001
+                            </button>
                           </td>
                           <td>
                             <div class="d-flex align-items-center">
-                              <select disabled class="form-select border-0 bg-light p-2">
-                                <option value="nao-iniciado">Não Iniciado</option>
-                                <option selected value="em-andamento">Em Andamento</option>
+                              <select
+                                disabled
+                                class="form-select border-0 bg-light p-2"
+                              >
+                                <option value="nao-iniciado">
+                                  Não Iniciado
+                                </option>
+                                <option selected value="em-andamento">
+                                  Em Andamento
+                                </option>
                                 <option value="concluido">Concluído</option>
-                            </select>
+                              </select>
                             </div>
                           </td>
                           <td>
@@ -1122,28 +1499,49 @@
                           </td>
                           <td>
                             <select class="form-select border-0 bg-light p-2">
-                              <option value="" selected disabled>Selecione uma opção</option>
+                              <option value="" selected disabled>
+                                Selecione uma opção
+                              </option>
                               <option value="viavel">Viável</option>
                               <option value="inviavel">Inviável</option>
                             </select>
                           </td>
                           <td>
-                            <button class="btn btn-primary finalizar-btn" data-id="#001">Finalizar</button>
+                            <button
+                              class="btn btn-primary finalizar-btn"
+                              data-id="#001"
+                            >
+                              Finalizar
+                            </button>
                           </td>
                         </tr>
                         <tr>
                           <td>
-                            <button class="btn btn-link p-0 text-decoration-none end-id" data-id="#002">#002</button>
+                            <button
+                              class="btn btn-link p-0 text-decoration-none end-id"
+                              data-id="#002"
+                            >
+                              #002
+                            </button>
                           </td>
                           <td>
                             <div class="d-flex align-items-center">
-                              <select disabled class="form-select border-0 bg-light p-2">
-                                <option value="nao-iniciado">Não Iniciado</option>
-                                <option value="em-andamento">Em Andamento</option>
+                              <select
+                                disabled
+                                class="form-select border-0 bg-light p-2"
+                              >
+                                <option value="nao-iniciado">
+                                  Não Iniciado
+                                </option>
+                                <option value="em-andamento">
+                                  Em Andamento
+                                </option>
                                 <option value="concluido">Concluído</option>
-                            </select>
-                              <button class="btn iniciar-btn p-0 border-0 bg-transparent ml-2">
-                                <i class=" fa-solid fa-circle-play"></i>
+                              </select>
+                              <button
+                                class="btn iniciar-btn p-0 border-0 bg-transparent ml-2"
+                              >
+                                <i class="fa-solid fa-circle-play"></i>
                               </button>
                             </div>
                           </td>
@@ -1152,13 +1550,20 @@
                           </td>
                           <td>
                             <select class="form-select border-0 bg-light p-2">
-                              <option value="" selected disabled>Selecione uma opção</option>
+                              <option value="" selected disabled>
+                                Selecione uma opção
+                              </option>
                               <option value="viavel">Viável</option>
                               <option value="inviavel">Inviável</option>
                             </select>
                           </td>
                           <td>
-                            <button class="btn btn-primary finalizar-btn" data-id="#002">Finalizar</button>
+                            <button
+                              class="btn btn-primary finalizar-btn"
+                              data-id="#002"
+                            >
+                              Finalizar
+                            </button>
                           </td>
                         </tr>
                       </tbody>
@@ -1177,11 +1582,27 @@
               <div class="row justify-content-between my-4">
                 <div class="col-12 shadow bg-white p-4 rounded">
                   <h4 class="mb-3">KITS-TSSR</h4>
-                  <div class="header-result d-flex justify-content-start gap-3 mb-3">
-                    <input type="search" class="border-0 bg-light p-2 w-15" placeholder="Procurar por END ID.."/>
-                    <input type="search" class="border-0 bg-light p-2 w-15" placeholder="Procurar por Status.."/>
-                    <input type="search" class="border-0 bg-light p-2 w-15" placeholder="Procurar por Parecer.."/>
-                    <button class="btn btn-warning text-white">Pesquisar</button>
+                  <div
+                    class="header-result d-flex justify-content-start gap-3 mb-3"
+                  >
+                    <input
+                      type="search"
+                      class="border-0 bg-light p-2 w-15"
+                      placeholder="Procurar por END ID.."
+                    />
+                    <input
+                      type="search"
+                      class="border-0 bg-light p-2 w-15"
+                      placeholder="Procurar por Status.."
+                    />
+                    <input
+                      type="search"
+                      class="border-0 bg-light p-2 w-15"
+                      placeholder="Procurar por Parecer.."
+                    />
+                    <button class="btn btn-warning text-white">
+                      Pesquisar
+                    </button>
                   </div>
                   <div class="table-responsive text-nowrap">
                     <table class="table my-4 table-hover table-striped w-100">
@@ -1198,15 +1619,25 @@
                       <tbody>
                         <tr>
                           <td>
-                            <button class="btn btn-link p-0 text-decoration-none end-id" data-id="#001">#001</button>
+                            <button
+                              class="btn btn-link p-0 text-decoration-none end-id"
+                              data-id="#001"
+                            >
+                              #001
+                            </button>
                           </td>
                           <td>
-                            <select disabled class="form-select border-0 bg-light p-2">
+                            <select
+                              disabled
+                              class="form-select border-0 bg-light p-2"
+                            >
                               <option value="nao-iniciado">Não Iniciado</option>
                               <option value="em-andamento">Em Andamento</option>
                               <option value="concluido">Concluído</option>
-                          </select>
-                            <button class="btn iniciar-btn p-0 border-0 bg-transparent ml-2">
+                            </select>
+                            <button
+                              class="btn iniciar-btn p-0 border-0 bg-transparent ml-2"
+                            >
                               <i class="fa-solid fa-circle-play"></i>
                             </button>
                           </td>
@@ -1218,26 +1649,43 @@
                           </td>
                           <td>
                             <select class="form-select border-0 bg-light p-2">
-                              <option value="" selected disabled>Selecione uma opção</option>
+                              <option value="" selected disabled>
+                                Selecione uma opção
+                              </option>
                               <option value="viavel">Viável</option>
                               <option value="inviavel">Inviável</option>
                             </select>
                           </td>
                           <td>
-                            <button class="btn btn-primary finalizar-btn" data-id="#001">Finalizar</button>
+                            <button
+                              class="btn btn-primary finalizar-btn"
+                              data-id="#001"
+                            >
+                              Finalizar
+                            </button>
                           </td>
                         </tr>
                         <tr>
                           <td>
-                            <button class="btn btn-link p-0 text-decoration-none end-id" data-id="#001">#002</button>
+                            <button
+                              class="btn btn-link p-0 text-decoration-none end-id"
+                              data-id="#001"
+                            >
+                              #002
+                            </button>
                           </td>
                           <td>
-                            <select disabled class="form-select border-0 bg-light p-2">
+                            <select
+                              disabled
+                              class="form-select border-0 bg-light p-2"
+                            >
                               <option value="nao-iniciado">Não Iniciado</option>
                               <option value="em-andamento">Em Andamento</option>
                               <option value="concluido">Concluído</option>
-                          </select>
-                            <button class="btn iniciar-btn p-0 border-0 bg-transparent ml-2">
+                            </select>
+                            <button
+                              class="btn iniciar-btn p-0 border-0 bg-transparent ml-2"
+                            >
                               <i class="fa-solid fa-circle-play"></i>
                             </button>
                           </td>
@@ -1249,13 +1697,20 @@
                           </td>
                           <td>
                             <select class="form-select border-0 bg-light p-2">
-                              <option value="" selected disabled>Selecione uma opção</option>
+                              <option value="" selected disabled>
+                                Selecione uma opção
+                              </option>
                               <option value="viavel">Viável</option>
                               <option value="inviavel">Inviável</option>
                             </select>
                           </td>
                           <td>
-                            <button class="btn btn-primary finalizar-btn" data-id="#002">Finalizar</button>
+                            <button
+                              class="btn btn-primary finalizar-btn"
+                              data-id="#002"
+                            >
+                              Finalizar
+                            </button>
                           </td>
                         </tr>
                       </tbody>
@@ -1273,11 +1728,27 @@
               <div class="row justify-content-between my-4">
                 <div class="col-12 shadow bg-white p-4 rounded">
                   <h4 class="mb-3">SCI de Inclusão</h4>
-                  <div class="header-result d-flex justify-content-start gap-3 mb-3">
-                    <input type="search" class="border-0 bg-light p-2 w-15" placeholder="Procurar por END ID.."/>
-                    <input type="search" class="border-0 bg-light p-2 w-15" placeholder="Procurar por Status.."/>
-                    <input type="search" class="border-0 bg-light p-2 w-15" placeholder="Procurar por Código SCI.."/>
-                    <button class="btn btn-warning text-white">Pesquisar</button>
+                  <div
+                    class="header-result d-flex justify-content-start gap-3 mb-3"
+                  >
+                    <input
+                      type="search"
+                      class="border-0 bg-light p-2 w-15"
+                      placeholder="Procurar por END ID.."
+                    />
+                    <input
+                      type="search"
+                      class="border-0 bg-light p-2 w-15"
+                      placeholder="Procurar por Status.."
+                    />
+                    <input
+                      type="search"
+                      class="border-0 bg-light p-2 w-15"
+                      placeholder="Procurar por Código SCI.."
+                    />
+                    <button class="btn btn-warning text-white">
+                      Pesquisar
+                    </button>
                   </div>
                   <div class="table-responsive text-nowrap">
                     <table class="table my-4 table-hover table-striped w-100">
@@ -1294,50 +1765,88 @@
                       <tbody>
                         <tr>
                           <td>
-                            <button  class="btn btn-link p-0 text-decoration-none end-id" data-id="#001">#001</button>
+                            <button
+                              class="btn btn-link p-0 text-decoration-none end-id"
+                              data-id="#001"
+                            >
+                              #001
+                            </button>
                           </td>
                           <td>
-                            <select disabled class="form-select border-0 bg-light p-2">
+                            <select
+                              disabled
+                              class="form-select border-0 bg-light p-2"
+                            >
                               <option value="nao-iniciado">Não Iniciado</option>
                               <option value="em-andamento">Em Andamento</option>
                               <option value="concluido">Concluído</option>
-                          </select>
-                            
-                          <button class="btn iniciar-btn p-0 border-0 bg-transparent ml-2">
-                            <i class="fa-solid fa-circle-play"></i>
-                          </button>
+                            </select>
+
+                            <button
+                              class="btn iniciar-btn p-0 border-0 bg-transparent ml-2"
+                            >
+                              <i class="fa-solid fa-circle-play"></i>
+                            </button>
                           </td>
                           <td>
-                            <input type="text" class="form-control" placeholder="Código SCI"/>
+                            <input
+                              type="text"
+                              class="form-control"
+                              placeholder="Código SCI"
+                            />
                           </td>
                           <td><input type="date" class="form-control" /></td>
                           <td><input type="date" class="form-control" /></td>
                           <td>
-                            <button class="btn btn-primary finalizar-btn" data-id="#001">Finalizar</button>
+                            <button
+                              class="btn btn-primary finalizar-btn"
+                              data-id="#001"
+                            >
+                              Finalizar
+                            </button>
                           </td>
                         </tr>
                         <tr>
                           <td>
-                            <button class="btn btn-link p-0 text-decoration-none end-id" data-id="#002">#002</button>
+                            <button
+                              class="btn btn-link p-0 text-decoration-none end-id"
+                              data-id="#002"
+                            >
+                              #002
+                            </button>
                           </td>
                           <td>
-                            <select disabled class="form-select border-0 bg-light p-2">
+                            <select
+                              disabled
+                              class="form-select border-0 bg-light p-2"
+                            >
                               <option value="nao-iniciado">Não Iniciado</option>
                               <option value="em-andamento">Em Andamento</option>
                               <option value="concluido">Concluído</option>
-                          </select>
-                            
-                          <button class="btn iniciar-btn p-0 border-0 bg-transparent ml-2">
-                            <i class="fa-solid fa-circle-play"></i>
-                          </button>
+                            </select>
+
+                            <button
+                              class="btn iniciar-btn p-0 border-0 bg-transparent ml-2"
+                            >
+                              <i class="fa-solid fa-circle-play"></i>
+                            </button>
                           </td>
                           <td>
-                            <input type="text" class="form-control"placeholder="Código SCI"/>
+                            <input
+                              type="text"
+                              class="form-control"
+                              placeholder="Código SCI"
+                            />
                           </td>
                           <td><input type="date" class="form-control" /></td>
                           <td><input type="date" class="form-control" /></td>
                           <td>
-                            <button class="btn btn-primary finalizar-btn" data-id="#002">Finalizar</button>
+                            <button
+                              class="btn btn-primary finalizar-btn"
+                              data-id="#002"
+                            >
+                              Finalizar
+                            </button>
                           </td>
                         </tr>
                       </tbody>
@@ -1355,11 +1864,27 @@
               <div class="row justify-content-between my-4">
                 <div class="col-12 shadow bg-white p-4 rounded">
                   <h4 class="mb-3">Todas obras</h4>
-                  <div class="header-result d-flex justify-content-start gap-3 mb-3">
-                    <input type="search" class="border-0 bg-light p-2 w-15" placeholder="Procurar por Status..." />
-                    <input type="search" class="border-0 bg-light p-2 w-15" placeholder="Procurar por Início Previsto..." />
-                    <input type="search" class="border-0 bg-light p-2 w-15" placeholder="Procurar por Data Final..." />
-                    <button class="btn btn-warning text-white">Pesquisar</button>
+                  <div
+                    class="header-result d-flex justify-content-start gap-3 mb-3"
+                  >
+                    <input
+                      type="search"
+                      class="border-0 bg-light p-2 w-15"
+                      placeholder="Procurar por Status..."
+                    />
+                    <input
+                      type="search"
+                      class="border-0 bg-light p-2 w-15"
+                      placeholder="Procurar por Início Previsto..."
+                    />
+                    <input
+                      type="search"
+                      class="border-0 bg-light p-2 w-15"
+                      placeholder="Procurar por Data Final..."
+                    />
+                    <button class="btn btn-warning text-white">
+                      Pesquisar
+                    </button>
                   </div>
                   <div class="table-responsive text-nowrap">
                     <table class="table my-4 table-hover table-striped w-100">
@@ -1375,39 +1900,73 @@
                       <tbody>
                         <tr>
                           <td>
-                            <button class="btn btn-link p-0 text-decoration-none end-id" data-id="#001">#001</button>
+                            <button
+                              class="btn btn-link p-0 text-decoration-none end-id"
+                              data-id="#001"
+                            >
+                              #001
+                            </button>
                           </td>
                           <td>
-                            <select disabled class="form-select border-0 bg-light p-2">
+                            <select
+                              disabled
+                              class="form-select border-0 bg-light p-2"
+                            >
                               <option value="nao-iniciado">Não Iniciado</option>
                               <option value="em-andamento">Em Andamento</option>
                               <option value="concluido">Concluído</option>
-                          </select>
-                          <button class="btn iniciar-btn p-0 border-0 bg-transparent ml-2">
-                            <i class="fa-solid fa-circle-play"></i>
-                          </button>
+                            </select>
+                            <button
+                              class="btn iniciar-btn p-0 border-0 bg-transparent ml-2"
+                            >
+                              <i class="fa-solid fa-circle-play"></i>
+                            </button>
                           </td>
                           <td><input type="date" class="form-control" /></td>
                           <td><input type="date" class="form-control" /></td>
-                          <td><button class="btn btn-primary finalizar-btn" data-id="#001">Finalizar</button></td>
+                          <td>
+                            <button
+                              class="btn btn-primary finalizar-btn"
+                              data-id="#001"
+                            >
+                              Finalizar
+                            </button>
+                          </td>
                         </tr>
                         <tr>
                           <td>
-                            <button class="btn btn-link p-0 text-decoration-none end-id" data-id="#002">#002</button>
+                            <button
+                              class="btn btn-link p-0 text-decoration-none end-id"
+                              data-id="#002"
+                            >
+                              #002
+                            </button>
                           </td>
                           <td>
-                            <select disabled class="form-select border-0 bg-light p-2">
+                            <select
+                              disabled
+                              class="form-select border-0 bg-light p-2"
+                            >
                               <option value="nao-iniciado">Não Iniciado</option>
                               <option value="em-andamento">Em Andamento</option>
                               <option value="concluido">Concluído</option>
-                          </select>
-                          <button class="btn iniciar-btn p-0 border-0 bg-transparent ml-2">
-                            <i class="fa-solid fa-circle-play"></i>
-                          </button>
+                            </select>
+                            <button
+                              class="btn iniciar-btn p-0 border-0 bg-transparent ml-2"
+                            >
+                              <i class="fa-solid fa-circle-play"></i>
+                            </button>
                           </td>
                           <td><input type="date" class="form-control" /></td>
                           <td><input type="date" class="form-control" /></td>
-                          <td><button class="btn btn-primary finalizar-btn" data-id="#002">Finalizar</button></td>
+                          <td>
+                            <button
+                              class="btn btn-primary finalizar-btn"
+                              data-id="#002"
+                            >
+                              Finalizar
+                            </button>
+                          </td>
                         </tr>
                       </tbody>
                     </table>
@@ -1416,10 +1975,8 @@
               </div>
             </div>
           </div>
-          
 
           <!-- ============================== PÁGINA DE PROJETO ============================== -->
-
 
           <!--  editar projeto-->
 
@@ -1432,126 +1989,209 @@
                     <div class="row form-desing my-4">
                       <div class="col-md-6 mt-2 mt-md-0">
                         <label>END ID *</label>
-                        <input type="text" class="form-control" placeholder="Informe o END ID" />
+                        <input
+                          type="text"
+                          class="form-control"
+                          placeholder="Informe o END ID"
+                        />
                       </div>
                       <div class="col-md-0 mt-0 mt-md-0 d-flex align-items-end">
                         <button class="btn btn-primary w-100">
-                          <i class="fa-solid fa-magnifying-glass"></i> 
+                          <i class="fa-solid fa-magnifying-glass"></i>
                         </button>
                       </div>
                     </div>
-                    
-     
+
                     <div class="row form-desing my-4">
                       <div class="col-md-6 mt-2 mt-md-0">
                         <label class="">ENDEREÇO ID *</label>
-                        <input type="text" class="form-control" placeholder="Informe o ENDEREÇO ID" />
+                        <input
+                          type="text"
+                          class="form-control"
+                          placeholder="Informe o ENDEREÇO ID"
+                        />
                       </div>
                       <div class="col-md-6 mt-2 mt-md-0">
                         <label class="">SITE ID *</label>
-                        <input type="text" class="form-control" placeholder="Informe o SITE ID" />
+                        <input
+                          type="text"
+                          class="form-control"
+                          placeholder="Informe o SITE ID"
+                        />
                       </div>
                     </div>
 
                     <div class="row form-desing my-4">
                       <div class="col-md-6 mt-2 mt-md-0">
                         <label class="">Leitura inicial *</label>
-                        <input type="text" class="form-control" placeholder="Informe a LEITURA INICIAL" />
+                        <input
+                          type="text"
+                          class="form-control"
+                          placeholder="Informe a LEITURA INICIAL"
+                        />
                       </div>
                       <div class="col-md-6 mt-2 mt-md-0">
                         <label class="">Concessionária *</label>
-                        <input type="text" class="form-control" placeholder="Informe a CONCESSIONÁRIA" />
+                        <input
+                          type="text"
+                          class="form-control"
+                          placeholder="Informe a CONCESSIONÁRIA"
+                        />
                       </div>
                     </div>
-          
+
                     <div class="row form-desing my-4">
                       <div class="col-md-6 mt-2 mt-md-0">
                         <label class="">REGIONAL *</label>
-                        <input type="text" class="form-control" placeholder="Informe a REGIONAL" />
+                        <input
+                          type="text"
+                          class="form-control"
+                          placeholder="Informe a REGIONAL"
+                        />
                       </div>
                       <div class="col-md-6 mt-2 mt-md-0">
                         <label class="">CEP *</label>
-                        <input type="text" class="form-control" placeholder="Informe o CEP" />
+                        <input
+                          type="text"
+                          class="form-control"
+                          placeholder="Informe o CEP"
+                        />
                       </div>
                     </div>
                     <div class="row form-desing my-4">
                       <div class="col-md-6 mt-2 mt-md-0">
                         <label class="">UF *</label>
-                        <input type="text" class="form-control" placeholder="Informe o UF" />
+                        <input
+                          type="text"
+                          class="form-control"
+                          placeholder="Informe o UF"
+                        />
                       </div>
                       <div class="col-md-6 mt-2 mt-md-0">
                         <label class="">CIDADE *</label>
-                        <input type="text" class="form-control" placeholder="Informe a CIDADE" />
+                        <input
+                          type="text"
+                          class="form-control"
+                          placeholder="Informe a CIDADE"
+                        />
                       </div>
                     </div>
-          
+
                     <div class="row form-desing my-4">
                       <div class="col-md-6 mt-2 mt-md-0">
                         <label class="">ENDEREÇO *</label>
-                        <input type="text" class="form-control" placeholder="Informe o ENDEREÇO" />
+                        <input
+                          type="text"
+                          class="form-control"
+                          placeholder="Informe o ENDEREÇO"
+                        />
                       </div>
                       <div class="col-md-6 mt-2 mt-md-0">
                         <label class="">NÚMERO *</label>
-                        <input type="text" class="form-control" placeholder="Informe o NÚMERO" />
+                        <input
+                          type="text"
+                          class="form-control"
+                          placeholder="Informe o NÚMERO"
+                        />
                       </div>
                     </div>
                     <div class="row form-desing my-4">
                       <div class="col-md-6 mt-2 mt-md-0">
                         <label class="">BAIRRO *</label>
-                        <input type="text" class="form-control" placeholder="Informe o BAIRRO" />
+                        <input
+                          type="text"
+                          class="form-control"
+                          placeholder="Informe o BAIRRO"
+                        />
                       </div>
                       <div class="col-md-6 mt-2 mt-md-0">
                         <label class="">COMPLEMENTO</label>
-                        <input type="text" class="form-control" placeholder="Informe o COMPLEMENTO" />
+                        <input
+                          type="text"
+                          class="form-control"
+                          placeholder="Informe o COMPLEMENTO"
+                        />
                       </div>
                     </div>
-          
+
                     <div class="row form-desing my-4">
                       <div class="col-md-6 mt-2 mt-md-0">
                         <label class="">CNPJ *</label>
-                        <input type="text" class="form-control" placeholder="Informe o CNPJ" />
+                        <input
+                          type="text"
+                          class="form-control"
+                          placeholder="Informe o CNPJ"
+                        />
                       </div>
                       <div class="col-md-6 mt-2 mt-md-0">
                         <label class="">CMPJ DA UC SOLICITADA *</label>
-                        <input type="text" class="form-control" placeholder="Informe o CMPJ DA UC SOLICITADA" />
+                        <input
+                          type="text"
+                          class="form-control"
+                          placeholder="Informe o CMPJ DA UC SOLICITADA"
+                        />
                       </div>
                     </div>
-          
+
                     <div class="row form-desing my-4">
                       <div class="col-md-6 mt-2 mt-md-0">
                         <label class="">Previsão de ligação *</label>
-                        <input type="date" class="form-control" placeholder="Informe a PREVISÃO" />
+                        <input
+                          type="date"
+                          class="form-control"
+                          placeholder="Informe a PREVISÃO"
+                        />
                       </div>
                       <div class="col-md-6 mt-2 mt-md-0">
                         <label class="">Número Medidor *</label>
-                        <input type="text" class="form-control" placeholder="Informe o NÚMERO MEDIDOR" />
+                        <input
+                          type="text"
+                          class="form-control"
+                          placeholder="Informe o NÚMERO MEDIDOR"
+                        />
                       </div>
                     </div>
-          
+
                     <!-- Novos campos: TIPO DE TENSAO e UNIDADE -->
                     <div class="row form-desing my-4">
                       <div class="col-md-6 mt-2 mt-md-0">
                         <label class="">TIPO DE TENSAO *</label>
-                        <input type="text" class="form-control" placeholder="Informe o TIPO DE TENSAO" />
+                        <input
+                          type="text"
+                          class="form-control"
+                          placeholder="Informe o TIPO DE TENSAO"
+                        />
                       </div>
                       <div class="col-md-6 mt-2 mt-md-0">
                         <label class="">UNIDADE *</label>
-                        <input type="text" class="form-control" placeholder="Informe a UNIDADE" />
+                        <input
+                          type="text"
+                          class="form-control"
+                          placeholder="Informe a UNIDADE"
+                        />
                       </div>
                     </div>
-          
+
                     <!-- Número de instalação e Número de fases -->
                     <div class="row form-desing my-4">
                       <div class="col-md-6 mt-2 mt-md-0">
                         <label class="">Número de instalação *</label>
-                        <input type="text" class="form-control" placeholder="Informe o NÚMERO DE INSTALAÇÃO" />
+                        <input
+                          type="text"
+                          class="form-control"
+                          placeholder="Informe o NÚMERO DE INSTALAÇÃO"
+                        />
                       </div>
                       <div class="col-md-6 mt-2 mt-md-0">
                         <label class="">Número de fases *</label>
-                        <input type="text" class="form-control" placeholder="Informe o NÚMERO DE FASES" />
+                        <input
+                          type="text"
+                          class="form-control"
+                          placeholder="Informe o NÚMERO DE FASES"
+                        />
                       </div>
                     </div>
-          
+
                     <!-- Leitura inicial -->
                     <div class="col-md-6 mt-2 mt-md-0">
                       <label class="">Status ligação *</label>
@@ -1561,14 +2201,20 @@
                         <option value="cancelado">Cancelado</option>
                       </select>
                     </div>
-          
+
                     <!-- Botões -->
                     <div class="row form-desing my-4">
                       <div class="col">
-                        <button class="btn btn-primary text-white py-2 px-5" type="button">
+                        <button
+                          class="btn btn-primary text-white py-2 px-5"
+                          type="button"
+                        >
                           Atualizar
                         </button>
-                        <button class="btn btn-secondary text-white py-2 px-5" type="reset">
+                        <button
+                          class="btn btn-secondary text-white py-2 px-5"
+                          type="reset"
+                        >
                           Resetar
                         </button>
                       </div>
@@ -1578,119 +2224,180 @@
               </div>
             </div>
           </div>
-          
-        
 
           <!-- todos projetos-->
 
           <div class="tab-pane fade px-4" id="todos-projetos">
             <div class="container-fluid">
-                <div class="row justify-content-between my-4">
-                    <div class="col shadow bg-white p-4 rounded">
-                        <h4 class="mb-3">Todos projetos:</h4>
-                        <div class="header-result mb-3">
-                            <input type="search" class="border-0 bg-light p-2 w-40" placeholder="Pesquisar por END ID..." />
-                            <input type="search" class="border-0 bg-light p-2" placeholder="Pesquisar por Status..." />
-                            <input type="search" class="border-0 bg-light p-2" placeholder="Pesquisar por Data Entrada..." />
-                            <button class="btn btn-warning text-white">BUSCAR</button>
-                        </div>
-                        <div class="table-responsive text-nowrap">
-                            <table class="table table-hover table-striped w-100">
-                                <thead class="bg-light">
-                                    <tr>
-                                        <th>End ID</th>
-                                        <th></th>
-                                        <th>Status Projeto</th>
-                                        <th>Data Entrada</th>
-                                        <th>Data Aprovação</th>
-                                        <th>Data Ligação</th>
-                                        <th>Ação</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td>
-                                            <button class="btn btn-link p-0 text-decoration-none end-id" data-id="#001">#001</button>
-                                        </td>
-                                        <td>
-                                            <button class="btn btn-outline-primary btn-sm">Ver mais..</button>
-                                        </td>
-                                        <td>
-                                            <select disabled class="form-select border-0 bg-light p-2">
-                                                <option value="nao-iniciado">Não Iniciado</option>
-                                                <option value="em-andamento" selected>Em Andamento</option>
-                                                <option value="concluido">Concluído</option>
-                                                <option value="aprovado">Aprovado</option>
-                                                <option value="inviavel">Inviável</option>
-                                            </select>
-                                        </td>
-                                        <td><input type="date" class="form-control" /></td>
-                                        <td><input type="date" class="form-control" /></td>
-                                        <td><input type="date" class="form-control" /></td>
-                                        <td>
-                                            <button class="btn btn-primary finalizar-btn" data-id="#001">Finalizar</button>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <button class="btn btn-link p-0 text-decoration-none end-id" data-id="#001">#002</button>
-                                        </td>
-                                        <td>
-                                            <button class="btn btn-outline-primary btn-sm">Ver mais..</button>
-                                        </td>
-                                        <td>
-                                            <select disabled class="form-select border-0 bg-light p-2">
-                                                <option value="nao-iniciado">Não Iniciado</option>
-                                                <option value="em-andamento">Em Andamento</option>
-                                                <option value="concluido">Concluído</option>
-                                                <option value="aprovado">Aprovado</option>
-                                                <option value="inviavel">Inviável</option>
-                                            </select>
-                                            <button class="btn iniciar-btn p-0 border-0 bg-transparent ml-2">
-                                              <i class="fa-solid fa-circle-play"></i>
-                                            </button>
-                                        </td>
-                                        <td><input type="date" class="form-control" /></td>
-                                        <td><input type="date" class="form-control" /></td>
-                                        <td><input type="date" class="form-control" /></td>
-                                        <td>
-                                            <button class="btn btn-primary finalizar-btn" data-id="#002">Finalizar</button>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <button class="btn btn-link p-0 text-decoration-none end-id" data-id="#001">#003</button>
-                                        </td>
-                                        <td><button class="btn btn-outline-primary btn-sm">Ver mais..</button></td>
-                                        <td>
-                                            <select disabled class="form-select border-0 bg-light p-2">
-                                                <option value="nao-iniciado">Não Iniciado</option>
-                                                <option value="em-andamento">Em Andamento</option>
-                                                <option value="concluido">Concluído</option>
-                                                <option value="aprovado">Aprovado</option>
-                                                <option value="inviavel">Inviável</option>
-                                            </select>
-                                            <button class="btn iniciar-btn p-0 border-0 bg-transparent ml-2">
-                                              <i class="fa-solid fa-circle-play"></i>
-                                            </button>
-                                        </td>
-                                        <td><input type="date" class="form-control" /></td>
-                                        <td><input type="date" class="form-control" /></td>
-                                        <td><input type="date" class="form-control" /></td>
-                                        <td>
-                                            <button class="btn btn-primary finalizar-btn" data-id="#002">Finalizar</button>
-                                        </td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
+              <div class="row justify-content-between my-4">
+                <div class="col shadow bg-white p-4 rounded">
+                  <h4 class="mb-3">Todos projetos:</h4>
+                  <div class="header-result mb-3">
+                    <input
+                      type="search"
+                      class="border-0 bg-light p-2 w-40"
+                      placeholder="Pesquisar por END ID..."
+                    />
+                    <input
+                      type="search"
+                      class="border-0 bg-light p-2"
+                      placeholder="Pesquisar por Status..."
+                    />
+                    <input
+                      type="search"
+                      class="border-0 bg-light p-2"
+                      placeholder="Pesquisar por Data Entrada..."
+                    />
+                    <button class="btn btn-warning text-white">BUSCAR</button>
+                  </div>
+                  <div class="table-responsive text-nowrap">
+                    <table class="table table-hover table-striped w-100">
+                      <thead class="bg-light">
+                        <tr>
+                          <th>End ID</th>
+                          <th></th>
+                          <th>Status Projeto</th>
+                          <th>Data Entrada</th>
+                          <th>Data Aprovação</th>
+                          <th>Data Ligação</th>
+                          <th>Ação</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>
+                            <button
+                              class="btn btn-link p-0 text-decoration-none end-id"
+                              data-id="#001"
+                            >
+                              #001
+                            </button>
+                          </td>
+                          <td>
+                            <button class="btn btn-outline-primary btn-sm">
+                              Ver mais..
+                            </button>
+                          </td>
+                          <td>
+                            <select
+                              disabled
+                              class="form-select border-0 bg-light p-2"
+                            >
+                              <option value="nao-iniciado">Não Iniciado</option>
+                              <option value="em-andamento" selected>
+                                Em Andamento
+                              </option>
+                              <option value="concluido">Concluído</option>
+                              <option value="aprovado">Aprovado</option>
+                              <option value="inviavel">Inviável</option>
+                            </select>
+                          </td>
+                          <td><input type="date" class="form-control" /></td>
+                          <td><input type="date" class="form-control" /></td>
+                          <td><input type="date" class="form-control" /></td>
+                          <td>
+                            <button
+                              class="btn btn-primary finalizar-btn"
+                              data-id="#001"
+                            >
+                              Finalizar
+                            </button>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <button
+                              class="btn btn-link p-0 text-decoration-none end-id"
+                              data-id="#001"
+                            >
+                              #002
+                            </button>
+                          </td>
+                          <td>
+                            <button class="btn btn-outline-primary btn-sm">
+                              Ver mais..
+                            </button>
+                          </td>
+                          <td>
+                            <select
+                              disabled
+                              class="form-select border-0 bg-light p-2"
+                            >
+                              <option value="nao-iniciado">Não Iniciado</option>
+                              <option value="em-andamento">Em Andamento</option>
+                              <option value="concluido">Concluído</option>
+                              <option value="aprovado">Aprovado</option>
+                              <option value="inviavel">Inviável</option>
+                            </select>
+                            <button
+                              class="btn iniciar-btn p-0 border-0 bg-transparent ml-2"
+                            >
+                              <i class="fa-solid fa-circle-play"></i>
+                            </button>
+                          </td>
+                          <td><input type="date" class="form-control" /></td>
+                          <td><input type="date" class="form-control" /></td>
+                          <td><input type="date" class="form-control" /></td>
+                          <td>
+                            <button
+                              class="btn btn-primary finalizar-btn"
+                              data-id="#002"
+                            >
+                              Finalizar
+                            </button>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <button
+                              class="btn btn-link p-0 text-decoration-none end-id"
+                              data-id="#001"
+                            >
+                              #003
+                            </button>
+                          </td>
+                          <td>
+                            <button class="btn btn-outline-primary btn-sm">
+                              Ver mais..
+                            </button>
+                          </td>
+                          <td>
+                            <select
+                              disabled
+                              class="form-select border-0 bg-light p-2"
+                            >
+                              <option value="nao-iniciado">Não Iniciado</option>
+                              <option value="em-andamento">Em Andamento</option>
+                              <option value="concluido">Concluído</option>
+                              <option value="aprovado">Aprovado</option>
+                              <option value="inviavel">Inviável</option>
+                            </select>
+                            <button
+                              class="btn iniciar-btn p-0 border-0 bg-transparent ml-2"
+                            >
+                              <i class="fa-solid fa-circle-play"></i>
+                            </button>
+                          </td>
+                          <td><input type="date" class="form-control" /></td>
+                          <td><input type="date" class="form-control" /></td>
+                          <td><input type="date" class="form-control" /></td>
+                          <td>
+                            <button
+                              class="btn btn-primary finalizar-btn"
+                              data-id="#002"
+                            >
+                              Finalizar
+                            </button>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
                 </div>
+              </div>
             </div>
-        </div>
-          
-          
-        
+          </div>
+
           <!-- ============================== PÁGINA DE SCI EXCLUSÃO ============================== -->
 
           <div class="tab-pane fade px-4" id="sci-exclusão">
@@ -1698,12 +2405,26 @@
               <div class="row justify-content-between my-4">
                 <div class="col-12 shadow bg-white p-4 rounded">
                   <h4 class="mb-3">SCI de Exclusão</h4>
-                  <div class="header-result d-flex justify-content-start gap-3 mb-3">
-                    <input type="search" class="border-0 bg-light p-2 w-15" placeholder="Procurar por Status..."/>
-                    <input type="search" class="border-0 bg-light p-2 w-15" placeholder="Procurar por Código SCI..."/>
-                    <input type="search" class="border-0 bg-light p-2 w-15" placeholder="Procurar por Cadastro Workflow..."/>
+                  <div
+                    class="header-result d-flex justify-content-start gap-3 mb-3"
+                  >
+                    <input
+                      type="search"
+                      class="border-0 bg-light p-2 w-15"
+                      placeholder="Procurar por Status..."
+                    />
+                    <input
+                      type="search"
+                      class="border-0 bg-light p-2 w-15"
+                      placeholder="Procurar por Código SCI..."
+                    />
+                    <input
+                      type="search"
+                      class="border-0 bg-light p-2 w-15"
+                      placeholder="Procurar por Cadastro Workflow..."
+                    />
                     <button class="btn btn-warning text-white">
-                        Pesquisar
+                      Pesquisar
                     </button>
                   </div>
                   <div class="table-responsive text-nowrap">
@@ -1722,22 +2443,34 @@
                       <tbody>
                         <tr>
                           <td>
-                            <button class="btn btn-link p-0 text-decoration-none end-id" data-id="#001">
+                            <button
+                              class="btn btn-link p-0 text-decoration-none end-id"
+                              data-id="#001"
+                            >
                               #001
                             </button>
                           </td>
                           <td>
-                            <select disabled class="form-select border-0 bg-light p-2">
+                            <select
+                              disabled
+                              class="form-select border-0 bg-light p-2"
+                            >
                               <option value="nao-iniciado">Não Iniciado</option>
                               <option value="em-andamento">Em Andamento</option>
                               <option value="concluido">Concluído</option>
-                          </select>
-                          <button class="btn iniciar-btn p-0 border-0 bg-transparent ml-2">
-                            <i class="fa-solid fa-circle-play"></i>
-                          </button>
+                            </select>
+                            <button
+                              class="btn iniciar-btn p-0 border-0 bg-transparent ml-2"
+                            >
+                              <i class="fa-solid fa-circle-play"></i>
+                            </button>
                           </td>
                           <td>
-                            <input type="text" class="form-control" placeholder="Código SCI"/>
+                            <input
+                              type="text"
+                              class="form-control"
+                              placeholder="Código SCI"
+                            />
                           </td>
                           <td>
                             <input type="date" class="form-control" />
@@ -1758,22 +2491,34 @@
                         </tr>
                         <tr>
                           <td>
-                            <button class="btn btn-link p-0 text-decoration-none end-id" data-id="#001">
+                            <button
+                              class="btn btn-link p-0 text-decoration-none end-id"
+                              data-id="#001"
+                            >
                               #002
                             </button>
                           </td>
                           <td>
-                            <select disabled class="form-select border-0 bg-light p-2">
+                            <select
+                              disabled
+                              class="form-select border-0 bg-light p-2"
+                            >
                               <option value="nao-iniciado">Não Iniciado</option>
                               <option value="em-andamento">Em Andamento</option>
                               <option value="concluido">Concluído</option>
-                          </select>
-                          <button class="btn iniciar-btn p-0 border-0 bg-transparent ml-2">
-                            <i class="fa-solid fa-circle-play"></i>
-                          </button>
+                            </select>
+                            <button
+                              class="btn iniciar-btn p-0 border-0 bg-transparent ml-2"
+                            >
+                              <i class="fa-solid fa-circle-play"></i>
+                            </button>
                           </td>
                           <td>
-                            <input type="text" class="form-control" placeholder="Código SCI"/>
+                            <input
+                              type="text"
+                              class="form-control"
+                              placeholder="Código SCI"
+                            />
                           </td>
                           <td>
                             <input type="date" class="form-control" />
@@ -1785,7 +2530,10 @@
                             <input type="date" class="form-control" />
                           </td>
                           <td>
-                            <select disabled class="form-select border-0 bg-light p-2">
+                            <select
+                              disabled
+                              class="form-select border-0 bg-light p-2"
+                            >
                               <option value="nao-iniciado">Não Iniciado</option>
                               <option value="em-andamento">Em Andamento</option>
                               <option value="concluido">Concluído</option>
@@ -1803,8 +2551,12 @@
       </div>
     </div>
     <!-- ============================== script ============================== -->
+    <script src="js/host.js"></script>
+    <script src="js/validaToken.js"></script>
+    <script src="js/cadastroEndId.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jwt-decode@3.1.2/build/jwt-decode.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"></script>
-    <script src="script.js"></script>
+    <script src="js/script.js"></script>
   </body>
 </html>
