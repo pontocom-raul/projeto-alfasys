@@ -29,56 +29,88 @@ document
     login(event);
   });
 
-// Função de login
-function login(event) {
-  event.preventDefault(); // Previne o comportamento padrão do formulário
-
-  // Seleciona os campos de entrada de email e senha
-  const iemail = document.querySelector("#login-email");
-  const ipassword = document.querySelector("#login-password");
-
-  // Faz a requisição para o backend (API)
-  fetch("https://alfasys-back-production.up.railway.app/users/login", {
-    method: "POST",
-    headers: {
-      Accept: "application/json",
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify({
-      email: iemail.value, // Pega o valor do input de email
-      senha: ipassword.value, // Pega o valor do input de senha
-    }),
-  })
-    .then((response) => {
-      if (!response.ok) {
-        throw new Error("Erro ao autenticar. Verifique suas credenciais.");
-      }
-      return response.json();
+  function login(event) {
+    event.preventDefault(); // Previne o comportamento padrão do formulário
+  
+    // Seleciona os campos de entrada de email e senha
+    const iemail = document.querySelector("#login-email");
+    const ipassword = document.querySelector("#login-password");
+    const emailError = document.getElementById("email-error");
+    const passwordError = document.getElementById("password-error");
+    const alertError = document.querySelector(".alert-error");
+    const loginButton = event.target.querySelector("button[type='submit']");
+  
+    // Limpa erros anteriores
+    iemail.classList.remove("error");
+    ipassword.classList.remove("error");
+    emailError.style.display = "none";
+    passwordError.style.display = "none";
+    alertError.classList.remove("show");
+    alertError.textContent = "";
+  
+    // Ativa estado de carregamento no botão
+    loginButton.textContent = "Carregando...";
+    loginButton.disabled = true;
+  
+    fetch("https://alfasys-back-production.up.railway.app/users/login", {
+      method: "POST",
+      headers: {
+        Accept: "application/json",
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        email: iemail.value,
+        senha: ipassword.value,
+      }),
     })
-    .then((data) => {
-      console.log(data);
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error("Verifique suas credenciais");
+        }
+        return response.json();
+      })
+      .then((data) => {
+        if (data.token) {
+          const token = data.token;
+  
+          // Armazena o token no localStorage
+          localStorage.setItem("token", token);
+  
+          // Redireciona para a página inicial
+          window.location.href = "/index.html";
+        } else {
+          throw new Error("Token não encontrado.");
+        }
+      })
+      .catch((error) => {
+        // Exibe mensagem de erro e aplica estilos
+        iemail.classList.add("error");
+        ipassword.classList.add("error");
+  
+        // Exibe alerta estilizado
+        alertError.classList.add("show");
+        alertError.textContent =
+          "Erro: " + error.message || "Credenciais incorretas.";
+  
+        // Restaura o estado do botão
+        loginButton.textContent = "Entrar";
+        loginButton.disabled = false;
+      });
+  }
 
-      // Verifica se o login foi bem-sucedido e se há um token
-      if (data.token) {
-        const token = data.token;
+//MOSTRAR SENHA
+function togglePasswordVisibility() {
+  const passwordField = document.getElementById("login-password");
+  const toggleIcon = document.getElementById("toggle-password");
 
-        // Armazena o token no localStorage
-        localStorage.setItem("token", token);
-
-        console.log("Token armazenado no localStorage:", token);
-
-        // Exibe uma mensagem de sucesso no login
-        alert("Login realizado com sucesso!");
-
-        window.location.href = "/index.html";
-      } else {
-        // Exibe uma mensagem de erro se não houver token
-        alert("Erro ao realizar o login: Token não encontrado.");
-      }
-    })
-    .catch((error) => {
-      // Lida com erros na requisição
-      console.error("Erro na requisição:", error);
-      alert(error.message || "Erro na requisição. Tente novamente.");
-    });
+  if (passwordField.type === "password") {
+    passwordField.type = "text";
+    toggleIcon.classList.remove("fa-eye");
+    toggleIcon.classList.add("fa-eye-slash");
+  } else {
+    passwordField.type = "password";
+    toggleIcon.classList.remove("fa-eye-slash");
+    toggleIcon.classList.add("fa-eye");
+  }
 }
+  
