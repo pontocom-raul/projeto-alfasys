@@ -4,7 +4,7 @@ if (!token) {
   console.log("Token nulo ou ausente.");
   window.location.href = "/login.html";
 } else {
-  fetch("https://alfasys-back-production.up.railway.app/users/valida-token", {
+  fetch(`${host}/users/valida-token`, {
     method: "POST",
     headers: {
       Authorization: `Bearer ${token}`,
