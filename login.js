@@ -99,18 +99,19 @@ document
   }
 
 //MOSTRAR SENHA
-function togglePasswordVisibility() {
-  const passwordField = document.getElementById("login-password");
-  const toggleIcon = document.getElementById("toggle-password");
+      function togglePasswordVisibility() {
+        const passwordInput = document.getElementById('login-password');
+        const toggleIcon = document.getElementById('toggle-password');
 
-  if (passwordField.type === "password") {
-    passwordField.type = "text";
-    toggleIcon.classList.remove("fa-eye");
-    toggleIcon.classList.add("fa-eye-slash");
-  } else {
-    passwordField.type = "password";
-    toggleIcon.classList.remove("fa-eye-slash");
-    toggleIcon.classList.add("fa-eye");
-  }
-}
+        if (passwordInput.type === 'password') {
+          passwordInput.type = 'text';
+          toggleIcon.classList.remove('fa-eye');
+          toggleIcon.classList.add('fa-eye-slash');
+        } else {
+          passwordInput.type = 'password';
+          toggleIcon.classList.remove('fa-eye-slash');
+          toggleIcon.classList.add('fa-eye');
+        }
+      }
+  
   
